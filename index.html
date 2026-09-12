@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>M.D Memorial School | Aurangabad, Bulandshahr</title>
+
+<meta name="description" content="M.D Memorial School, Aurangabad, Bulandshahr — Nursery to Class 5.">
+
+<style>
+:root{
+  --navy:#0b1f44;
+  --blue:#123d7a;
+  --gold:#e7b354;
+  --light:#f5f8fc;
+  --white:#ffffff;
+  --text:#172033;
+  --muted:#64748b;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:white;
+  line-height:1.6;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* TOP BAR */
+.topbar{
+  background:#07152f;
+  color:#dbe7ff;
+  padding:7px 20px;
+  font-size:13px;
+}
+
+.topbar-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+}
+
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  box-shadow:0 4px 20px rgba(0,0,0,.08);
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--navy);
+  font-weight:800;
+}
+
+.brand img{
+  width:58px;
+  height:58px;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid var(--gold);
+}
+
+.brand-text{
+  line-height:1.15;
+}
+
+.brand-text small{
+  display:block;
+  font-size:11px;
+  color:var(--gold);
+  letter-spacing:1px;
+  margin-top:4px;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+nav a{
+  color:var(--navy);
+  font-size:14px;
+  font-weight:700;
+  padding:10px 12px;
+  border-radius:8px;
+}
+
+nav a:hover{
+  background:#eef4ff;
+  color:var(--blue);
+}
+
+.nav-btn{
+  background:var(--gold);
+  color:#101f3e!important;
+}
+
+/* HERO */
+.hero{
+  min-height:650px;
+  display:flex;
+  align-items:center;
+  color:white;
+  background:
+    linear-gradient(120deg,rgba(7,25,59,.96),rgba(18,61,122,.88)),
+    radial-gradient(circle at top right,#315fa0,transparent 40%);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:50%;
+  right:-180px;
+  top:-180px;
+}
+
+.hero-inner{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:60px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 15px;
+  border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.1);
+  border-radius:30px;
+  color:#ffe4a6;
+  font-weight:700;
+  font-size:14px;
+}
+
+.hero h1{
+  font-size:clamp(42px,6vw,72px);
+  line-height:1.05;
+  margin:20px 0 15px;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero p{
+  max-width:650px;
+  font-size:18px;
+  color:#e7eefc;
+  margin-bottom:25px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 21px;
+  border-radius:9px;
+  font-weight:800;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.primary{
+  background:var(--gold);
+  color:#102044;
+}
+
+.secondary{
+  border:1px solid white;
+  color:white;
+}
+
+.hero-card{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  padding:25px;
+  border-radius:28px;
+  text-align:center;
+  backdrop-filter:blur(10px);
+  box-shadow:0 25px 70px rgba(0,0,0,.25);
+}
+
+.hero-card img{
+  width:min(100%,330px);
+  aspect-ratio:1;
+  object-fit:cover;
+  border-radius:50%;
+  background:white;
+  border:8px solid white;
+}
+
+.hero-card h3{
+  margin-top:15px;
+  font-size:22px;
+}
+
+/* STATS */
+.stats{
+  max-width:1100px;
+  margin:-55px auto 0;
+  position:relative;
+  z-index:5;
+  padding:0 20px;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:white;
+  border-radius:18px;
+  box-shadow:0 15px 40px rgba(15,35,70,.12);
+  overflow:hidden;
+}
+
+.stat{
+  text-align:center;
+  padding:25px 12px;
+  border-right:1px solid #e8edf5;
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat strong{
+  display:block;
+  font-size:27px;
+  color:var(--navy);
+}
+
+.stat span{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* COMMON */
+section{
+  padding:90px 20px;
+}
+
+.container{
+  max-width:1150px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.title .small{
+  color:var(--gold);
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:12px;
+}
+
+.title h2{
+  color:var(--navy);
+  font-size:38px;
+  margin:6px 0;
+}
+
+.title p{
+  color:var(--muted);
+}
+
+/* ABOUT */
+.about{
+  background:#f8fafc;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.about-text h3{
+  color:var(--navy);
+  font-size:27px;
+  margin-bottom:15px;
+}
+
+.about-text p{
+  color:#526074;
+  margin-bottom:15px;
+}
+
+.feature-list{
+  display:grid;
+  gap:13px;
+  margin-top:20px;
+}
+
+.feature{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  background:white;
+  padding:13px;
+  border-radius:10px;
+  box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.feature-icon{
+  font-size:22px;
+}
+
+/* PRINCIPAL */
+.message{
+  background:linear-gradient(135deg,var(--navy),var(--blue));
+  color:white;
+  border-radius:25px;
+  padding:45px;
+  position:relative;
+  overflow:hidden;
+}
+
+.message:after{
+  content:"“";
+  position:absolute;
+  right:25px;
+  top:-35px;
+  font-size:180px;
+  color:rgba(255,255,255,.07);
+}
+
+.message h3{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.message p{
+  color:#e6edfb;
+  max-width:850px;
+  font-size:17px;
+}
+
+.signature{
+  margin-top:22px;
+  color:#ffd98d;
+  font-weight:800;
+}
+
+/* CLASSES */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:white;
+  border:1px solid #e6ebf3;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(15,35,70,.07);
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 18px 40px rgba(15,35,70,.13);
+}
+
+.card-icon{
+  width:55px;
+  height:55px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#eef4ff;
+  border-radius:14px;
+  font-size:27px;
+  margin-bottom:18px;
+}
+
+.card h3{
+  color:var(--navy);
+  font-size:21px;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:var(--muted);
+}
+
+/* NOTICE */
+.notice-section{
+  background:#f8fafc;
+}
+
+.notice-board{
+  max-width:850px;
+  margin:auto;
+  background:white;
+  border-radius:18px;
+  box-shadow:0 10px 35px rgba(0,0,0,.07);
+  overflow:hidden;
+}
+
+.notice-head{
+  background:var(--navy);
+  color:white;
+  padding:18px 25px;
+  font-size:20px;
+  font-weight:800;
+}
+
+.notice-item{
+  padding:18px 25px;
+  border-bottom:1px solid #edf0f5;
+  display:flex;
+  gap:15px;
+}
+/* FEE TABLE DESIGN */
+.fee-table-container {
+  max-width: 850px;
+  margin: 30px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0,0,0,.07);
+  overflow-x: auto;
+}
+.fee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.fee-table th, .fee-table td {
+  padding: 12px 15px;
+  border: 1px solid #edf0f5;
+  text-align: center;
+}
+.fee-table th {
+  background-color: var(--navy);
+  color: white;
+}
+.fee-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.notice-date{
+  min-width:65px;
+  text-align:center;
+  background:#fff4db;
+  color:#7b581d;
+  padding:7px;
+  border-radius:8px;
+  font-weight:800;
+  font-size:12px;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.photo{
+  height:230px;
+  border-radius:16px;
+  overflow:hidden;
+  background:linear-gradient(135deg,#e8eef8,#d7e1f1);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#70809a;
+  font-weight:800;
+  border:1px solid #dce4ef;
+  transition:.25s;
+}
+
+.photo:hover{
+  transform:scale(1.02);
+}
+
+/* ADMISSION */
+.admission{
+  background:linear-gradient(135deg,#fff8e8,#fffdf7);
+}
+
+.admission-box{
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:30px;
+  background:white;
+  padding:40px;
+  border-radius:22px;
+  box-shadow:0 10px 35px rgba(70,50,10,.08);
+}
+
+.admission-box h2{
+  color:var(--navy);
+  margin-bottom:8px;
+}
+
+/* CONTACT */
+.contact{
+  background:#f5f7fb;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.contact-box{
+  background:white;
+  border-radius:18px;
+  padding:30px;
+  box-shadow:0 8px 30px rgba(0,0,0,.06);
+}
+
+.contact-box h3{
+  color:var(--navy);
+  margin-bottom:7px;
+}
+
+.contact-box p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.contact-box a{
+  color:var(--blue);
+  font-weight:800;
+}
+
+/* FOOTER */
+footer{
+  background:#07152f;
+  color:#b9c7df;
+  padding:35px 20px;
+  text-align:center;
+}
+
+footer strong{
+  color:white;
+}
+
+.footer-links{
+  margin:15px 0;
+}
+
+.footer-links a{
+  color:#d9e3f5;
+  margin:0 8px;
+  font-size:13px;
+}
+
+/* WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25d366;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:27px;
+  box-shadow:0 8px 25px rgba(0,0,0,.25);
+  z-index:999;
+}
+
+/* RESPONSIVE */
+@media(max-width:850px){
+
+  .topbar-inner{
+    justify-content:center;
+  }
+
+  .topbar-inner span:first-child{
+    display:none;
+  }
+
+  .hero-inner,
+  .about-grid,
+  .contact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-inner{
+    padding:70px 20px;
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .stat{
+    border-bottom:1px solid #e8edf5;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .admission-box{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  nav a{
+    padding:8px 6px;
+    font-size:12px;
+  }
+
+  .nav-btn{
+    display:none;
+  }
+}
+
+@media(max-width:550px){
+
+  .brand-text{
+    font-size:14px;
+  }
+
+  .brand img{
+    width:50px;
+    height:50px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  section{
+    padding:65px 18px;
+  }
+
+  .title h2{
+    font-size:30px;
+  }
+
+  .stats{
+    margin-top:-30px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .message{
+    padding:28px;
+  }
+
+  .admission-box{
+    padding:28px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📍 Aurangabad, Bulandshahr, Uttar Pradesh</span>
+    <span>📞 7409777967</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+
+    <a class="brand" href="#home">
+      <img src="logo.jpeg" alt="M.D Memorial School Logo">
+
+      <div class="brand-text">
+        M.D MEMORIAL SCHOOL
+        <small>LEARN • GROW • SHINE</small>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#notice">Notice</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <a href="#fees">Fee Structure</a>
+
+      <a class="nav-btn" href="#admission">Admission</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <div>
+
+      <span class="badge">🎓 Nursery to Class 5</span>
+
+      <h1>
+        M.D Memorial<br>
+        <span>School</span>
+      </h1>
+
+      <p>
+        ज्ञान, संस्कार और उज्ज्वल भविष्य की ओर एक मजबूत कदम।
+        बच्चों की शिक्षा, संस्कार और सर्वांगीण विकास के लिए समर्पित।
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="#admission">🎓 Admissions</a>
+        <a class="btn secondary" href="#about">Explore School</a>
+      </div>
+
+    </div>
+
+    <div class="hero-card">
+
+      <img src="logo.jpeg" alt="M.D Memorial School">
+
+      <h3>Welcome to M.D Memorial School</h3>
+
+      <p>
+        Aurangabad, Bulandshahr
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STATS -->
+<div class="stats">
+
+  <div class="stats-grid">
+
+    <div class="stat">
+      <strong>1997</strong>
+      <span>Established</span>
+    </div>
+
+    <div class="stat">
+      <strong>Nur–5</strong>
+      <span>Classes</span>
+    </div>
+
+    <div class="stat">
+      <strong>📚</strong>
+      <span>Quality Education</span>
+    </div>
+
+    <div class="stat">
+      <strong>❤️</strong>
+      <span>Child Focused</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">About Us</div>
+      <h2>Growing Minds, Building Futures</h2>
+      <p>एक सुरक्षित और सीखने वाला वातावरण</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-text">
+
+        <h3>हमारा विद्यालय</h3>
+
+        <p>
+          <strong>M.D Memorial School</strong> Aurangabad,
+          Bulandshahr में Nursery से Class 5 तक के विद्यार्थियों
+          के लिए शिक्षा प्रदान करता है।
+        </p>
+
+        <p>
+          हमारा उद्देश्य बच्चों में शिक्षा के साथ अच्छे संस्कार,
+          आत्मविश्वास, अनुशासन और रचनात्मक सोच विकसित करना है।
+        </p>
+
+        <div class="feature-list">
+
+          <div class="feature">
+            <div class="feature-icon">📚</div>
+            <div>शिक्षा पर विशेष ध्यान</div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🌱</div>
+            <div>बच्चों का सर्वांगीण विकास</div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">⭐</div>
+            <div>संस्कार और अनुशासन</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="message">
+
+        <h3>Principal's Message</h3>
+
+        <p>
+          हमारा विश्वास है कि प्रत्येक बच्चा विशेष है।
+          हमारा प्रयास है कि बच्चों को ऐसा वातावरण मिले
+          जहाँ वे सीखने के साथ-साथ आत्मविश्वास और अच्छे
+          संस्कार भी विकसित कर सकें।
+        </p>
+
+        <div class="signature">
+          — Principal, M.D Memorial School
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CLASSES -->
+<section id="classes">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Academics</div>
+      <h2>Our Classes</h2>
+      <p>बच्चों की learning journey की मजबूत शुरुआत</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">🧸</div>
+        <h3>Nursery</h3>
+        <p>
+          खेल और activities के माध्यम से शुरुआती learning
+          और basic concepts पर focus।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📖</div>
+        <h3>LKG & UKG</h3>
+        <p>
+          बच्चों की मजबूत foundation के लिए learning,
+          activities और creative development।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <h3>Class 1–5</h3>
+        <p>
+          Academic foundation, confidence और overall
+          development पर विशेष ध्यान।
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  <!-- FEE STRUCTURE SECTION -->
+<section class="container" id="fees">
+  <div class="fee-table-container">
+    <h2 style="text-align: center; color: var(--navy); margin-bottom: 20px;">Fees Structure (Session 2026-27)</h2>
+    <table class="fee-table">
+      <thead>
+        <tr>
+          <th>Class / Standard</th>
+          <th>Monthly Tuition Fee</th>
+          <th>Exam, Activity & Cultural Fee</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Nursery to UKG</strong></td>
+          <td>₹ 350 / month</td>
+          <td>₹ 600</td>
+        </tr>
+        <tr>
+          <td><strong>Class 1st to 5th</strong></td>
+          <td>₹ 400 / month</td>
+          <td>₹ 600</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="fee-note" style="text-align: center; margin-top: 15px; color: #64748b; font-size: 13px;">
+      * Note: Monthly Tuition Fee har mahine ki 10 tareekh tak jama karni hogi.
+    </div>
+  </div>
+</section>
+
+<!-- NOTICE -->
+<section class="notice-section" id="notice">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Latest Updates</div>
+      <h2>Notice Board</h2>
+      <p>विद्यालय से संबंधित महत्वपूर्ण सूचनाएँ</p>
+    </div>
+
+    <div class="notice-board">
+
+      <div class="notice-head">
+        📢 School Notices
+      </div>
+
+      <div class="notice-item">
+
+        <div class="notice-date">
+          NOTICE
+        </div>
+
+        <div>
+          <strong>Important School Updates</strong>
+          <p>
+            विद्यालय की नई सूचना यहाँ update की जा सकती है।
+          </p>
+        </div>
+
+      </div>
+
+      <div class="notice-item">
+
+        <div class="notice-date">
+          INFO
+        </div>
+
+        <div>
+          <strong>Admission Information</strong>
+          <p>
+            Nursery से Class 5 तक admission की जानकारी के लिए
+            school office से संपर्क करें।
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Our Memories</div>
+      <h2>School Gallery</h2>
+      <p>विद्यालय की activities और events की झलक</p>
+    </div>
+
+   <div class="gallery" style="display:grid; grid-template-columns:repeat(2, 1fr); gap:15px;">
+
+  <img src="a5b00ca8-6e49-4309-b53b-1b7a1586dd9e.jpeg"
+       alt="School Gallery Photo 1"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="15ee2656-ff28-40c1-97f3-4ce6c5d04ca5.jpeg"
+       alt="School Gallery Photo 2"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="1e7a30a4-c8b3-4405-9297-bbceee85123e.jpeg"
+       alt="School Gallery Photo 3"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="1f491bd3-0e0c-4568-b970-43b2985cdb1e.jpeg"
+       alt="School Gallery Photo 4"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="2EADB222-24B2-4D4F-A2B3-64A13E3DFEBB.png"
+       alt="School Gallery Photo 5"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="788853e2-ff2a-417d-ab30-7d62065f4b50.jpeg"
+       alt="School Gallery Photo 6"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="IMG_0828.jpeg"
+       alt="School Gallery Photo 7"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="IMG_0843.jpeg"
+       alt="School Gallery Photo 8"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="IMG_0870.jpeg"
+       alt="School Gallery Photo 9"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+  <img src="d5fb95f0-c573-4145-a41b-9b74d47ccde9.jpeg"
+       alt="School Gallery Photo 10"
+       style="width:100%; height:220px; object-fit:cover; border-radius:12px; display:block;">
+
+</div>
+
+
+      
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ADMISSION -->
+
+<section class="admission" id="admission">
+
+  <div class="container">
+
+    <div class="admission-box">
+
+      <div>
+
+        <h2>🎓 Admissions Open</h2>
+
+        <p>
+          Nursery से Class 5 तक admission information
+          के लिए school office से संपर्क करें।
+        </p>
+
+      </div>
+
+      <a class="btn primary" href="tel:7409777967">
+        📞 Call School
+      </a>
+
+    <a class="btn primary" href="javascript:void(0)" onclick="openAdmissionForm()" style="margin-left:10px;">
+      📝 Online Admission
+</a>
+      
+</a>
+
+    </div>
+
+<!-- REQUIRED DOCUMENTS -->
+<section id="documents">
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Admission</div>
+      <h2>Required Documents</h2>
+      <p>प्रवेश के समय निम्नलिखित दस्तावेज़ आवश्यक हैं</p>
+    </div>
+
+    <div class="documents-box">
+
+      <div class="document-item">
+        <span>🪪</span>
+        <div>
+          <h3>Student Aadhaar Card</h3>
+          <p>विद्यार्थी का आधार कार्ड</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📄</span>
+        <div>
+          <h3>Birth Certificate</h3>
+          <p>विद्यार्थी का आधार कार्ड उपलब्ध न होने पर जन्म प्रमाण पत्र आवश्यक है</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>🔢</span>
+        <div>
+          <h3>PEN Number</h3>
+          <p>विद्यार्थी का PEN Number</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📑</span>
+        <div>
+          <h3>Previous School Report Card / Marksheet</h3>
+          <p>पिछले विद्यालय की रिपोर्ट कार्ड / मार्कशीट</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📋</span>
+        <div>
+          <h3>Transfer Certificate (TC)</h3>
+          <p>स्थानांतरण प्रमाण पत्र, यदि लागू हो</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📸</span>
+        <div>
+          <h3>Passport Size Photographs</h3>
+          <p>विद्यार्थी के पासपोर्ट साइज फोटो</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>👨‍👩‍👧</span>
+        <div>
+          <h3>Parent / Guardian Aadhaar Card</h3>
+          <p>माता-पिता / अभिभावक का आधार कार्ड</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>🏠</span>
+        <div>
+          <h3>Address Proof</h3>
+          <p>पते का प्रमाण</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📱</span>
+        <div>
+          <h3>WhatsApp Mobile Number</h3>
+          <p>अभिभावक का सक्रिय WhatsApp मोबाइल नंबर</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:25px; padding:18px; border-radius:12px; background:#fff3cd; border:1px solid #ffe69c; text-align:center;">
+      <h3 style="margin:0 0 8px;">⚠️ Important Admission Note</h3>
+      <p style="margin:0;">
+        <strong>₹500 Admission Fee</strong> admission के समय देना compulsory है।
+      </p>
+    </div>
+
+  </div>
+</section>
+
+    <!-- ONLINE ADMISSION FORM -->
+<section id="admission-form" style="display:none;">
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Admission</div>
+      <h2>Online Admission Form</h2>
+      <p>कृपया विद्यार्थी की सही जानकारी भरें</p>
+    </div>
+
+    <div class="documents-box">
+
+      <form>
+
+        <div class="form-group">
+          <label>Application No. *</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>Date *</label>
+          <input type="date" required>
+        </div>
+
+        <div class="form-group">
+          <label>Student Name *</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>Father / Mother Name *</label>
+          <input type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>Gender *</label>
+          <select required>
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Class *</label>
+          <select required>
+            <option value="">Select Class</option>
+            <option>Nursery</option>
+            <option>LKG</option>
+            <option>UKG</option>
+            <option>Class 1</option>
+            <option>Class 2</option>
+            <option>Class 3</option>
+            <option>Class 4</option>
+            <option>Class 5</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Date of Birth *</label>
+          <input type="date" required>
+        </div>
+
+        <div class="form-group">
+          <label>Student Aadhaar</label>
+          <input type="text" maxlength="12" inputmode="numeric">
+        </div>
+
+        <div class="form-group">
+          <label>PEN Number</label>
+          <input type="text">
+        </div>
+
+        <div class="form-group">
+          <label>Previous School</label>
+          <input type="text">
+        </div>
+
+        <div class="form-group">
+          <label>Transfer Certificate (TC)</label>
+          <select>
+            <option value="">Select</option>
+            <option>Available</option>
+            <option>Not Available</option>
+            <option>Not Applicable</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Parent / Guardian Aadhaar</label>
+          <input type="text" maxlength="12" inputmode="numeric">
+        </div>
+
+        <div class="form-group">
+          <label>Address *</label>
+          <textarea rows="3" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>WhatsApp Number *</label>
+          <input type="tel" maxlength="10" inputmode="numeric" required>
+        </div>
+
+        <button type="submit" class="btn primary">
+          Submit Admission Form
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+</section>
+    
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Get In Touch</div>
+      <h2>Contact Us</h2>
+      <p>हमसे संपर्क करें</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-box">
+
+        <h3>📍 School Address</h3>
+
+        <p>
+          Aurangabad, Bulandshahr,<br>
+          Uttar Pradesh
+        </p>
+
+        <h3>📞 Phone</h3>
+
+        <p>
+          <a href="tel:7409777967">
+            7409777967
+          </a>
+        </p>
+
+      </div>
+
+      <div class="contact-box">
+
+        <h3>🎓 Admissions</h3>
+
+        <p>
+          Admission, classes और school information
+          के लिए हमारे school office से संपर्क करें।
+        </p>
+
+        <a class="btn primary" href="tel:7409777967">
+          Call Now
+        </a>
+        <a class="btn primary"
+   href="https://wa.me/917409777967?text=Hello%20M.D.%20Memorial%20School,%20I%20want%20information%20about%20admission."
+   target="_blank">
+  💬 WhatsApp
+</a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+
+  <p>
+    <strong>M.D Memorial School</strong>
+    · Aurangabad, Bulandshahr
+  </p>
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#classes">Classes</a>
+    <a href="#notice">Notice</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <p>
+    Nursery to Class 5 · © 2026 All Rights Reserved
+  </p>
+
+</footer>
+
+<!-- WHATSAPP -->
+<a
+  class="whatsapp"
+  href="https://wa.me/917409777967"
+  target="_blank"
+  aria-label="WhatsApp School"
+>
+  ☎
+</a>
+
+  <script>
+function openAdmissionForm() {
+  const form = document.getElementById("admission-form");
+
+  if (form) {
+    form.style.display = "block";
+    form.scrollIntoView({ behavior: "smooth" });
+  }
+}
+</script>
+
+</body>
+</html>
