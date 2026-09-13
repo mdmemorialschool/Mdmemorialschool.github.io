@@ -1132,9 +1132,7 @@ footer strong{
         📞 Call School
       </a>
 
-    <a class="btn primary" href="javascript:void(0)" onclick="openAdmissionForm()" style="margin-left:10px;">
-      📝 Online Admission
-</a>
+    
       
 </a>
 
@@ -1236,59 +1234,7 @@ footer strong{
   </div>
 </section>
 
-<!-- ONLINE ADMISSION FORM -->
-<section id="admission-form" style="display:none;">
-  <div class="container">
 
-    <div class="title">
-      <div class="small">Admission</div>
-      <h2>Online Admission Form</h2>
-      <p>कृपया विद्यार्थी की सही जानकारी भरें</p>
-    </div>
-
-    <div class="documents-box">
-
-      <form>
-
-        <div class="form-group">
-          <label>Student Name *</label>
-          <input type="text" placeholder="Enter Student Name" required>
-        </div>
-
-        <div class="form-group">
-          <label>Mobile Number *</label>
-          <input type="tel" maxlength="10" inputmode="numeric"
-                 placeholder="Enter Mobile Number" required>
-        </div>
-
-        <div class="form-group">
-          <label>Class *</label>
-          <select required>
-            <option value="">Select Class</option>
-            <option>Nursery</option>
-            <option>LKG</option>
-            <option>UKG</option>
-            <option>Class 1</option>
-            <option>Class 2</option>
-            <option>Class 3</option>
-            <option>Class 4</option>
-            <option>Class 5</option>
-          </select>
-        </div>
-
-        <button type="submit" class="btn primary">
-          Submit Admission Form
-        </button>
-
-      </form>
-
-    </div>
-  </div>
-</section>
-    
-  </div>
-
-</section>
 
 <!-- CONTACT -->
 <section class="contact" id="contact">
@@ -1380,19 +1326,10 @@ footer strong{
   target="_blank"
   aria-label="WhatsApp School"
 >
-  ☎
+  
 </a>
 
-  <script>
-function openAdmissionForm() {
-  const form = document.getElementById("admission-form");
 
-  if (form) {
-    form.style.display = "block";
-    form.scrollIntoView({ behavior: "smooth" });
-  }
-}
-</script>
 
 </body>
 </html>
