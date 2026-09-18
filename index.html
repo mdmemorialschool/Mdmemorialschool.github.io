@@ -8,84 +8,51 @@
 
 <meta name="description" content="M.D Memorial School, Aurangabad, Bulandshahr — Nursery to Class 5.">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
 <style>
-
 :root{
-  --navy:#071426;
-  --navy2:#0c1f39;
-  --blue:#12345c;
-  --gold:#c9a45c;
-  --gold2:#e4c982;
-  --cream:#f8f5ed;
-  --white:#ffffff;
-  --text:#182333;
-  --muted:#687386;
-  --border:rgba(201,164,92,.28);
-  --shadow:0 25px 70px rgba(5,18,35,.13);
-  --radius:24px;
+  --navy:#0b1f44;
+  --blue:#123d7a;
+  --gold:#e7b354;
+  --light:#f6f8fc;
+  --white:#fff;
+  --text:#172033;
+  --muted:#64748b;
+  --border:#e5eaf2;
 }
 
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-}
-
-html{
   scroll-behavior:smooth;
 }
 
 body{
-  font-family:"DM Sans",sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   color:var(--text);
   background:#fff;
-  line-height:1.7;
-  overflow-x:hidden;
+  line-height:1.6;
 }
 
 a{
   text-decoration:none;
-  color:inherit;
-}
-
-img{
-  max-width:100%;
-  display:block;
-}
-
-.container{
-  width:min(1180px,92%);
-  margin:auto;
 }
 
 /* ================= TOP BAR ================= */
 
 .topbar{
-  background:var(--navy);
-  color:#fff;
-  padding:9px 0;
+  background:#07152f;
+  color:#dbe7ff;
+  padding:7px 20px;
   font-size:13px;
-  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .topbar-inner{
+  max-width:1200px;
+  margin:auto;
   display:flex;
   justify-content:space-between;
-  align-items:center;
-  gap:20px;
-}
-
-.topbar span{
-  color:#dfe5ed;
-}
-
-.topbar a{
-  color:var(--gold2);
-  font-weight:700;
+  gap:15px;
 }
 
 /* ================= HEADER ================= */
@@ -93,14 +60,17 @@ img{
 header{
   position:sticky;
   top:0;
-  z-index:999;
-  background:rgba(255,255,255,.94);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(7,20,38,.08);
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #edf0f5;
+  box-shadow:0 4px 18px rgba(0,0,0,.06);
 }
 
-.navbar{
-  height:82px;
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:11px 20px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -109,1176 +79,1475 @@ header{
 .brand{
   display:flex;
   align-items:center;
-  gap:13px;
+  gap:11px;
+  color:var(--navy);
+  font-weight:800;
 }
 
 .brand img{
-  width:58px;
-  height:58px;
-  object-fit:contain;
+  width:57px;
+  height:57px;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid var(--gold);
 }
 
 .brand-text{
-  line-height:1.1;
-}
-
-.brand-text strong{
-  display:block;
-  font-family:"Playfair Display",serif;
-  font-size:21px;
-  color:var(--navy);
+  line-height:1.15;
+  font-size:15px;
 }
 
 .brand-text small{
   display:block;
-  color:var(--gold);
   font-size:10px;
-  letter-spacing:2px;
+  color:#b7862d;
+  letter-spacing:1.4px;
   margin-top:5px;
-  font-weight:700;
 }
 
-.nav-links{
+nav{
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:2px;
 }
 
-.nav-links a{
-  font-size:14px;
-  font-weight:600;
-  color:#344054;
-  transition:.3s;
-}
-
-.nav-links a:hover{
-  color:var(--gold);
-}
-
-.nav-admission{
-  padding:11px 20px;
-  border-radius:50px;
-  background:var(--navy);
-  color:#fff!important;
-  border:1px solid var(--gold);
-}
-
-.menu-btn{
-  display:none;
-  border:0;
-  background:transparent;
-  font-size:28px;
+nav a{
   color:var(--navy);
-  cursor:pointer;
+  font-size:13px;
+  font-weight:700;
+  padding:9px 10px;
+  border-radius:8px;
+  transition:.2s;
+}
+
+nav a:hover{
+  background:#eef4ff;
+  color:var(--blue);
+}
+
+.nav-btn{
+  background:var(--gold);
+  color:#102044!important;
+  margin-left:5px;
 }
 
 /* ================= HERO ================= */
 
 .hero{
-  min-height:720px;
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(circle at 80% 20%,rgba(201,164,92,.18),transparent 28%),
-    radial-gradient(circle at 15% 80%,rgba(34,86,140,.28),transparent 30%),
-    linear-gradient(135deg,#061323,#0b203b 60%,#102d50);
-  color:#fff;
+  min-height:620px;
   display:flex;
   align-items:center;
+  color:#fff;
+  background:
+    linear-gradient(120deg,rgba(7,25,59,.97),rgba(18,61,122,.91)),
+    radial-gradient(circle at top right,#315fa0,transparent 40%);
+  position:relative;
+  overflow:hidden;
 }
 
 .hero:before{
   content:"";
   position:absolute;
-  width:520px;
-  height:520px;
-  border:1px solid rgba(201,164,92,.18);
+  width:650px;
+  height:650px;
+  border:1px solid rgba(255,255,255,.07);
   border-radius:50%;
-  right:-170px;
-  top:-160px;
+  right:-300px;
+  bottom:-350px;
 }
 
 .hero:after{
   content:"";
   position:absolute;
-  width:320px;
-  height:320px;
-  border:1px solid rgba(201,164,92,.13);
+  width:420px;
+  height:420px;
+  border:1px solid rgba(255,255,255,.09);
   border-radius:50%;
-  left:-150px;
-  bottom:-170px;
+  right:-170px;
+  top:-190px;
 }
 
-.hero-grid{
+.hero-inner{
+  width:100%;
+  max-width:1200px;
+  margin:auto;
+  padding:75px 20px;
+  display:grid;
+  grid-template-columns:1.12fr .88fr;
+  gap:55px;
+  align-items:center;
   position:relative;
   z-index:2;
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  align-items:center;
-  gap:70px;
 }
 
-.hero-content{
-  animation:fadeUp .9s ease both;
-}
-
-.eyebrow{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  color:var(--gold2);
-  font-size:12px;
-  letter-spacing:3px;
-  text-transform:uppercase;
+.badge{
+  display:inline-block;
+  padding:7px 14px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.08);
+  border-radius:30px;
+  color:#ffe4a6;
   font-weight:700;
-  margin-bottom:20px;
-}
-
-.eyebrow:before{
-  content:"";
-  width:38px;
-  height:1px;
-  background:var(--gold);
+  font-size:13px;
 }
 
 .hero h1{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(45px,6vw,76px);
-  line-height:1.03;
-  font-weight:600;
-  max-width:720px;
+  font-size:clamp(42px,6vw,70px);
+  line-height:1.04;
+  margin:19px 0 14px;
+  letter-spacing:-1px;
 }
 
 .hero h1 span{
-  color:var(--gold2);
+  color:var(--gold);
 }
 
-.hero-sub{
-  max-width:600px;
-  color:#cbd5e1;
+.hero p{
+  max-width:650px;
   font-size:17px;
-  margin:24px 0 34px;
+  color:#e7eefc;
+  margin-bottom:24px;
 }
 
-.hero-buttons{
+.buttons{
   display:flex;
-  gap:14px;
   flex-wrap:wrap;
+  gap:10px;
 }
 
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:14px 25px;
-  border-radius:50px;
-  font-weight:700;
-  font-size:14px;
-  transition:.3s;
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:9px;
+  font-weight:800;
+  transition:.2s;
 }
 
-.btn-gold{
-  background:linear-gradient(135deg,#b99047,#e5ca86);
-  color:#071426;
-  box-shadow:0 12px 35px rgba(201,164,92,.25);
+.btn:hover{
+  transform:translateY(-2px);
 }
 
-.btn-gold:hover{
-  transform:translateY(-3px);
+.primary{
+  background:var(--gold);
+  color:#102044;
 }
 
-.btn-outline{
-  border:1px solid rgba(255,255,255,.3);
+.secondary{
+  border:1px solid rgba(255,255,255,.7);
   color:#fff;
-  background:rgba(255,255,255,.05);
+}
+
+.hero-card{
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.18);
+  padding:28px;
+  border-radius:24px;
+  text-align:center;
   backdrop-filter:blur(10px);
+  box-shadow:0 20px 60px rgba(0,0,0,.22);
 }
 
-.btn-outline:hover{
-  border-color:var(--gold);
-  color:var(--gold2);
-}
-
-/* HERO LOGO */
-
-.hero-visual{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  animation:fadeIn 1.2s ease both;
-}
-
-.logo-orbit{
-  width:390px;
-  height:390px;
+.hero-card img{
+  width:min(100%,300px);
+  aspect-ratio:1;
+  object-fit:cover;
   border-radius:50%;
-  border:1px solid rgba(201,164,92,.38);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
+  background:#fff;
+  border:7px solid #fff;
 }
 
-.logo-orbit:before,
-.logo-orbit:after{
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  border:1px solid rgba(255,255,255,.08);
+.hero-card h3{
+  margin-top:15px;
+  font-size:21px;
 }
 
-.logo-orbit:before{
-  inset:28px;
-}
-
-.logo-orbit:after{
-  inset:60px;
-}
-
-.hero-logo-card{
-  width:230px;
-  height:270px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.2);
-  backdrop-filter:blur(20px);
-  border-radius:28px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 35px 80px rgba(0,0,0,.25);
-  position:relative;
-  z-index:2;
-}
-
-.hero-logo-card img{
-  width:145px;
-  height:145px;
-  object-fit:contain;
-  margin-bottom:16px;
-}
-
-.hero-logo-card small{
-  color:var(--gold2);
-  letter-spacing:2px;
-  font-size:10px;
-  font-weight:700;
+.hero-card p{
+  margin:4px auto 0;
+  font-size:14px;
+  color:#dce7fa;
 }
 
 /* ================= STATS ================= */
 
-.stats-wrap{
+.stats{
+  max-width:1100px;
+  margin:-45px auto 0;
   position:relative;
-  margin-top:-58px;
   z-index:5;
+  padding:0 20px;
 }
 
-.stats{
+.stats-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   background:#fff;
-  border:1px solid rgba(7,20,38,.08);
-  border-radius:24px;
-  box-shadow:var(--shadow);
+  border-radius:16px;
+  box-shadow:0 14px 35px rgba(15,35,70,.11);
   overflow:hidden;
+  border:1px solid #edf0f5;
 }
 
 .stat{
-  padding:30px 20px;
   text-align:center;
-  position:relative;
+  padding:22px 10px;
+  border-right:1px solid #e8edf5;
 }
 
-.stat:not(:last-child):after{
-  content:"";
-  position:absolute;
-  right:0;
-  top:28px;
-  height:55px;
-  width:1px;
-  background:#e8e8e8;
+.stat:last-child{
+  border-right:0;
 }
 
 .stat strong{
   display:block;
-  font-family:"Playfair Display",serif;
+  font-size:25px;
   color:var(--navy);
-  font-size:29px;
 }
 
 .stat span{
   color:var(--muted);
   font-size:12px;
-  text-transform:uppercase;
-  letter-spacing:1px;
 }
 
-/* ================= SECTIONS ================= */
+/* ================= COMMON ================= */
 
 section{
-  padding:105px 0;
+  padding:82px 20px;
 }
 
-.section-head{
+.container{
+  max-width:1150px;
+  margin:auto;
+}
+
+.title{
   text-align:center;
-  max-width:720px;
-  margin:0 auto 55px;
+  margin-bottom:40px;
 }
 
-.section-kicker{
-  color:var(--gold);
-  font-size:11px;
-  text-transform:uppercase;
-  letter-spacing:3px;
+.title .small{
+  color:#b7862d;
   font-weight:800;
-  margin-bottom:10px;
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-size:11px;
 }
 
-.section-head h2{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(34px,4vw,50px);
-  line-height:1.15;
+.title h2{
   color:var(--navy);
+  font-size:36px;
+  line-height:1.2;
+  margin:6px 0;
 }
 
-.section-head p{
+.title p{
   color:var(--muted);
-  margin-top:15px;
 }
 
 /* ================= ABOUT ================= */
 
 .about{
-  background:var(--cream);
+  background:#f8fafc;
 }
 
 .about-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:70px;
+  gap:42px;
   align-items:center;
 }
 
-.about-card{
-  position:relative;
-  min-height:460px;
-  background:linear-gradient(145deg,#0a1b31,#12345c);
-  border-radius:30px;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-  padding:45px;
-  display:flex;
-  align-items:flex-end;
-}
-
-.about-card:before{
-  content:"";
-  position:absolute;
-  width:300px;
-  height:300px;
-  border:1px solid rgba(201,164,92,.25);
-  border-radius:50%;
-  top:-120px;
-  right:-100px;
-}
-
-.about-card-inner{
-  position:relative;
-  z-index:2;
-}
-
-.about-card .year{
-  font-family:"Playfair Display",serif;
-  font-size:100px;
-  color:rgba(255,255,255,.08);
-  line-height:1;
-}
-
-.about-card h3{
-  color:#fff;
-  font-family:"Playfair Display",serif;
-  font-size:32px;
-}
-
-.about-card p{
-  color:#bdc8d7;
-  margin-top:10px;
-}
-
 .about-text h3{
-  font-family:"Playfair Display",serif;
-  font-size:38px;
   color:var(--navy);
-  margin-bottom:20px;
+  font-size:26px;
+  margin-bottom:13px;
 }
 
 .about-text p{
-  color:var(--muted);
-  margin-bottom:18px;
+  color:#526074;
+  margin-bottom:14px;
 }
 
-.gold-line{
-  width:70px;
-  height:3px;
-  background:linear-gradient(90deg,var(--gold),transparent);
-  margin:25px 0;
+.feature-list{
+  display:grid;
+  gap:11px;
+  margin-top:18px;
+}
+
+.feature{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  background:#fff;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #edf0f5;
+  box-shadow:0 4px 15px rgba(0,0,0,.035);
+}
+
+.feature-icon{
+  font-size:21px;
 }
 
 /* ================= PRINCIPAL ================= */
 
-.principal{
-  background:#fff;
-}
-
-.principal-box{
-  background:linear-gradient(135deg,#071426,#102c4e);
+.message{
+  background:linear-gradient(135deg,var(--navy),var(--blue));
   color:#fff;
-  border-radius:30px;
-  padding:55px;
+  border-radius:22px;
+  padding:40px;
   position:relative;
   overflow:hidden;
+  box-shadow:0 12px 30px rgba(11,31,68,.12);
 }
 
-.principal-box:after{
+.message:after{
   content:"“";
   position:absolute;
-  right:45px;
-  top:-35px;
-  font-family:Georgia,serif;
-  font-size:230px;
-  color:rgba(201,164,92,.12);
+  right:20px;
+  top:-38px;
+  font-size:170px;
+  color:rgba(255,255,255,.07);
 }
 
-.principal-content{
-  position:relative;
-  z-index:2;
-  max-width:800px;
+.message h3{
+  font-size:27px;
+  margin-bottom:14px;
 }
 
-.principal-label{
-  color:var(--gold2);
-  text-transform:uppercase;
-  letter-spacing:2px;
-  font-size:11px;
-  font-weight:800;
-}
-
-.principal-box h3{
-  font-family:"Playfair Display",serif;
-  font-size:38px;
-  margin:10px 0 18px;
-}
-
-.principal-box p{
-  color:#c8d2df;
+.message p{
+  color:#e6edfb;
+  max-width:850px;
+  font-size:16px;
 }
 
 .signature{
-  margin-top:25px;
-  color:var(--gold2);
-  font-family:"Playfair Display",serif;
-  font-size:20px;
+  margin-top:20px;
+  color:#ffd98d;
+  font-weight:800;
 }
 
 /* ================= CLASSES ================= */
 
-.classes{
-  background:#f7f8fa;
-}
-
-.class-grid{
+.cards{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:22px;
+  gap:20px;
 }
 
-.class-card{
+.card{
   background:#fff;
-  border:1px solid #e7e9ed;
-  border-radius:24px;
-  padding:32px;
-  position:relative;
-  overflow:hidden;
-  transition:.35s;
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:27px;
+  box-shadow:0 8px 25px rgba(15,35,70,.055);
+  transition:.2s;
 }
 
-.class-card:hover{
-  transform:translateY(-8px);
-  border-color:var(--border);
-  box-shadow:0 20px 50px rgba(8,25,45,.1);
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px rgba(15,35,70,.10);
 }
 
-.class-number{
-  position:absolute;
-  right:20px;
-  top:8px;
-  font-family:"Playfair Display",serif;
-  font-size:75px;
-  color:#f0f1f3;
-  font-weight:700;
+.card-icon{
+  width:52px;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#eef4ff;
+  border-radius:13px;
+  font-size:25px;
+  margin-bottom:16px;
 }
 
-.class-card h3{
-  position:relative;
-  z-index:2;
-  font-family:"Playfair Display",serif;
-  font-size:27px;
+.card h3{
   color:var(--navy);
-  margin-top:35px;
+  font-size:20px;
+  margin-bottom:7px;
 }
 
-.class-card p{
+.card p{
   color:var(--muted);
   font-size:14px;
-  margin-top:7px;
-}
-
-.card-line{
-  width:40px;
-  height:2px;
-  background:var(--gold);
-  margin-top:22px;
 }
 
 /* ================= FEES ================= */
 
-.fees{
+#fees{
+  background:#fff;
+}
+
+.fee-table-container{
+  max-width:850px;
+  margin:auto;
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow:0 9px 30px rgba(15,35,70,.07);
+  overflow-x:auto;
+}
+
+.fee-table-container h2{
+  text-align:center;
+  color:var(--navy);
+  margin-bottom:20px;
+  font-size:27px;
+}
+
+.fee-table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:650px;
+}
+
+.fee-table th,
+.fee-table td{
+  padding:12px 15px;
+  border:1px solid #edf0f5;
+  text-align:center;
+  font-size:14px;
+}
+
+.fee-table th{
   background:var(--navy);
   color:#fff;
 }
 
-.fees .section-head h2{
-  color:#fff;
+.fee-table tr:nth-child(even){
+  background:#f8fafc;
 }
 
-.fees .section-head p{
-  color:#aebaca;
-}
-
-.fee-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:25px;
-}
-
-.fee-card{
-  border:1px solid rgba(201,164,92,.3);
-  background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));
-  border-radius:26px;
-  padding:35px;
-  backdrop-filter:blur(10px);
-}
-
-.fee-card h3{
-  font-family:"Playfair Display",serif;
-  color:var(--gold2);
-  font-size:28px;
-}
-
-.fee-price{
-  margin:20px 0;
-  font-size:34px;
-  font-weight:700;
-}
-
-.fee-price span{
+.fee-note{
+  text-align:center;
+  margin-top:15px;
+  color:var(--muted);
   font-size:13px;
-  font-weight:400;
-  color:#aebaca;
-}
-
-.fee-info{
-  padding-top:20px;
-  border-top:1px solid rgba(255,255,255,.12);
-  color:#c4cedb;
-  font-size:14px;
 }
 
 /* ================= NOTICE ================= */
 
-.notice{
-  background:var(--cream);
+.notice-section{
+  background:#f8fafc;
 }
 
-.notice-box{
+.notice-board{
   max-width:850px;
   margin:auto;
   background:#fff;
-  border-radius:25px;
-  padding:35px;
-  box-shadow:var(--shadow);
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow:0 9px 30px rgba(0,0,0,.055);
+  overflow:hidden;
+}
+
+.notice-head{
+  background:var(--navy);
+  color:#fff;
+  padding:17px 24px;
+  font-size:19px;
+  font-weight:800;
 }
 
 .notice-item{
+  padding:17px 24px;
+  border-bottom:1px solid #edf0f5;
   display:flex;
-  gap:20px;
-  padding:22px 0;
-  border-bottom:1px solid #eceef1;
+  gap:14px;
 }
 
 .notice-item:last-child{
   border-bottom:0;
 }
 
-.notice-icon{
-  min-width:48px;
-  height:48px;
-  border-radius:50%;
-  background:rgba(201,164,92,.12);
-  color:var(--gold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:800;
-}
-
-.notice-item h3{
-  color:var(--navy);
-  font-size:17px;
-}
-
 .notice-item p{
   color:var(--muted);
   font-size:14px;
-  margin-top:3px;
+}
+
+.notice-date{
+  min-width:65px;
+  height:max-content;
+  text-align:center;
+  background:#fff4db;
+  color:#7b581d;
+  padding:6px;
+  border-radius:8px;
+  font-weight:800;
+  font-size:11px;
 }
 
 /* ================= GALLERY ================= */
 
 .gallery{
-  background:#fff;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
 }
 
-.gallery-grid{
-  columns:3 250px;
-  column-gap:18px;
-}
-
-.gallery-item{
-  break-inside:avoid;
-  margin-bottom:18px;
-  position:relative;
-  overflow:hidden;
-  border-radius:20px;
-  background:#eee;
-}
-
-.gallery-item img{
+.gallery img{
   width:100%;
-  transition:.5s;
+  height:240px;
+  object-fit:cover;
+  border-radius:14px;
+  display:block;
+  border:1px solid #e1e7f0;
+  transition:.2s;
 }
 
-.gallery-item:hover img{
-  transform:scale(1.06);
-}
-
-.gallery-item:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(transparent 55%,rgba(0,0,0,.3));
-  pointer-events:none;
+.gallery img:hover{
+  transform:scale(1.015);
+  box-shadow:0 10px 25px rgba(0,0,0,.10);
 }
 
 /* ================= ADMISSION ================= */
 
 .admission{
-  background:
-    radial-gradient(circle at 10% 20%,rgba(201,164,92,.15),transparent 25%),
-    linear-gradient(135deg,#071426,#102b4c);
-  color:#fff;
+  background:linear-gradient(135deg,#fff8e8,#fffdf7);
 }
 
 .admission-box{
-  text-align:center;
-  max-width:800px;
-  margin:auto;
-}
-
-.admission-box .section-kicker{
-  color:var(--gold2);
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:30px;
+  background:#fff;
+  padding:38px;
+  border-radius:21px;
+  border:1px solid #f1e7d0;
+  box-shadow:0 9px 30px rgba(70,50,10,.06);
 }
 
 .admission-box h2{
-  font-family:"Playfair Display",serif;
-  font-size:clamp(36px,5vw,58px);
+  color:var(--navy);
+  margin-bottom:7px;
 }
 
 .admission-box p{
-  color:#c2ccda;
-  margin:18px auto 30px;
-  max-width:650px;
-}
-
-.admission-buttons{
-  display:flex;
-  justify-content:center;
-  gap:14px;
-  flex-wrap:wrap;
+  color:var(--muted);
 }
 
 /* ================= DOCUMENTS ================= */
 
-.documents{
-  background:#f7f8fa;
-}
-
-.document-grid{
+.documents-box{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:16px;
+  gap:15px;
 }
 
-.document{
-  padding:22px;
+.document-item{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
   background:#fff;
-  border-radius:18px;
-  border:1px solid #e8eaed;
-  display:flex;
-  align-items:center;
-  gap:13px;
-  transition:.3s;
+  border:1px solid var(--border);
+  padding:17px;
+  border-radius:13px;
+  box-shadow:0 5px 18px rgba(0,0,0,.04);
 }
 
-.document:hover{
-  transform:translateY(-4px);
-  border-color:var(--border);
+.document-item > span{
+  font-size:23px;
 }
 
-.document-icon{
-  width:38px;
-  height:38px;
+.document-item h3{
+  color:var(--navy);
+  font-size:15px;
+  margin-bottom:3px;
+}
+
+.document-item p{
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.5;
+}
+
+.admission-note{
+  margin-top:25px;
+  padding:18px;
   border-radius:12px;
-  background:rgba(201,164,92,.13);
-  color:var(--gold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:800;
+  background:#fff3cd;
+  border:1px solid #ffe69c;
+  text-align:center;
 }
 
-.document span{
-  font-size:13px;
-  font-weight:600;
-  color:#3a4554;
+.admission-note h3{
+  margin-bottom:7px;
+}
+
+.admission-note p{
+  margin:0;
 }
 
 /* ================= CONTACT ================= */
 
 .contact{
-  background:#fff;
+  background:#f5f7fb;
 }
 
 .contact-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
 }
 
-.contact-card{
-  border:1px solid #e7e9ed;
-  border-radius:23px;
-  padding:32px;
-  text-align:center;
-  transition:.3s;
+.contact-box{
+  background:#fff;
+  border-radius:17px;
+  padding:28px;
+  border:1px solid var(--border);
+  box-shadow:0 7px 25px rgba(0,0,0,.05);
 }
 
-.contact-card:hover{
-  box-shadow:0 20px 45px rgba(8,25,45,.08);
-  transform:translateY(-5px);
-}
-
-.contact-icon{
-  width:55px;
-  height:55px;
-  border-radius:50%;
-  background:rgba(201,164,92,.12);
-  color:var(--gold);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:0 auto 17px;
-  font-size:20px;
-}
-
-.contact-card h3{
-  font-family:"Playfair Display",serif;
-  font-size:22px;
+.contact-box h3{
   color:var(--navy);
+  margin-bottom:6px;
 }
 
-.contact-card p{
+.contact-box p{
   color:var(--muted);
-  font-size:14px;
-  margin-top:7px;
+  margin-bottom:17px;
+}
+
+.contact-box a{
+  color:var(--blue);
+  font-weight:800;
+}
+
+.contact-box .btn{
+  margin-right:7px;
+  margin-bottom:5px;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-  background:#050f1d;
+  background:#07152f;
+  color:#b9c7df;
+  padding:34px 20px;
+  text-align:center;
+}
+
+footer strong{
   color:#fff;
-  padding:55px 0 25px;
-}
-
-.footer-grid{
-  display:grid;
-  grid-template-columns:1.5fr 1fr 1fr;
-  gap:50px;
-  padding-bottom:40px;
-  border-bottom:1px solid rgba(255,255,255,.1);
-}
-
-.footer-brand{
-  display:flex;
-  gap:14px;
-  align-items:center;
-  margin-bottom:18px;
-}
-
-.footer-brand img{
-  width:60px;
-  height:60px;
-  object-fit:contain;
-}
-
-.footer-brand strong{
-  font-family:"Playfair Display",serif;
-  font-size:22px;
-}
-
-footer p{
-  color:#8e9bad;
-  font-size:13px;
-}
-
-.footer-title{
-  color:var(--gold2);
-  font-size:12px;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:17px;
-  font-weight:800;
 }
 
 .footer-links{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
+  margin:14px 0;
 }
 
 .footer-links a{
-  color:#b5bfcc;
+  color:#d9e3f5;
+  margin:0 8px;
   font-size:13px;
-  transition:.3s;
 }
 
-.footer-links a:hover{
-  color:var(--gold2);
-}
+/* ================= WHATSAPP ================= */
 
-.copyright{
-  text-align:center;
-  color:#687587;
-  font-size:12px;
-  padding-top:23px;
-}
-
-/* ================= FLOATING BUTTONS ================= */
-
-.float-buttons{
+.whatsapp{
   position:fixed;
-  right:20px;
-  bottom:20px;
-  z-index:1000;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-}
-
-.float-btn{
-  width:53px;
-  height:53px;
+  right:18px;
+  bottom:18px;
+  width:56px;
+  height:56px;
   border-radius:50%;
+  background:#25d366;
+  color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  color:#fff;
-  font-size:20px;
-  box-shadow:0 10px 25px rgba(0,0,0,.2);
-  transition:.3s;
+  font-size:26px;
+  box-shadow:0 7px 22px rgba(0,0,0,.22);
+  z-index:999;
 }
 
-.float-btn:hover{
-  transform:scale(1.1);
-}
-
-.call-btn{
-  background:var(--navy);
-  border:1px solid var(--gold);
-}
-
-.whatsapp-btn{
-  background:#168c4b;
-}
-
-/* ================= ANIMATION ================= */
-
-@keyframes fadeUp{
-  from{
-    opacity:0;
-    transform:translateY(25px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@keyframes fadeIn{
-  from{
-    opacity:0;
-    transform:scale(.92);
-  }
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
-}
-
-.reveal{
-  animation:fadeUp .8s ease both;
+.whatsapp:before{
+  content:"💬";
 }
 
 /* ================= RESPONSIVE ================= */
 
 @media(max-width:900px){
 
-  .nav-links{
-    position:absolute;
-    top:82px;
-    left:0;
-    right:0;
-    background:#fff;
-    padding:20px 5%;
-    display:none;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    box-shadow:0 20px 30px rgba(0,0,0,.08);
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .nav-links a{
-    padding:14px 0;
-    border-bottom:1px solid #eee;
-  }
-
-  .nav-admission{
-    text-align:center;
-    margin-top:12px;
-  }
-
-  .menu-btn{
-    display:block;
-  }
-
-  .hero{
-    min-height:auto;
-    padding:90px 0 120px;
-  }
-
-  .hero-grid{
-    grid-template-columns:1fr;
-    gap:55px;
-    text-align:center;
-  }
-
-  .hero-sub{
-    margin-left:auto;
-    margin-right:auto;
-  }
-
-  .hero-buttons{
-    justify-content:center;
-  }
-
-  .hero-visual{
-    order:-1;
-  }
-
-  .logo-orbit{
-    width:300px;
-    height:300px;
-  }
-
-  .hero-logo-card{
-    width:190px;
-    height:225px;
-  }
-
-  .hero-logo-card img{
-    width:115px;
-    height:115px;
-  }
-
-  .stats{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .stat:nth-child(2):after{
-    display:none;
-  }
-
-  .about-grid{
-    grid-template-columns:1fr;
-  }
-
-  .class-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .document-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
+  .hero-inner,
+  .about-grid,
   .contact-grid{
     grid-template-columns:1fr;
   }
 
-  .footer-grid{
+  .hero{
+    min-height:auto;
+  }
+
+  .hero-inner{
+    padding:65px 20px;
+    text-align:center;
+  }
+
+  .hero p{
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+  .buttons{
+    justify-content:center;
+  }
+
+  .stats-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .stat{
+    border-bottom:1px solid #e8edf5;
+  }
+
+  .cards{
+    grid-template-columns:1fr;
+  }
+
+  .documents-box{
     grid-template-columns:1fr 1fr;
   }
 
+  nav a{
+    padding:8px 6px;
+    font-size:11px;
+  }
+
+  .nav-btn{
+    display:none;
+  }
 }
 
 @media(max-width:600px){
 
   .topbar-inner{
     justify-content:center;
-    text-align:center;
   }
 
-  .topbar-inner span{
+  .topbar-inner span:first-child{
     display:none;
   }
 
-  .navbar{
-    height:72px;
+  .brand-text{
+    font-size:13px;
   }
 
   .brand img{
-    width:48px;
-    height:48px;
+    width:49px;
+    height:49px;
   }
 
-  .brand-text strong{
-    font-size:17px;
+  nav{
+    display:none;
   }
 
-  .hero{
-    padding-top:65px;
+  section{
+    padding:62px 17px;
+  }
+
+  .title{
+    margin-bottom:30px;
+  }
+
+  .title h2{
+    font-size:29px;
   }
 
   .hero h1{
     font-size:45px;
   }
 
-  .hero-sub{
-    font-size:15px;
-  }
-
-  .logo-orbit{
-    width:260px;
-    height:260px;
-  }
-
-  .hero-logo-card{
-    width:165px;
-    height:200px;
-  }
-
-  .hero-logo-card img{
-    width:100px;
-    height:100px;
-  }
-
-  section{
-    padding:75px 0;
-  }
-
-  .stats-wrap{
-    margin-top:-40px;
+  .hero-card{
+    padding:23px;
   }
 
   .stats{
-    border-radius:18px;
+    margin-top:-30px;
+    padding:0 15px;
   }
 
   .stat{
-    padding:22px 10px;
+    padding:19px 8px;
   }
 
   .stat strong{
-    font-size:23px;
+    font-size:22px;
   }
 
   .stat span{
-    font-size:9px;
+    font-size:11px;
   }
 
-  .about-card{
-    min-height:350px;
-    padding:30px;
+  .message{
+    padding:28px;
   }
 
-  .about-card .year{
-    font-size:75px;
+  .message h3{
+    font-size:24px;
   }
 
-  .about-text h3{
-    font-size:31px;
+  .fee-table-container{
+    padding:17px;
   }
 
-  .principal-box{
-    padding:32px 25px;
+  .fee-table-container h2{
+    font-size:23px;
   }
 
-  .principal-box h3{
-    font-size:30px;
-  }
-
-  .class-grid,
-  .fee-grid,
-  .document-grid{
+  .gallery{
     grid-template-columns:1fr;
   }
 
-  .gallery-grid{
-    columns:2 140px;
+  .gallery img{
+    height:230px;
   }
 
-  .gallery-item{
-    margin-bottom:10px;
-    border-radius:13px;
-  }
-
-  .notice-box{
-    padding:22px;
-  }
-
-  .notice-item{
-    gap:13px;
-  }
-
-  .footer-grid{
+  .admission-box{
     grid-template-columns:1fr;
-    gap:30px;
+    text-align:center;
+    padding:28px;
   }
 
-  .float-buttons{
-    right:15
+  .documents-box{
+    grid-template-columns:1fr;
+  }
+
+  .contact-box{
+    padding:24px;
+  }
+
+  .contact-box .btn{
+    padding:11px 15px;
+    font-size:13px;
+  }
+
+  .whatsapp{
+    width:53px;
+    height:53px;
+    right:15px;
+    bottom:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📍 Aurangabad, Bulandshahr, Uttar Pradesh</span>
+    <span>📞 7409777967</span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="nav">
+
+    <a class="brand" href="#home">
+      <img src="logo.jpeg" alt="M.D Memorial School Logo">
+
+      <div class="brand-text">
+        M.D MEMORIAL SCHOOL
+        <small>LEARN • GROW • SHINE</small>
+      </div>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#classes">Classes</a>
+      <a href="#notice">Notice</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#fees">Fees</a>
+      <a href="#contact">Contact</a>
+      <a class="nav-btn" href="#admission">Admission</a>
+    </nav>
+
+  </div>
+</header>
+
+<main>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-inner">
+
+    <div>
+
+      <span class="badge">🎓 Nursery to Class 5</span>
+
+      <h1>
+        M.D Memorial<br>
+        <span>School</span>
+      </h1>
+
+      <p>
+        ज्ञान, संस्कार और उज्ज्वल भविष्य की ओर एक मजबूत कदम।
+        बच्चों की शिक्षा, संस्कार और सर्वांगीण विकास के लिए समर्पित।
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="#admission">🎓 Admissions</a>
+        <a class="btn secondary" href="#about">Explore School</a>
+      </div>
+
+    </div>
+
+    <div class="hero-card">
+
+      <img src="logo.jpeg" alt="M.D Memorial School">
+
+      <h3>Welcome to M.D Memorial School</h3>
+
+      <p>
+        Aurangabad, Bulandshahr
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<div class="stats">
+
+  <div class="stats-grid">
+
+    <div class="stat">
+      <strong>1997</strong>
+      <span>Established</span>
+    </div>
+
+    <div class="stat">
+      <strong>Nur–5</strong>
+      <span>Classes</span>
+    </div>
+
+    <div class="stat">
+      <strong>📚</strong>
+      <span>Quality Education</span>
+    </div>
+
+    <div class="stat">
+      <strong>❤️</strong>
+      <span>Child Focused</span>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">About Us</div>
+      <h2>Growing Minds, Building Futures</h2>
+      <p>एक सुरक्षित और सीखने वाला वातावरण</p>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-text">
+
+        <h3>हमारा विद्यालय</h3>
+
+        <p>
+          <strong>M.D Memorial School</strong> Aurangabad,
+          Bulandshahr में Nursery से Class 5 तक के विद्यार्थियों
+          के लिए शिक्षा प्रदान करता है।
+        </p>
+
+        <p>
+          हमारा उद्देश्य बच्चों में शिक्षा के साथ अच्छे संस्कार,
+          आत्मविश्वास, अनुशासन और रचनात्मक सोच विकसित करना है।
+        </p>
+
+        <div class="feature-list">
+
+          <div class="feature">
+            <div class="feature-icon">📚</div>
+            <div>शिक्षा पर विशेष ध्यान</div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">🌱</div>
+            <div>बच्चों का सर्वांगीण विकास</div>
+          </div>
+
+          <div class="feature">
+            <div class="feature-icon">⭐</div>
+            <div>संस्कार और अनुशासन</div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="message">
+
+        <h3>Principal's Message</h3>
+
+        <p>
+          हमारा विश्वास है कि प्रत्येक बच्चा विशेष है।
+          हमारा प्रयास है कि बच्चों को ऐसा वातावरण मिले
+          जहाँ वे सीखने के साथ-साथ आत्मविश्वास और अच्छे
+          संस्कार भी विकसित कर सकें।
+        </p>
+
+        <div class="signature">
+          — Principal, M.D Memorial School
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CLASSES ================= -->
+
+<section id="classes">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Academics</div>
+      <h2>Our Classes</h2>
+      <p>बच्चों की learning journey की मजबूत शुरुआत</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="card-icon">🧸</div>
+        <h3>Nursery</h3>
+        <p>
+          खेल और activities के माध्यम से शुरुआती learning
+          और basic concepts पर focus।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">📖</div>
+        <h3>LKG & UKG</h3>
+        <p>
+          बच्चों की मजबूत foundation के लिए learning,
+          activities और creative development।
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <h3>Class 1–5</h3>
+        <p>
+          Academic foundation, confidence और overall
+          development पर विशेष ध्यान।
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FEES ================= -->
+
+<section id="fees">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Fee Structure</div>
+      <h2>Fees Structure</h2>
+      <p>Session 2026-27</p>
+    </div>
+
+    <div class="fee-table-container">
+
+      <table class="fee-table">
+
+        <thead>
+          <tr>
+            <th>Class / Standard</th>
+            <th>Monthly Tuition Fee</th>
+            <th>Exam, Activity & Cultural Fee</th>
+          </tr>
+        </thead>
+
+        <tbody>
+
+          <tr>
+            <td><strong>Nursery to UKG</strong></td>
+            <td>₹ 350 / month</td>
+            <td>₹ 600</td>
+          </tr>
+
+          <tr>
+            <td><strong>Class 1st to 5th</strong></td>
+            <td>₹ 400 / month</td>
+            <td>₹ 600</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+      <div class="fee-note">
+        * Note: Monthly Tuition Fee har mahine ki 10 tareekh tak jama karni hogi.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= NOTICE ================= -->
+
+<section class="notice-section" id="notice">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Latest Updates</div>
+      <h2>Notice Board</h2>
+      <p>विद्यालय से संबंधित महत्वपूर्ण सूचनाएँ</p>
+    </div>
+
+    <div class="notice-board">
+
+      <div class="notice-head">
+        📢 School Notices
+      </div>
+
+      <div class="notice-item">
+
+        <div class="notice-date">
+          NOTICE
+        </div>
+
+        <div>
+          <strong>Important School Updates</strong>
+          <p>
+            विद्यालय की नई सूचना यहाँ update की जा सकती है।
+          </p>
+        </div>
+
+      </div>
+
+      <div class="notice-item">
+
+        <div class="notice-date">
+          INFO
+        </div>
+
+        <div>
+          <strong>Admission Information</strong>
+          <p>
+            Nursery से Class 5 तक admission की जानकारी के लिए
+            school office से संपर्क करें।
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Our Memories</div>
+      <h2>School Gallery</h2>
+      <p>विद्यालय की activities और events की झलक</p>
+    </div>
+
+    <div class="gallery">
+
+      <img src="a5b00ca8-6e49-4309-b53b-1b7a1586dd9e.jpeg"
+           alt="School Gallery Photo 1">
+
+      <img src="15ee2656-ff28-40c1-97f3-4ce6c5d04ca5.jpeg"
+           alt="School Gallery Photo 2">
+
+      <img src="1e7a30a4-c8b3-4405-9297-bbceee85123e.jpeg"
+           alt="School Gallery Photo 3">
+
+      <img src="1f491bd3-0e0c-4568-b970-43b2985cdb1e.jpeg"
+           alt="School Gallery Photo 4">
+
+      <img src="2EADB222-24B2-4D4F-A2B3-64A13E3DFEBB.png"
+           alt="School Gallery Photo 5">
+
+      <img src="788853e2-ff2a-417d-ab30-7d62065f4b50.jpeg"
+           alt="School Gallery Photo 6">
+
+      <img src="IMG_0828.jpeg"
+           alt="School Gallery Photo 7">
+
+      <img src="IMG_0843.jpeg"
+           alt="School Gallery Photo 8">
+
+      <img src="IMG_0870.jpeg"
+           alt="School Gallery Photo 9">
+
+      <img src="d5fb95f0-c573-4145-a41b-9b74d47ccde9.jpeg"
+           alt="School Gallery Photo 10">
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= ADMISSION ================= -->
+
+<section class="admission" id="admission">
+
+  <div class="container">
+
+    <div class="admission-box">
+
+      <div>
+        <h2>🎓 Admissions Open</h2>
+
+        <p>
+          Nursery से Class 5 तक admission information
+          के लिए school office से संपर्क करें।
+        </p>
+      </div>
+
+      <a class="btn primary" href="tel:7409777967">
+        📞 Call School
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= REQUIRED DOCUMENTS ================= -->
+
+<section id="documents">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Admission</div>
+      <h2>Required Documents</h2>
+      <p>प्रवेश के समय निम्नलिखित दस्तावेज़ आवश्यक हैं</p>
+    </div>
+
+    <div class="documents-box">
+
+      <div class="document-item">
+        <span>🪪</span>
+        <div>
+          <h3>Student Aadhaar Card</h3>
+          <p>विद्यार्थी का आधार कार्ड</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📄</span>
+        <div>
+          <h3>Birth Certificate</h3>
+          <p>विद्यार्थी का आधार कार्ड उपलब्ध न होने पर जन्म प्रमाण पत्र आवश्यक है</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>🔢</span>
+        <div>
+          <h3>PEN Number</h3>
+          <p>विद्यार्थी का PEN Number</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📑</span>
+        <div>
+          <h3>Previous School Report Card / Marksheet</h3>
+          <p>पिछले विद्यालय की रिपोर्ट कार्ड / मार्कशीट</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📋</span>
+        <div>
+          <h3>Transfer Certificate (TC)</h3>
+          <p>स्थानांतरण प्रमाण पत्र, यदि लागू हो</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📸</span>
+        <div>
+          <h3>Passport Size Photographs</h3>
+          <p>विद्यार्थी के पासपोर्ट साइज फोटो</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>👨‍👩‍👧</span>
+        <div>
+          <h3>Parent / Guardian Aadhaar Card</h3>
+          <p>माता-पिता / अभिभावक का आधार कार्ड</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>🏠</span>
+        <div>
+          <h3>Address Proof</h3>
+          <p>पते का प्रमाण</p>
+        </div>
+      </div>
+
+      <div class="document-item">
+        <span>📱</span>
+        <div>
+          <h3>WhatsApp Mobile Number</h3>
+          <p>अभिभावक का सक्रिय WhatsApp मोबाइल नंबर</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="admission-note">
+
+      <h3>⚠️ Important Admission Note</h3>
+
+      <p>
+        <strong>₹500 Admission Fee</strong> admission के समय देना compulsory है।
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="title">
+      <div class="small">Get In Touch</div>
+      <h2>Contact Us</h2>
+      <p>हमसे संपर्क करें</p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-box">
+
+        <h3>📍 School Address</h3>
+
+        <p>
+          Aurangabad, Bulandshahr,<br>
+          Uttar Pradesh
+        </p>
+
+        <h3>📞 Phone</h3>
+
+        <p>
+          <a href="tel:7409777967">
+            7409777967
+          </a>
+        </p>
+
+      </div>
+
+      <div class="contact-box">
+
+        <h3>🎓 Admissions</h3>
+
+        <p>
+          Admission, classes और school information
+          के लिए हमारे school office से संपर्क करें।
+        </p>
+
+        <a class="btn primary" href="tel:7409777967">
+          📞 Call Now
+        </a>
+
+        <a class="btn primary"
+           href="https://wa.me/917409777967?text=Hello%20M.D.%20Memorial%20School,%20I%20want%20information%20about%20admission."
+           target="_blank">
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <p>
+    <strong>M.D Memorial School</strong>
+    · Aurangabad, Bulandshahr
+  </p>
+
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#classes">Classes</a>
+    <a href="#notice">Notice</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <p>
+    Nursery to Class 5 · © 2026 All Rights Reserved
+  </p>
+
+</footer>
+
+<!-- ================= WHATSAPP ================= -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/917409777967"
+  target="_blank"
+  aria-label="WhatsApp School">
+</a>
+
+</body>
+</html>
