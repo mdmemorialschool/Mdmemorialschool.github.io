@@ -11,24 +11,22 @@
 <meta name="keywords" content="M.D Memorial School, MD Memorial School, school in Aurangabad, school in Bulandshahr, English medium school Aurangabad, Nursery to Class 5, school near Bulandshahr">
 
 <meta name="author" content="M.D Memorial School">
-
 <meta name="robots" content="index, follow">
-
 <meta name="language" content="English">
 
 <meta name="geo.region" content="IN-UP">
 <meta name="geo.placename" content="Aurangabad, Bulandshahr, Uttar Pradesh, India">
 
-<!-- Open Graph -->
 <meta property="og:title" content="M.D Memorial School | Aurangabad, Bulandshahr">
 <meta property="og:description" content="M.D Memorial School — Learn • Grow • Shine. English medium education from Nursery to Class 5.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="M.D Memorial School">
 <meta property="og:locale" content="en_IN">
 
-<!-- Theme -->
 <meta name="theme-color" content="#071936">
+
 <style>
+
 :root{
   --navy:#071936;
   --blue:#123d7a;
@@ -95,7 +93,7 @@ button{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.94);
+  background:rgba(255,255,255,.96);
   backdrop-filter:blur(14px);
   border-bottom:1px solid rgba(7,25,54,.08);
 }
@@ -103,7 +101,7 @@ button{
 .nav-inner{
   max-width:1250px;
   margin:auto;
-  padding:15px 5%;
+  padding:12px 5%;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -135,28 +133,84 @@ button{
   letter-spacing:1.2px;
 }
 
-.nav-links{
+/* MENU BUTTON */
+
+.menu-btn{
+  width:48px;
+  height:48px;
+  border:0;
+  border-radius:14px;
+  background:var(--navy);
+  color:#fff;
+  font-size:25px;
+  cursor:pointer;
+  display:grid;
+  place-items:center;
+  transition:.3s;
+}
+
+.menu-btn:hover{
+  background:var(--blue);
+  transform:translateY(-2px);
+}
+
+/* DROPDOWN MENU */
+
+.menu-panel{
+  position:absolute;
+  top:100%;
+  right:5%;
+  width:270px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:10px;
+  box-shadow:0 20px 50px rgba(7,25,54,.18);
+  display:none;
+  animation:menuOpen .25s ease;
+}
+
+.menu-panel.show{
+  display:block;
+}
+
+@keyframes menuOpen{
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.menu-panel a{
   display:flex;
   align-items:center;
-  gap:25px;
-}
-
-.nav-links a{
-  font-size:14px;
+  gap:12px;
+  padding:14px 15px;
+  border-radius:13px;
+  color:var(--navy);
   font-weight:600;
-  color:#27334a;
-  transition:.25s;
+  font-size:14px;
+  transition:.2s;
 }
 
-.nav-links a:hover{
+.menu-panel a:hover{
+  background:var(--cream);
   color:var(--blue);
 }
 
-.nav-btn{
-  background:var(--navy)!important;
-  color:#fff!important;
-  padding:11px 18px;
-  border-radius:30px;
+.menu-panel .menu-admission{
+  background:var(--navy);
+  color:#fff;
+  margin-top:5px;
+}
+
+.menu-panel .menu-admission:hover{
+  background:var(--blue);
+  color:#fff;
 }
 
 /* HERO */
@@ -375,6 +429,34 @@ section{
 
 .section-head p{
   color:var(--muted);
+}
+
+/* PAGE SECTIONS */
+
+.page-section{
+  display:none;
+}
+
+.page-section.active{
+  display:block;
+  animation:pageOpen .35s ease;
+}
+
+@keyframes pageOpen{
+  from{
+    opacity:0;
+    transform:translateY(12px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* HOME */
+
+.home-section{
+  display:block;
 }
 
 /* ABOUT */
@@ -622,56 +704,6 @@ td{
   background:#fff;
 }
 
-.gallery-toggle,
-.document-toggle{
-  width:100%;
-  max-width:850px;
-  margin:0 auto;
-  padding:20px 25px;
-  border:1px solid var(--line);
-  border-radius:18px;
-  background:#fff;
-  color:var(--navy);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  font-size:17px;
-  font-weight:700;
-  cursor:pointer;
-  box-shadow:0 10px 30px rgba(7,25,54,.07);
-  transition:.3s;
-}
-
-.gallery-toggle:hover,
-.document-toggle:hover{
-  transform:translateY(-3px);
-  box-shadow:var(--shadow);
-}
-
-.gallery-hidden,
-.documents-hidden{
-  display:none;
-  max-width:1100px;
-  margin:28px auto 0;
-}
-
-.gallery-hidden.show,
-.documents-hidden.show{
-  display:block;
-  animation:openBox .35s ease;
-}
-
-@keyframes openBox{
-  from{
-    opacity:0;
-    transform:translateY(-12px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
 .gallery-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -730,10 +762,6 @@ td{
   background:var(--cream);
 }
 
-.documents-hidden{
-  max-width:1100px;
-}
-
 .document-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -787,6 +815,20 @@ td{
 .contact-card span{
   color:var(--muted);
   font-size:14px;
+}
+
+.map-btn{
+  display:inline-block;
+  background:var(--navy);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:25px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.map-btn:hover{
+  background:var(--blue);
 }
 
 /* FOOTER */
@@ -866,10 +908,6 @@ footer{
 
 @media(max-width:900px){
 
-  .nav-links{
-    display:none;
-  }
-
   .hero-inner{
     grid-template-columns:1fr;
     text-align:center;
@@ -937,6 +975,21 @@ footer{
 
   .brand-text strong{
     font-size:15px;
+  }
+
+  .brand-text small{
+    font-size:9px;
+  }
+
+  .menu-btn{
+    width:44px;
+    height:44px;
+  }
+
+  .menu-panel{
+    right:4%;
+    left:4%;
+    width:auto;
   }
 
   .hero{
@@ -1048,6 +1101,7 @@ footer{
     bottom:15px;
   }
 }
+
 </style>
 </head>
 
@@ -1059,110 +1113,196 @@ footer{
   <span>📞 7409777967</span>
 </div>
 
+
 <!-- NAVBAR -->
 <nav class="navbar">
+
   <div class="nav-inner">
 
-    <a href="#home" class="brand">
+    <a href="#home" class="brand" onclick="showPage('home')">
+
       <img src="logo.jpeg" alt="M.D Memorial School Logo">
+
       <div class="brand-text">
         <strong>M.D Memorial School</strong>
         <small>LEARN • GROW • SHINE</small>
       </div>
+
     </a>
 
-    <div class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#classes">Classes</a>
-      <a href="#fees">Fees</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-      <a href="#admission" class="nav-btn">Admission</a>
-    </div>
+
+    <!-- MENU BUTTON -->
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">
+      ☰
+    </button>
 
   </div>
+
+
+  <!-- MENU -->
+  <div class="menu-panel" id="menuPanel">
+
+    <a href="#home" onclick="showPage('home')">
+      🏠 Home
+    </a>
+
+    <a href="#about" onclick="showPage('about')">
+      🏫 About Us
+    </a>
+
+    <a href="#gallery" onclick="showPage('gallery')">
+      📸 School Gallery
+    </a>
+
+    <a href="#fees" onclick="showPage('fees')">
+      💰 Fee Structure
+    </a>
+
+    <a href="#documents" onclick="showPage('documents')">
+      📄 Required Documents
+    </a>
+
+    <a href="#contact" onclick="showPage('contact')">
+      📞 Contact Us
+    </a>
+
+    <a href="#admission" class="menu-admission" onclick="showPage('admission')">
+      🎓 Admission 2026–27
+    </a>
+
+  </div>
+
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-inner">
 
-    <div>
-      <span class="hero-tag">NURSERY TO CLASS 5</span>
+<!-- HOME PAGE -->
 
-      <h1>
-        M.D Memorial<br>
-        <span>School</span>
-      </h1>
+<div id="home" class="page-section active home-section">
 
-      <p class="hero-sub">
-        जहाँ शिक्षा केवल किताबों तक सीमित नहीं,
-        बल्कि बच्चों के उज्ज्वल भविष्य की नींव बनती है।
-      </p>
+  <!-- HERO -->
+  <section class="hero">
 
-      <div class="hero-buttons">
-        <a href="#admission" class="btn btn-gold">Apply for Admission</a>
-        <a href="#about" class="btn btn-outline">Explore School</a>
+    <div class="hero-inner">
+
+      <div>
+
+        <span class="hero-tag">
+          NURSERY TO CLASS 5
+        </span>
+
+        <h1>
+          M.D Memorial<br>
+          <span>School</span>
+        </h1>
+
+        <p class="hero-sub">
+          जहाँ शिक्षा केवल किताबों तक सीमित नहीं,
+          बल्कि बच्चों के उज्ज्वल भविष्य की नींव बनती है।
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#admission"
+             class="btn btn-gold"
+             onclick="showPage('admission')">
+             Apply for Admission
+          </a>
+
+          <a href="#about"
+             class="btn btn-outline"
+             onclick="showPage('about')">
+             Explore School
+          </a>
+
+        </div>
+
       </div>
+
+
+      <div class="hero-card">
+
+        <div class="logo-card">
+
+          <img
+            src="logo.jpeg"
+            alt="M.D Memorial School">
+
+        </div>
+
+        <div class="established">
+
+          <strong>1997</strong>
+          <small>Established</small>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="hero-card">
-      <div class="logo-card">
-        <img src="logo.jpeg" alt="M.D Memorial School">
-      </div>
+  </section>
 
-      <div class="established">
-        <strong>1997</strong>
-        <small>Established</small>
-      </div>
+
+  <!-- STATS -->
+
+  <div class="stats">
+
+    <div class="stat">
+      <strong>1997</strong>
+      <span>Established</span>
     </div>
 
-  </div>
-</section>
+    <div class="stat">
+      <strong>Nur–5</strong>
+      <span>Classes</span>
+    </div>
 
-<!-- STATS -->
-<div class="stats">
+    <div class="stat">
+      <strong>English</strong>
+      <span>Medium</span>
+    </div>
 
-  <div class="stat">
-    <strong>1997</strong>
-    <span>Established</span>
-  </div>
+    <div class="stat">
+      <strong>Smart</strong>
+      <span>Classes</span>
+    </div>
 
-  <div class="stat">
-    <strong>Nur–5</strong>
-    <span>Classes</span>
-  </div>
-
-  <div class="stat">
-    <strong>English</strong>
-    <span>Medium</span>
-  </div>
-
-  <div class="stat">
-    <strong>Smart</strong>
-    <span>Classes</span>
   </div>
 
 </div>
 
-<!-- ABOUT -->
-<section class="about" id="about">
+
+<!-- ABOUT PAGE -->
+
+<section class="about page-section" id="about">
+
   <div class="container">
 
     <div class="section-head">
-      <span class="eyebrow">ABOUT OUR SCHOOL</span>
-      <h2>Growing Minds, Building Futures</h2>
+
+      <span class="eyebrow">
+        ABOUT OUR SCHOOL
+      </span>
+
+      <h2>
+        Growing Minds, Building Futures
+      </h2>
+
       <p>
         M.D Memorial School is committed to providing quality education
         in a caring and supportive environment.
       </p>
+
     </div>
+
 
     <div class="about-grid">
 
       <div class="about-text">
-        <h3>Education With Care</h3>
+
+        <h3>
+          Education With Care
+        </h3>
 
         <p>
           M.D Memorial School was established in 1997 at Aurangabad,
@@ -1176,109 +1316,190 @@ footer{
           extra attention and guidance.
         </p>
 
+
         <div class="features">
 
           <div class="feature">
             <strong>English Medium</strong>
-            <span>Focus on confident communication and learning.</span>
+            <span>
+              Focus on confident communication and learning.
+            </span>
           </div>
 
           <div class="feature">
             <strong>Smart Classes</strong>
-            <span>Technology-supported classroom learning.</span>
+            <span>
+              Technology-supported classroom learning.
+            </span>
           </div>
 
           <div class="feature">
             <strong>Extra Classes</strong>
-            <span>Additional support wherever students need it.</span>
+            <span>
+              Additional support wherever students need it.
+            </span>
           </div>
 
           <div class="feature">
             <strong>Activities</strong>
-            <span>GK competitions, games, dance and singing.</span>
+            <span>
+              GK competitions, games, dance and singing.
+            </span>
           </div>
 
         </div>
+
       </div>
+
 
       <div>
 
         <div class="message">
-          <h4>Principal's Message</h4>
+
+          <h4>
+            Principal's Message
+          </h4>
+
           <p>
             Our aim is to create an environment where every child
             feels encouraged to learn, grow and shine. We believe
             that education becomes meaningful when children receive
             knowledge, values and individual attention together.
           </p>
+
           <br>
-          <strong>— Mrs. Poonam Devi, Principal</strong>
+
+          <strong>
+            — Mrs. Poonam Devi, Principal
+          </strong>
+
         </div>
 
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- CLASSES -->
-<section class="classes" id="classes">
+
+<!-- CLASSES PAGE -->
+
+<section class="classes page-section" id="classes">
+
   <div class="container">
 
     <div class="section-head">
-      <span class="eyebrow">ACADEMIC PROGRAM</span>
-      <h2>Our Classes</h2>
-      <p>Strong foundations for every stage of early education.</p>
+
+      <span class="eyebrow">
+        ACADEMIC PROGRAM
+      </span>
+
+      <h2>
+        Our Classes
+      </h2>
+
+      <p>
+        Strong foundations for every stage of early education.
+      </p>
+
     </div>
+
 
     <div class="class-grid">
 
       <div class="class-card">
-        <div class="class-number">01</div>
-        <h3>Nursery – UKG</h3>
+
+        <div class="class-number">
+          01
+        </div>
+
+        <h3>
+          Nursery – UKG
+        </h3>
+
         <p>
           Early learning with focus on basic concepts,
           communication, creativity and confidence.
         </p>
+
       </div>
 
+
       <div class="class-card">
-        <div class="class-number">02</div>
-        <h3>Class 1 – 3</h3>
+
+        <div class="class-number">
+          02
+        </div>
+
+        <h3>
+          Class 1 – 3
+        </h3>
+
         <p>
           Building strong academic foundations through
           engaging classroom learning and activities.
         </p>
+
       </div>
 
+
       <div class="class-card">
-        <div class="class-number">03</div>
-        <h3>Class 4 – 5</h3>
+
+        <div class="class-number">
+          03
+        </div>
+
+        <h3>
+          Class 4 – 5
+        </h3>
+
         <p>
           Developing independent learning, knowledge,
           discipline and preparation for higher classes.
         </p>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- FEES -->
-<section class="fees" id="fees">
+
+<!-- FEES PAGE -->
+
+<section class="fees page-section" id="fees">
+
   <div class="container">
 
     <div class="section-head">
-      <span class="eyebrow">FEE STRUCTURE</span>
-      <h2>Affordable Education</h2>
-      <p>Session 2026–27 fee structure.</p>
+
+      <span class="eyebrow">
+        FEE STRUCTURE
+      </span>
+
+      <h2>
+        Affordable Education
+      </h2>
+
+      <p>
+        Session 2026–27 fee structure.
+      </p>
+
     </div>
+
 
     <div class="fee-box">
 
-      <span class="session">SESSION 2026–27</span>
+      <span class="session">
+        SESSION 2026–27
+      </span>
 
       <table>
+
         <tr>
           <th>Class</th>
           <th>Monthly Fee</th>
@@ -1296,239 +1517,307 @@ footer{
           <td>₹400 / Month</td>
           <td>₹600</td>
         </tr>
+
       </table>
 
       <p class="fee-note">
         Monthly tuition fee is due by the 10th of every month.
-        Admission fee of ₹500 is compulsory at the time of admission.
       </p>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- NOTICE -->
-<section class="notice" id="notice">
+
+<!-- GALLERY PAGE -->
+
+<section class="gallery page-section" id="gallery">
+
   <div class="container">
 
     <div class="section-head">
-      <span class="eyebrow">LATEST INFORMATION</span>
-      <h2>Notice Board</h2>
-      <p>Important school updates and announcements.</p>
-    </div>
 
-    <div class="notice-box">
+      <span class="eyebrow">
+        OUR CAMPUS
+      </span>
 
-      <div class="notice-head">
-        <strong>School Notice</strong>
-        <span class="update">UPDATE</span>
-      </div>
+      <h2>
+        School Gallery
+      </h2>
 
-      <div class="notice-body">
-
-        <div class="notice-item">
-          <strong>Admissions Open</strong>
-          <p>Admissions are open for Nursery to Class 5.</p>
-        </div>
-
-        <div class="notice-item">
-          <strong>Fee Reminder</strong>
-          <p>Monthly tuition fee is due by the 10th of every month.</p>
-        </div>
-
-      </div>
+      <p>
+        Moments from M.D Memorial School.
+      </p>
 
     </div>
+
+
+    <div class="gallery-grid">
+
+      <img src="a5b00ca8-6e49-4309-b53b-1b7a1586dd9e.jpeg"
+           alt="M.D Memorial School">
+
+      <img src="15ee2656-ff28-40c1-97f3-4ce6c5d04ca5.jpeg"
+           alt="M.D Memorial School">
+
+      <img src="1e7a30a4-c8b3-4405-9297-bbceee85123e.jpeg"
+           alt="M.D Memorial School">
+
+      <img src="1f491bd3-0e0c-4568-b970-43b2985cdb1e.jpeg"
+           alt="M.D Memorial School">
+
+      <img src="2EADB222-24B2-4D4F-A2B3-64A13E3DFEBB.png"
+           alt="M.D Memorial School">
+
+      <img src="788853e2-ff2a-417d-ab30-7d62065f4b50.jpeg"
+           alt="M.D Memorial School">
+
+      <img src="IMG_0828.jpeg"
+           alt="M.D Memorial School">
+
+      <img src="IMG_0843.jpeg"
+           alt="M.D Memorial School">
+
+      <img src="IMG_0870.jpeg"
+           alt="M.D Memorial School">
+
+      <img src="d5fb95f0-c573-4145-a41b-9b74d47ccde9.jpeg"
+           alt="M.D Memorial School">
+
+    </div>
+
   </div>
+
 </section>
 
-<!-- GALLERY -->
-<section class="gallery" id="gallery">
+
+<!-- ADMISSION PAGE -->
+
+<section class="admission page-section" id="admission">
+
   <div class="container">
 
-    <div class="section-head">
-      <span class="eyebrow">OUR CAMPUS</span>
-      <h2>School Gallery</h2>
-      <p>Click below to explore moments from M.D Memorial School.</p>
-    </div>
+    <span class="eyebrow">
+      ADMISSIONS 2026–27
+    </span>
 
-    <button class="gallery-toggle" onclick="toggleGallery()">
-      <span>📸 View School Gallery</span>
-      <span id="galleryArrow">＋</span>
-    </button>
-
-    <div class="gallery-hidden" id="galleryList">
-
-      <div class="gallery-grid">
-
-        <img src="a5b00ca8-6e49-4309-b53b-1b7a1586dd9e.jpeg" alt="M.D Memorial School">
-        <img src="15ee2656-ff28-40c1-97f3-4ce6c5d04ca5.jpeg" alt="M.D Memorial School">
-        <img src="1e7a30a4-c8b3-4405-9297-bbceee85123e.jpeg" alt="M.D Memorial School">
-        <img src="1f491bd3-0e0c-4568-b970-43b2985cdb1e.jpeg" alt="M.D Memorial School">
-        <img src="2EADB222-24B2-4D4F-A2B3-64A13E3DFEBB.png" alt="M.D Memorial School">
-        <img src="788853e2-ff2a-417d-ab30-7d62065f4b50.jpeg" alt="M.D Memorial School">
-        <img src="IMG_0828.jpeg" alt="M.D Memorial School">
-        <img src="IMG_0843.jpeg" alt="M.D Memorial School">
-        <img src="IMG_0870.jpeg" alt="M.D Memorial School">
-        <img src="d5fb95f0-c573-4145-a41b-9b74d47ccde9.jpeg" alt="M.D Memorial School">
-
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ADMISSION -->
-<section class="admission" id="admission">
-  <div class="container">
-
-    <span class="eyebrow">ADMISSIONS 2026–27</span>
-
-    <h2>Give Your Child a Strong Start</h2>
+    <h2>
+      Give Your Child a Strong Start
+    </h2>
 
     <p>
       Admissions are open for Nursery to Class 5.
       Contact us today for admission information.
     </p>
 
+
     <div class="hero-buttons" style="justify-content:center;">
-      <a href="tel:7409777967" class="btn btn-gold">Call 7409777967</a>
+
+      <a href="tel:7409777967"
+         class="btn btn-gold">
+         Call 7409777967
+      </a>
 
       <a
         href="https://wa.me/917409777967?text=Hello%20M.D.%20Memorial%20School,%20I%20want%20information%20about%20admission."
         class="btn btn-outline">
         WhatsApp Us
       </a>
+
     </div>
 
   </div>
+
 </section>
 
-<!-- DOCUMENTS -->
-<section class="documents" id="documents">
+
+<!-- DOCUMENTS PAGE -->
+
+<section class="documents page-section" id="documents">
+
   <div class="container">
 
     <div class="section-head">
-      <span class="eyebrow">ADMISSION REQUIREMENTS</span>
-      <h2>Required Documents</h2>
-      <p>Click below to view the documents required for admission.</p>
+
+      <span class="eyebrow">
+        ADMISSION REQUIREMENTS
+      </span>
+
+      <h2>
+        Required Documents
+      </h2>
+
+      <p>
+        Documents required for admission.
+      </p>
+
     </div>
 
-    <button class="document-toggle" onclick="toggleDocuments()">
-      <span>📄 View Required Documents</span>
-      <span id="documentArrow">＋</span>
-    </button>
 
-    <div class="documents-hidden" id="documentsList">
+    <div class="document-grid">
 
-      <div class="document-grid">
+      <div class="document-card">
+        Student Aadhaar
+      </div>
 
-        <div class="document-card">
-          Student Aadhaar
-        </div>
+      <div class="document-card">
+        Birth Certificate
+        <small>
+          Only if Aadhaar is unavailable
+        </small>
+      </div>
 
-        <div class="document-card">
-          Birth Certificate
-          <small>(Only if Aadhaar is unavailable)</small>
-        </div>
+      <div class="document-card">
+        PEN Number
+      </div>
 
-        <div class="document-card">
-          PEN Number
-        </div>
+      <div class="document-card">
+        Previous School Report Card / Marksheet
+      </div>
 
-        <div class="document-card">
-          Previous School Report Card / Marksheet
-        </div>
+      <div class="document-card">
+        Transfer Certificate
+        <small>
+          If applicable
+        </small>
+      </div>
 
-        <div class="document-card">
-          Transfer Certificate
-          <small>(If applicable)</small>
-        </div>
+      <div class="document-card">
+        Passport Size Photographs
+      </div>
 
-        <div class="document-card">
-          Passport Size Photographs
-        </div>
+      <div class="document-card">
+        Parent / Guardian Aadhaar
+      </div>
 
-        <div class="document-card">
-          Parent / Guardian Aadhaar
-        </div>
+      <div class="document-card">
+        Address Proof
+      </div>
 
-        <div class="document-card">
-          Address Proof
-        </div>
-
-        <div class="document-card">
-          WhatsApp Mobile Number
-        </div>
-
+      <div class="document-card">
+        WhatsApp Mobile Number
       </div>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
+
+<!-- CONTACT PAGE -->
+
+<section class="contact page-section" id="contact">
+
   <div class="container">
 
     <div class="section-head">
-      <span class="eyebrow">GET IN TOUCH</span>
-      <h2>Contact Us</h2>
-      <p>We are happy to help you with admission and school information.</p>
+
+      <span class="eyebrow">
+        GET IN TOUCH
+      </span>
+
+      <h2>
+        Contact Us
+      </h2>
+
+      <p>
+        We are happy to help you with admission and school information.
+      </p>
+
     </div>
+
 
     <div class="contact-grid">
 
-      <div class="contact-card">
-  <strong>📍 Address</strong>
-
-  <span>
-    M.D Memorial School,<br>
-    Aurangabad, Bulandshahr,<br>
-    Uttar Pradesh
-  </span>
-
-  <br><br>
-
-  <a
-    href="https://maps.app.goo.gl/D363mKKb5yUFidWB7?g_st=ic"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="map-btn">
-    📍 Get Directions
-  </a>
-</div>
 
       <div class="contact-card">
-        <strong>📞 Phone</strong>
-        <span>7409777967</span>
+
+        <strong>
+          📍 Address
+        </strong>
+
+        <span>
+          M.D Memorial School,<br>
+          Aurangabad, Bulandshahr,<br>
+          Uttar Pradesh
+        </span>
+
+        <br><br>
+
+        <a
+          href="https://maps.app.goo.gl/D363mKKb5yUFidWB7?g_st=ic"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-btn">
+          📍 Get Directions
+        </a>
+
       </div>
 
+
       <div class="contact-card">
-        <strong>👩‍🏫 Management</strong>
+
+        <strong>
+          📞 Phone
+        </strong>
+
+        <span>
+          7409777967
+        </span>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <strong>
+          👩‍🏫 Management
+        </strong>
+
         <span>
           Mrs. Poonam Devi — Principal<br>
           Mr. Ashok Kumar — Manager
         </span>
+
       </div>
 
+
     </div>
+
   </div>
+
 </section>
 
+
 <!-- FOOTER -->
+
 <footer>
 
   <div class="footer-inner">
 
     <div class="footer-brand">
-      <img src="logo.jpeg" alt="M.D Memorial School">
+
+      <img
+        src="logo.jpeg"
+        alt="M.D Memorial School">
 
       <div>
-        <strong>M.D Memorial School</strong>
-        <small>Established 1997 • Aurangabad, Bulandshahr</small>
+
+        <strong>
+          M.D Memorial School
+        </strong>
+
+        <small>
+          Established 1997 • Aurangabad, Bulandshahr
+        </small>
+
       </div>
+
     </div>
+
 
     <div class="footer-tag">
       LEARN • GROW • SHINE
@@ -1536,13 +1825,16 @@ footer{
 
   </div>
 
+
   <div class="copyright">
     © 2026 M.D Memorial School. All Rights Reserved.
   </div>
 
 </footer>
 
+
 <!-- WHATSAPP -->
+
 <a
   class="whatsapp"
   href="https://wa.me/917409777967?text=Hello%20M.D.%20Memorial%20School,%20I%20want%20information%20about%20admission."
@@ -1550,38 +1842,102 @@ footer{
   ☎
 </a>
 
+
 <!-- JAVASCRIPT -->
+
 <script>
 
-function toggleGallery(){
+/* MENU */
 
-  const box = document.getElementById("galleryList");
-  const arrow = document.getElementById("galleryArrow");
+function toggleMenu(){
 
-  box.classList.toggle("show");
+  const menu = document.getElementById("menuPanel");
 
-  if(box.classList.contains("show")){
-    arrow.textContent = "−";
-  }else{
-    arrow.textContent = "＋";
-  }
+  menu.classList.toggle("show");
 
 }
 
-function toggleDocuments(){
 
-  const box = document.getElementById("documentsList");
-  const arrow = document.getElementById("documentArrow");
+/* PAGE NAVIGATION */
 
-  box.classList.toggle("show");
+function showPage(page){
 
-  if(box.classList.contains("show")){
-    arrow.textContent = "−";
-  }else{
-    arrow.textContent = "＋";
+  const pages = document.querySelectorAll(".page-section");
+
+  pages.forEach(function(section){
+
+    section.classList.remove("active");
+
+  });
+
+
+  const selectedPage = document.getElementById(page);
+
+  if(selectedPage){
+
+    selectedPage.classList.add("active");
+
   }
 
+
+  document.getElementById("menuPanel").classList.remove("show");
+
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
 }
+
+
+/* CLOSE MENU WHEN CLICKING OUTSIDE */
+
+document.addEventListener("click", function(event){
+
+  const menu = document.getElementById("menuPanel");
+  const button = document.querySelector(".menu-btn");
+
+  if(
+    menu.classList.contains("show") &&
+    !menu.contains(event.target) &&
+    !button.contains(event.target)
+  ){
+
+    menu.classList.remove("show");
+
+  }
+
+});
+
+
+/* HANDLE URL HASH */
+
+window.addEventListener("load", function(){
+
+  const hash = window.location.hash.replace("#","");
+
+  const validPages = [
+    "home",
+    "about",
+    "gallery",
+    "fees",
+    "documents",
+    "contact",
+    "admission"
+  ];
+
+  if(validPages.includes(hash)){
+
+    showPage(hash);
+
+  }else{
+
+    showPage("home");
+
+  }
+
+});
 
 </script>
 
