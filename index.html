@@ -29,6 +29,7 @@
 
 :root{
   --navy:#071936;
+  --navy2:#0b2348;
   --blue:#123d7a;
   --gold:#e5b85c;
   --gold2:#f5d98b;
@@ -38,7 +39,7 @@
   --muted:#6d7687;
   --line:#e7eaf0;
   --soft:#f5f7fa;
-  --shadow:0 20px 60px rgba(7,25,54,.10);
+  --shadow:0 20px 60px rgba(7,25,54,.12);
 }
 
 *{
@@ -56,6 +57,7 @@ body{
   color:var(--text);
   background:#fff;
   line-height:1.6;
+  overflow-x:hidden;
 }
 
 img{
@@ -71,12 +73,15 @@ button{
   font-family:inherit;
 }
 
-/* TOP BAR */
+
+/* =====================================================
+   TOP BAR
+===================================================== */
 
 .topbar{
   background:var(--navy);
   color:#fff;
-  padding:9px 6%;
+  padding:9px 5%;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -84,24 +89,27 @@ button{
 }
 
 .topbar span{
-  opacity:.9;
+  opacity:.92;
 }
 
-/* NAVBAR */
+
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .navbar{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(14px);
+  background:rgba(255,255,255,.98);
+  backdrop-filter:blur(15px);
   border-bottom:1px solid rgba(7,25,54,.08);
 }
 
 .nav-inner{
-  max-width:1250px;
+  max-width:1400px;
   margin:auto;
-  padding:12px 5%;
+  padding:12px 4%;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -112,11 +120,12 @@ button{
   display:flex;
   align-items:center;
   gap:12px;
+  flex-shrink:0;
 }
 
 .brand img{
-  width:52px;
-  height:52px;
+  width:58px;
+  height:58px;
   object-fit:contain;
   border-radius:50%;
 }
@@ -124,48 +133,105 @@ button{
 .brand-text strong{
   display:block;
   color:var(--navy);
-  font-size:18px;
+  font-family:Georgia,serif;
+  font-size:19px;
+  line-height:1.2;
 }
 
 .brand-text small{
-  color:var(--muted);
+  color:#7b8493;
   font-size:11px;
-  letter-spacing:1.2px;
+  letter-spacing:1.5px;
 }
 
-/* MENU BUTTON */
+
+/* DESKTOP NAVIGATION */
+
+.desktop-nav{
+  display:flex;
+  align-items:center;
+  gap:27px;
+}
+
+.desktop-nav a{
+  position:relative;
+  color:var(--navy);
+  font-size:13px;
+  font-weight:700;
+  text-transform:uppercase;
+  padding:12px 0;
+  transition:.25s;
+}
+
+.desktop-nav a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:4px;
+  width:0;
+  height:2px;
+  background:var(--gold);
+  transition:.25s;
+}
+
+.desktop-nav a:hover{
+  color:#a77b20;
+}
+
+.desktop-nav a:hover::after{
+  width:100%;
+}
+
+.desktop-admission{
+  background:var(--gold);
+  color:var(--navy)!important;
+  padding:13px 19px!important;
+  border-radius:7px;
+}
+
+.desktop-admission::after{
+  display:none;
+}
+
+.desktop-admission:hover{
+  background:#f0ca72;
+  transform:translateY(-2px);
+}
+
+
+/* MOBILE MENU BUTTON */
 
 .menu-btn{
   width:48px;
   height:48px;
   border:0;
-  border-radius:14px;
+  border-radius:13px;
   background:var(--navy);
   color:#fff;
   font-size:25px;
   cursor:pointer;
-  display:grid;
+  display:none;
   place-items:center;
   transition:.3s;
 }
 
 .menu-btn:hover{
   background:var(--blue);
-  transform:translateY(-2px);
 }
 
-/* DROPDOWN MENU */
+
+/* MOBILE DROPDOWN */
 
 .menu-panel{
   position:absolute;
   top:100%;
   right:5%;
-  width:270px;
+  width:280px;
   background:#fff;
   border:1px solid var(--line);
-  border-radius:20px;
+  border-radius:18px;
   padding:10px;
-  box-shadow:0 20px 50px rgba(7,25,54,.18);
+  box-shadow:0 20px 50px rgba(7,25,54,.20);
   display:none;
   animation:menuOpen .25s ease;
 }
@@ -190,7 +256,7 @@ button{
   align-items:center;
   gap:12px;
   padding:14px 15px;
-  border-radius:13px;
+  border-radius:12px;
   color:var(--navy);
   font-weight:600;
   font-size:14px;
@@ -213,60 +279,95 @@ button{
   color:#fff;
 }
 
-/* HERO */
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
-  min-height:680px;
+  min-height:calc(100vh - 100px);
+  min-height:720px;
   position:relative;
   overflow:hidden;
-  background:
-    linear-gradient(rgba(6,22,47,0.45), rgba(6,22,47,0.45)),
-    url('4794420C-2C8C-4713-BF55-E23285559A30.jpeg');
-background-size: 100% 100%;
-background-position: center;
-background-repeat: no-repeat;
-color:#fff;
+  color:#fff;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(4,17,38,.86) 0%,
+      rgba(4,17,38,.68) 35%,
+      rgba(4,17,38,.28) 70%,
+      rgba(4,17,38,.12) 100%
+    ),
+    url("4794420C-2C8C-4713-BF55-E23285559A30.jpeg");
+
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
 }
 
-.hero::before{
+
+/* DARK BOTTOM GRADIENT */
+
+.hero::after{
   content:"";
   position:absolute;
   inset:0;
-  opacity:.08;
-  background-image:
-    linear-gradienty(45deg,#fff 1px,transparent 1px),
-    linear-gradient(-45deg,#fff 1px,transparent 1px);
-  background-size:55px 55px;
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 55%,
+      rgba(2,10,24,.45) 100%
+    );
+  pointer-events:none;
 }
+
+
+/* HERO CONTENT */
 
 .hero-inner{
   position:relative;
-  max-width:1250px;
-  min-height:680px;
+  z-index:2;
+  max-width:1400px;
+  min-height:720px;
   margin:auto;
-  padding:90px 5% 70px;
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
+  padding:80px 5% 90px;
+  display:flex;
   align-items:center;
-  gap:50px;
+}
+
+.hero-content{
+  max-width:690px;
 }
 
 .hero-tag{
-  display:inline-block;
-  padding:8px 15px;
-  border:1px solid rgba(229,184,92,.45);
+  display:inline-flex;
+  align-items:center;
+  gap:13px;
   color:var(--gold2);
-  border-radius:30px;
-  font-size:12px;
+  font-size:13px;
+  font-weight:700;
   letter-spacing:2px;
-  margin-bottom:20px;
+  margin-bottom:22px;
 }
 
+.hero-tag::before,
+.hero-tag::after{
+  content:"";
+  width:42px;
+  height:1px;
+  background:var(--gold);
+}
+
+
 .hero h1{
-  font-family:Georgia,serif;
-  font-size:clamp(46px,6vw,78px);
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:800;
+  font-size:clamp(48px,6vw,78px);
   line-height:1.02;
-  margin-bottom:20px;
+  letter-spacing:-2px;
+  margin-bottom:22px;
+  text-transform:uppercase;
 }
 
 .hero h1 span{
@@ -274,11 +375,15 @@ color:#fff;
 }
 
 .hero-sub{
-  font-size:19px;
+  font-size:18px;
+  line-height:1.7;
   max-width:650px;
-  color:rgba(255,255,255,.78);
-  margin-bottom:30px;
+  color:rgba(255,255,255,.88);
+  margin-bottom:32px;
 }
+
+
+/* HERO BUTTONS */
 
 .hero-buttons{
   display:flex;
@@ -290,85 +395,89 @@ color:#fff;
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:14px 23px;
-  border-radius:30px;
+  padding:15px 27px;
+  border-radius:6px;
   font-weight:700;
   transition:.3s;
+  min-width:175px;
 }
 
 .btn-gold{
   background:var(--gold);
   color:var(--navy);
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
 }
 
-.btn-outline{
-  border:1px solid rgba(255,255,255,.35);
-  color:#fff;
-}
-
-.btn:hover{
+.btn-gold:hover{
+  background:#f0ca72;
   transform:translateY(-3px);
 }
 
-.hero-card{
-  position:relative;
-  display:flex;
-  justify-content:center;
+.btn-outline{
+  border:1px solid rgba(255,255,255,.65);
+  color:#fff;
+  background:rgba(255,255,255,.04);
 }
 
-.logo-card{
-  width:330px;
-  height:390px;
-  padding:30px;
-  border:1px solid rgba(229,184,92,.45);
-  border-radius:35px;
-  background:rgba(255,255,255,.08);
-  backdrop-filter:blur(15px);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 30px 80px rgba(0,0,0,.25);
-}
-
-.logo-card img{
-  width:245px;
-  height:245px;
-  object-fit:contain;
-  background:#fff;
-  border-radius:50%;
-  padding:15px;
-  box-shadow:0 0 0 8px rgba(229,184,92,.25);
-}
-
-.established{
-  position:absolute;
-  bottom:-25px;
-  right:5%;
+.btn-outline:hover{
   background:#fff;
   color:var(--navy);
-  padding:16px 22px;
-  border-radius:18px;
-  box-shadow:var(--shadow);
+  transform:translateY(-3px);
 }
 
-.established strong{
+
+/* HERO FEATURES */
+
+.hero-features{
+  display:flex;
+  margin-top:55px;
+  max-width:700px;
+}
+
+.hero-feature{
+  flex:1;
+  padding:0 25px;
+  border-right:1px solid rgba(255,255,255,.35);
+}
+
+.hero-feature:first-child{
+  padding-left:0;
+}
+
+.hero-feature:last-child{
+  border-right:0;
+}
+
+.hero-feature-icon{
+  font-size:28px;
+  margin-bottom:7px;
+}
+
+.hero-feature strong{
   display:block;
-  color:var(--blue);
-  font-size:22px;
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.4px;
 }
 
-.established small{
-  color:var(--muted);
+.hero-feature span{
+  display:block;
+  font-size:11px;
+  color:rgba(255,255,255,.7);
+  margin-top:3px;
 }
 
-/* STATS */
+
+/* =====================================================
+   STATS
+===================================================== */
 
 .stats{
   position:relative;
   margin:-55px auto 0;
   max-width:1050px;
   background:#fff;
-  border-radius:25px;
+  border-radius:20px;
   box-shadow:var(--shadow);
   padding:28px;
   display:grid;
@@ -398,7 +507,10 @@ color:#fff;
   font-size:13px;
 }
 
-/* GENERAL */
+
+/* =====================================================
+   GENERAL
+===================================================== */
 
 section{
   padding:95px 5%;
@@ -433,7 +545,8 @@ section{
   color:var(--muted);
 }
 
-/* PAGE SECTIONS */
+
+/* PAGE SYSTEM */
 
 .page-section{
   display:none;
@@ -455,13 +568,14 @@ section{
   }
 }
 
-/* HOME */
-
 .home-section{
   display:block;
 }
 
-/* ABOUT */
+
+/* =====================================================
+   ABOUT
+===================================================== */
 
 .about{
   background:var(--cream);
@@ -542,7 +656,10 @@ section{
   color:rgba(255,255,255,.75);
 }
 
-/* CLASSES */
+
+/* =====================================================
+   CLASSES
+===================================================== */
 
 .classes{
   background:#fff;
@@ -592,7 +709,10 @@ section{
   font-size:14px;
 }
 
-/* FEES */
+
+/* =====================================================
+   FEES
+===================================================== */
 
 .fees{
   background:var(--soft);
@@ -644,7 +764,10 @@ td{
   font-size:13px;
 }
 
-/* NOTICE */
+
+/* =====================================================
+   NOTICE
+===================================================== */
 
 .notice{
   background:var(--cream);
@@ -700,7 +823,10 @@ td{
   color:var(--navy);
 }
 
-/* GALLERY */
+
+/* =====================================================
+   GALLERY
+===================================================== */
 
 .gallery{
   background:#fff;
@@ -725,7 +851,10 @@ td{
   transform:scale(1.025);
 }
 
-/* ADMISSION */
+
+/* =====================================================
+   ADMISSION
+===================================================== */
 
 .admission{
   background:var(--navy);
@@ -758,7 +887,10 @@ td{
   margin:0 auto 28px;
 }
 
-/* DOCUMENTS */
+
+/* =====================================================
+   DOCUMENTS
+===================================================== */
 
 .documents{
   background:var(--cream);
@@ -787,7 +919,10 @@ td{
   margin-top:4px;
 }
 
-/* CONTACT */
+
+/* =====================================================
+   CONTACT
+===================================================== */
 
 .contact{
   background:#fff;
@@ -833,7 +968,10 @@ td{
   background:var(--blue);
 }
 
-/* FOOTER */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
   background:#041126;
@@ -888,7 +1026,10 @@ footer{
   font-size:12px;
 }
 
-/* WHATSAPP */
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
 
 .whatsapp{
   position:fixed;
@@ -906,27 +1047,67 @@ footer{
   box-shadow:0 10px 30px rgba(0,0,0,.25);
 }
 
-/* MOBILE */
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width:1100px){
+
+  .desktop-nav{
+    gap:15px;
+  }
+
+  .desktop-nav a{
+    font-size:11px;
+  }
+
+  .hero h1{
+    font-size:60px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE / TABLET
+===================================================== */
 
 @media(max-width:900px){
 
+  .desktop-nav{
+    display:none;
+  }
+
+  .menu-btn{
+    display:grid;
+  }
+
+  .hero{
+    min-height:700px;
+    background-position:center center;
+  }
+
   .hero-inner{
-    grid-template-columns:1fr;
-    text-align:center;
-    padding-top:65px;
+    min-height:700px;
+    padding:70px 6% 80px;
+    align-items:center;
+  }
+
+  .hero-content{
+    max-width:100%;
+  }
+
+  .hero h1{
+    font-size:clamp(45px,10vw,68px);
   }
 
   .hero-sub{
-    margin-left:auto;
-    margin-right:auto;
+    max-width:620px;
   }
 
-  .hero-buttons{
-    justify-content:center;
-  }
-
-  .hero-card{
-    margin-top:20px;
+  .hero-features{
+    margin-top:45px;
   }
 
   .stats{
@@ -953,13 +1134,21 @@ footer{
     flex-direction:column;
     text-align:center;
   }
+
 }
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
 
 @media(max-width:650px){
 
   .topbar{
     justify-content:center;
     text-align:center;
+    padding:8px 4%;
+    font-size:11px;
   }
 
   .topbar span:last-child{
@@ -967,12 +1156,12 @@ footer{
   }
 
   .nav-inner{
-    padding:11px 5%;
+    padding:10px 5%;
   }
 
   .brand img{
-    width:44px;
-    height:44px;
+    width:46px;
+    height:46px;
   }
 
   .brand-text strong{
@@ -984,8 +1173,8 @@ footer{
   }
 
   .menu-btn{
-    width:44px;
-    height:44px;
+    width:45px;
+    height:45px;
   }
 
   .menu-panel{
@@ -995,30 +1184,82 @@ footer{
   }
 
   .hero{
-    min-height:auto;
+    min-height:680px;
+
+    background-image:
+      linear-gradient(
+        rgba(4,17,38,.66),
+        rgba(4,17,38,.66)
+      ),
+      url("4794420C-2C8C-4713-BF55-E23285559A30.jpeg");
+
+    background-position:center center;
+    background-size:cover;
   }
 
   .hero-inner{
-    min-height:auto;
-    padding:65px 5% 90px;
+    min-height:680px;
+    padding:55px 6% 70px;
+    text-align:center;
+  }
+
+  .hero-content{
+    width:100%;
+  }
+
+  .hero-tag{
+    justify-content:center;
+    font-size:11px;
+    letter-spacing:1.5px;
+  }
+
+  .hero-tag::before,
+  .hero-tag::after{
+    width:25px;
   }
 
   .hero h1{
-    font-size:48px;
+    font-size:44px;
+    line-height:1.05;
+    letter-spacing:-1px;
   }
 
-  .logo-card{
-    width:270px;
-    height:320px;
+  .hero-sub{
+    font-size:15px;
+    line-height:1.7;
+    margin-left:auto;
+    margin-right:auto;
   }
 
-  .logo-card img{
-    width:200px;
-    height:200px;
+  .hero-buttons{
+    justify-content:center;
   }
 
-  .established{
-    right:0;
+  .btn{
+    width:100%;
+    max-width:280px;
+    padding:14px 20px;
+  }
+
+  .hero-features{
+    margin-top:42px;
+    width:100%;
+  }
+
+  .hero-feature{
+    padding:0 10px;
+  }
+
+  .hero-feature-icon{
+    font-size:22px;
+  }
+
+  .hero-feature strong{
+    font-size:10px;
+  }
+
+  .hero-feature span{
+    font-size:9px;
   }
 
   .stats{
@@ -1062,30 +1303,43 @@ footer{
     font-size:38px;
   }
 
-  th,td{
+  th,
+  td{
     padding:12px 9px;
     font-size:13px;
   }
+
 }
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
 
 @media(max-width:430px){
 
   .hero h1{
-    font-size:42px;
+    font-size:39px;
   }
 
   .hero-sub{
-    font-size:16px;
+    font-size:14px;
   }
 
-  .logo-card{
-    width:240px;
-    height:290px;
+  .hero-features{
+    gap:0;
   }
 
-  .logo-card img{
-    width:175px;
-    height:175px;
+  .hero-feature{
+    padding:0 6px;
+  }
+
+  .hero-feature strong{
+    font-size:9px;
+  }
+
+  .hero-feature span{
+    display:none;
   }
 
   .gallery-grid{
@@ -1102,6 +1356,7 @@ footer{
     right:15px;
     bottom:15px;
   }
+
 }
 
 </style>
@@ -1109,800 +1364,64 @@ footer{
 
 <body>
 
-<!-- TOP BAR -->
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
 <div class="topbar">
-  <span>📍 Aurangabad, Bulandshahr, Uttar Pradesh</span>
-  <span>📞 7409777967</span>
+
+  <span>
+    📍 Aurangabad, Bulandshahr, Uttar Pradesh
+  </span>
+
+  <span>
+    📞 7409777967
+  </span>
+
 </div>
 
-<!-- NAVBAR -->
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
 <nav class="navbar">
 
   <div class="nav-inner">
 
-    <a href="#home" class="brand" onclick="showPage('home')">
-
-      <img src="logo.jpeg" alt="M.D Memorial School Logo">
-
-      <div class="brand-text">
-        <strong>M.D Memorial School</strong>
-        <small>LEARN • GROW • SHINE</small>
-      </div>
-
-    </a>
-
-    <!-- MENU BUTTON -->
-    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">
-      ☰
-    </button>
-
-  </div>
-
-  <!-- MENU -->
-  <div class="menu-panel" id="menuPanel">
-
-    <a href="#home" onclick="showPage('home')">
-      🏠 Home
-    </a>
-
-    <a href="#about" onclick="showPage('about')">
-      🏫 About Us
-    </a>
-
-    <a href="#gallery" onclick="showPage('gallery')">
-      📸 School Gallery
-    </a>
-
-    <a href="#fees" onclick="showPage('fees')">
-      💰 Fee Structure
-    </a>
-
-    <a href="#documents" onclick="showPage('documents')">
-      📄 Required Documents
-    </a>
-
-    <a href="#contact" onclick="showPage('contact')">
-      📞 Contact Us
-    </a>
-
-    <a href="#admission" class="menu-admission" onclick="showPage('admission')">
-      🎓 Admission 2026–27
-    </a>
-
-  </div>
-
-</nav>
-
-<!-- HOME PAGE -->
-
-<div id="home" class="page-section active home-section">
-
-  <!-- HERO -->
-  <section class="hero">
-
-    <div class="hero-inner">
-
-      <div>
-
-        <span class="hero-tag">
-          NURSERY TO CLASS 5
-        </span>
-
-        <h1>
-          M.D Memorial<br>
-          <span>School</span>
-        </h1>
-
-        <p class="hero-sub">
-          जहाँ शिक्षा केवल किताबों तक सीमित नहीं,
-          बल्कि बच्चों के उज्ज्वल भविष्य की नींव बनती है।
-        </p>
-
-        <div class="hero-buttons">
-
-          <a href="#admission"
-             class="btn btn-gold"
-             onclick="showPage('admission')">
-             Apply for Admission
-          </a>
-
-          <a href="#about"
-             class="btn btn-outline"
-             onclick="showPage('about')">
-             Explore School
-          </a>
-
-        </div>
-
-      </div>
-
-      <div class="hero-card">
-
-        <div class="logo-card">
-
-          <img
-            src="logo.jpeg"
-            alt="M.D Memorial School">
-
-        </div>
-
-        <div class="established">
-
-          <strong>1997</strong>
-          <small>Established</small>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- STATS -->
-
-  <div class="stats">
-
-    <div class="stat">
-      <strong>1997</strong>
-      <span>Established</span>
-    </div>
-
-    <div class="stat">
-      <strong>Nur–5</strong>
-      <span>Classes</span>
-    </div>
-
-    <div class="stat">
-      <strong>English</strong>
-      <span>Medium</span>
-    </div>
-
-    <div class="stat">
-      <strong>Smart</strong>
-      <span>Classes</span>
-    </div>
-
-  </div>
-
-</div>
-
-<!-- ABOUT PAGE -->
-
-<section class="about page-section" id="about">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <span class="eyebrow">
-        ABOUT OUR SCHOOL
-      </span>
-
-      <h2>
-        Growing Minds, Building Futures
-      </h2>
-
-      <p>
-        M.D Memorial School is committed to providing quality education
-        in a caring and supportive environment.
-      </p>
-
-    </div>
-
-    <div class="about-grid">
-
-      <div class="about-text">
-
-        <h3>
-          Education With Care
-        </h3>
-
-        <p>
-          M.D Memorial School was established in 1997 at Aurangabad,
-          Bulandshahr, Uttar Pradesh. Our focus is on building strong
-          academic foundations along with confidence and creativity.
-        </p>
-
-        <p>
-          We believe every child learns differently. Therefore,
-          children who need additional academic support receive
-          extra attention and guidance.
-        </p>
-
-        <div class="features">
-
-          <div class="feature">
-            <strong>English Medium</strong>
-            <span>
-              Focus on confident communication and learning.
-            </span>
-          </div>
-
-          <div class="feature">
-            <strong>Smart Classes</strong>
-            <span>
-              Technology-supported classroom learning.
-            </span>
-          </div>
-
-          <div class="feature">
-            <strong>Extra Classes</strong>
-            <span>
-              Additional support wherever students need it.
-            </span>
-          </div>
-
-          <div class="feature">
-            <strong>Activities</strong>
-            <span>
-              GK competitions, games, dance and singing.
-            </span>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div>
-
-        <div class="message">
-
-          <h4>
-            Principal's Message
-          </h4>
-
-          <p>
-            Our aim is to create an environment where every child
-            feels encouraged to learn, grow and shine. We believe
-            that education becomes meaningful when children receive
-            knowledge, values and individual attention together.
-          </p>
-
-          <br>
-
-          <strong>
-            — Mrs. Poonam Devi, Principal
-          </strong>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CLASSES PAGE -->
-
-<section class="classes page-section" id="classes">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <span class="eyebrow">
-        ACADEMIC PROGRAM
-      </span>
-
-      <h2>
-        Our Classes
-      </h2>
-
-      <p>
-        Strong foundations for every stage of early education.
-      </p>
-
-    </div>
-
-    <div class="class-grid">
-
-      <div class="class-card">
-
-        <div class="class-number">
-          01
-        </div>
-
-        <h3>
-          Nursery – UKG
-        </h3>
-
-        <p>
-          Early learning with focus on basic concepts,
-          communication, creativity and confidence.
-        </p>
-
-      </div>
-
-      <div class="class-card">
-
-        <div class="class-number">
-          02
-        </div>
-
-        <h3>
-          Class 1 – 3
-        </h3>
-
-        <p>
-          Building strong academic foundations through
-          engaging classroom learning and activities.
-        </p>
-
-      </div>
-
-      <div class="class-card">
-
-        <div class="class-number">
-          03
-        </div>
-
-        <h3>
-          Class 4 – 5
-        </h3>
-
-        <p>
-          Developing independent learning, knowledge,
-          discipline and preparation for higher classes.
-        </p>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- FEES PAGE -->
-
-<section class="fees page-section" id="fees">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <span class="eyebrow">
-        FEE STRUCTURE
-      </span>
-
-      <h2>
-        Affordable Education
-      </h2>
-
-      <p>
-        Session 2026–27 fee structure.
-      </p>
-
-    </div>
-
-    <div class="fee-box">
-
-      <span class="session">
-        SESSION 2026–27
-      </span>
-
-      <table>
-
-        <tr>
-          <th>Class</th>
-          <th>Monthly Fee</th>
-          <th>Exam / Activity / Cultural Fee</th>
-        </tr>
-
-        <tr>
-          <td>Nursery – UKG</td>
-          <td>₹350 / Month</td>
-          <td>₹600</td>
-        </tr>
-
-        <tr>
-          <td>Class 1 – 5</td>
-          <td>₹400 / Month</td>
-          <td>₹600</td>
-        </tr>
-
-      </table>
-
-      <p class="fee-note">
-        Monthly tuition fee is due by the 10th of every month.
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- GALLERY PAGE -->
-
-<section class="gallery page-section" id="gallery">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <span class="eyebrow">
-        OUR CAMPUS
-      </span>
-
-      <h2>
-        School Gallery
-      </h2>
-
-      <p>
-        Moments from M.D Memorial School.
-      </p>
-
-    </div>
-
-    <div class="gallery-grid">
-
-      <img src="a5b00ca8-6e49-4309-b53b-1b7a1586dd9e.jpeg"
-           alt="M.D Memorial School">
-
-      <img src="15ee2656-ff28-40c1-97f3-4ce6c5d04ca5.jpeg"
-           alt="M.D Memorial School">
-
-      <img src="1e7a30a4-c8b3-4405-9297-bbceee85123e.jpeg"
-           alt="M.D Memorial School">
-
-      <img src="1f491bd3-0e0c-4568-b970-43b2985cdb1e.jpeg"
-           alt="M.D Memorial School">
-
-      <img src="2EADB222-24B2-4D4F-A2B3-64A13E3DFEBB.png"
-           alt="M.D Memorial School">
-
-      <img src="788853e2-ff2a-417d-ab30-7d62065f4b50.jpeg"
-           alt="M.D Memorial School">
-
-      <img src="IMG_0828.jpeg"
-           alt="M.D Memorial School">
-
-      <img src="IMG_0843.jpeg"
-           alt="M.D Memorial School">
-
-      <img src="IMG_0870.jpeg"
-           alt="M.D Memorial School">
-
-      <img src="d5fb95f0-c573-4145-a41b-9b74d47ccde9.jpeg"
-           alt="M.D Memorial School">
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- ADMISSION PAGE -->
-
-<section class="admission page-section" id="admission">
-
-  <div class="container">
-
-    <span class="eyebrow">
-      ADMISSIONS 2026–27
-    </span>
-
-    <h2>
-      Give Your Child a Strong Start
-    </h2>
-
-    <p>
-      Admissions are open for Nursery to Class 5.
-      Contact us today for admission information.
-    </p>
-
-    <div class="hero-buttons" style="justify-content:center;">
-
-      <a href="tel:7409777967"
-         class="btn btn-gold">
-         Call 7409777967
-      </a>
-
-      <a
-        href="https://wa.me/917409777967?text=Hello%20M.D.%20Memorial%20School,%20I%20want%20information%20about%20admission."
-        class="btn btn-outline">
-        WhatsApp Us
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- DOCUMENTS PAGE -->
-
-<section class="documents page-section" id="documents">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <span class="eyebrow">
-        ADMISSION REQUIREMENTS
-      </span>
-
-      <h2>
-        Required Documents
-      </h2>
-
-      <p>
-        Documents required for admission.
-      </p>
-
-    </div>
-
-    <div class="document-grid">
-
-      <div class="document-card">
-        Student Aadhaar
-      </div>
-
-      <div class="document-card">
-        Birth Certificate
-        <small>
-          Only if Aadhaar is unavailable
-        </small>
-      </div>
-
-      <div class="document-card">
-        PEN Number
-      </div>
-
-      <div class="document-card">
-        Previous School Report Card / Marksheet
-      </div>
-
-      <div class="document-card">
-        Transfer Certificate
-        <small>
-          If applicable
-        </small>
-      </div>
-
-      <div class="document-card">
-        Passport Size Photographs
-      </div>
-
-      <div class="document-card">
-        Parent / Guardian Aadhaar
-      </div>
-
-      <div class="document-card">
-        Address Proof
-      </div>
-
-      <div class="document-card">
-        WhatsApp Mobile Number
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- CONTACT PAGE -->
-
-<section class="contact page-section" id="contact">
-
-  <div class="container">
-
-    <div class="section-head">
-
-      <span class="eyebrow">
-        GET IN TOUCH
-      </span>
-
-      <h2>
-        Contact Us
-      </h2>
-
-      <p>
-        We are happy to help you with admission and school information.
-      </p>
-
-    </div>
-
-    <div class="contact-grid">
-
-      <div class="contact-card">
-
-        <strong>
-          📍 Address
-        </strong>
-
-        <span>
-          M.D Memorial School,<br>
-          Aurangabad, Bulandshahr,<br>
-          Uttar Pradesh
-        </span>
-
-        <br><br>
-
-        <a
-          href="https://maps.app.goo.gl/D363mKKb5yUFidWB7?g_st=ic"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="map-btn">
-          📍 Get Directions
-        </a>
-
-      </div>
-
-      <div class="contact-card">
-
-        <strong>
-          📞 Phone
-        </strong>
-
-        <span>
-          7409777967
-        </span>
-
-      </div>
-
-      <div class="contact-card">
-
-        <strong>
-          👩‍🏫 Management
-        </strong>
-
-        <span>
-          Mrs. Poonam Devi — Principal<br>
-          Mr. Ashok Kumar — Manager
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="footer-inner">
-
-    <div class="footer-brand">
+    <a href="#home"
+       class="brand"
+       onclick="showPage('home')">
 
       <img
         src="logo.jpeg"
-        alt="M.D Memorial School">
+        alt="M.D Memorial School Logo">
 
-      <div>
+      <div class="brand-text">
 
         <strong>
           M.D Memorial School
         </strong>
 
         <small>
-          Established 1997 • Aurangabad, Bulandshahr
+          LEARN • GROW • SHINE
         </small>
 
       </div>
 
-    </div>
+    </a>
 
-    <div class="footer-tag">
-      LEARN • GROW • SHINE
-    </div>
 
-  </div>
+    <!-- DESKTOP NAV -->
 
-  <div class="copyright">
-    © 2026 M.D Memorial School. All Rights Reserved.
-  </div>
+    <div class="desktop-nav">
 
-</footer>
+      <a href="#home"
+         onclick="showPage('home')">
+         Home
+      </a>
 
-<!-- WHATSAPP -->
-
-<a
-  class="whatsapp"
-  href="https://wa.me/917409777967?text=Hello%20M.D.%20Memorial%20School,%20I%20want%20information%20about%20admission."
-  aria-label="WhatsApp">
-  ☎
-</a>
-
-<!-- JAVASCRIPT -->
-
-<script>
-
-/* MENU */
-
-function toggleMenu(){
-
-  const menu = document.getElementById("menuPanel");
-
-  menu.classList.toggle("show");
-
-}
-
-/* PAGE NAVIGATION */
-
-function showPage(page){
-
-  const pages = document.querySelectorAll(".page-section");
-
-  pages.forEach(function(section){
-
-    section.classList.remove("active");
-
-  });
-
-  const selectedPage = document.getElementById(page);
-
-  if(selectedPage){
-
-    selectedPage.classList.add("active");
-
-  }
-
-  document.getElementById("menuPanel").classList.remove("show");
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-
-}
-
-/* CLOSE MENU WHEN CLICKING OUTSIDE */
-
-document.addEventListener("click", function(event){
-
-  const menu = document.getElementById("menuPanel");
-  const button = document.querySelector(".menu-btn");
-
-  if(
-    menu.classList.contains("show") &&
-    !menu.contains(event.target) &&
-    !button.contains(event.target)
-  ){
-
-    menu.classList.remove("show");
-
-  }
-
-});
-
-/* HANDLE URL HASH */
-
-window.addEventListener("load", function(){
-
-  const hash = window.location.hash.replace("#","");
-
-  const validPages = [
-    "home",
-    "about",
-    "gallery",
-    "fees",
-    "documents",
-    "contact",
-    "admission"
-  ];
-
-  if(validPages.includes(hash)){
-
-    showPage(hash);
-
-  }else{
-
-    showPage("home");
-
-  }
-
-});
-
-</script>
-
-</body>
-</html>
+      <a href="#about"
+         onclick="showPage('about')">
+         About Us
