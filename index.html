@@ -7,35 +7,42 @@
 
 <title>M.D Memorial School | Aurangabad, Bulandshahr</title>
 
-<meta name="description" content="M.D Memorial School, Aurangabad, Bulandshahr — English medium school offering education from Nursery to Class 5. Established in 1997.">
+<meta name="description" content="M.D Memorial School, Aurangabad, Bulandshahr — English medium school offering education from Nursery to Class 5. Established in 1997 with smart classes, extra academic support and co-curricular activities.">
 
-<meta name="keywords" content="M.D Memorial School, MD Memorial School, school in Aurangabad, school in Bulandshahr, English medium school Aurangabad">
+<meta name="keywords" content="M.D Memorial School, MD Memorial School, school in Aurangabad, school in Bulandshahr, English medium school Aurangabad, Nursery to Class 5, school near Bulandshahr">
 
 <meta name="author" content="M.D Memorial School">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#071936">
+<meta name="language" content="English">
+
+<meta name="geo.region" content="IN-UP">
+<meta name="geo.placename" content="Aurangabad, Bulandshahr, Uttar Pradesh, India">
 
 <meta property="og:title" content="M.D Memorial School | Aurangabad, Bulandshahr">
-<meta property="og:description" content="M.D Memorial School — Learn • Grow • Shine.">
+<meta property="og:description" content="M.D Memorial School — Learn • Grow • Shine. English medium education from Nursery to Class 5.">
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="M.D Memorial School">
+<meta property="og:locale" content="en_IN">
+
+<meta name="theme-color" content="#071936">
 
 <style>
 
-/* =====================================================
+/* =========================
    ROOT
-===================================================== */
+========================= */
 
 :root{
   --navy:#071936;
-  --navy2:#0b2348;
+  --navy2:#041126;
   --blue:#123d7a;
   --gold:#e5b85c;
-  --gold2:#f7dc91;
+  --gold2:#f5d98b;
   --cream:#f8f5ee;
   --white:#ffffff;
   --text:#172033;
   --muted:#6d7687;
-  --line:#e5e8ee;
+  --line:#e7eaf0;
   --soft:#f5f7fa;
   --shadow:0 20px 60px rgba(7,25,54,.12);
 }
@@ -72,19 +79,19 @@ button{
 }
 
 
-/* =====================================================
+/* =========================
    TOP BAR
-===================================================== */
+========================= */
 
 .topbar{
   background:var(--navy);
   color:#fff;
-  min-height:44px;
+  min-height:45px;
   padding:9px 5%;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  font-size:13px;
+  align-items:center;
+  font-size:14px;
 }
 
 .topbar span{
@@ -92,24 +99,23 @@ button{
 }
 
 
-/* =====================================================
+/* =========================
    NAVBAR
-===================================================== */
+========================= */
 
 .navbar{
   position:sticky;
   top:0;
   z-index:1000;
-  background:rgba(255,255,255,.98);
+  background:rgba(255,255,255,.97);
   backdrop-filter:blur(15px);
   border-bottom:1px solid rgba(7,25,54,.08);
 }
 
 .nav-inner{
   max-width:1250px;
-  min-height:86px;
   margin:auto;
-  padding:12px 5%;
+  padding:13px 5%;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -126,32 +132,31 @@ button{
   width:58px;
   height:58px;
   object-fit:contain;
+  border-radius:50%;
 }
 
 .brand-text strong{
   display:block;
   color:var(--navy);
   font-family:Georgia,serif;
-  font-size:22px;
+  font-size:21px;
   line-height:1.2;
 }
 
 .brand-text small{
-  display:block;
-  color:#7c8493;
+  color:#7b8391;
   font-size:11px;
-  letter-spacing:2.5px;
-  margin-top:5px;
+  letter-spacing:2.2px;
 }
 
 
-/* =====================================================
+/* =========================
    MENU BUTTON
-===================================================== */
+========================= */
 
 .menu-btn{
-  width:52px;
-  height:52px;
+  width:50px;
+  height:50px;
   border:0;
   border-radius:15px;
   background:var(--navy);
@@ -169,26 +174,26 @@ button{
 }
 
 
-/* =====================================================
-   MENU PANEL
-===================================================== */
+/* =========================
+   DROPDOWN MENU
+========================= */
 
 .menu-panel{
   position:absolute;
   top:100%;
   right:5%;
-  width:280px;
+  width:285px;
   background:#fff;
   border:1px solid var(--line);
   border-radius:20px;
   padding:10px;
   box-shadow:0 20px 50px rgba(7,25,54,.18);
   display:none;
+  animation:menuOpen .25s ease;
 }
 
 .menu-panel.show{
   display:block;
-  animation:menuOpen .25s ease;
 }
 
 @keyframes menuOpen{
@@ -232,24 +237,25 @@ button{
 }
 
 
-/* =====================================================
+/* =========================
    HERO
-===================================================== */
+========================= */
 
 .hero{
   position:relative;
-  min-height:680px;
+  min-height:720px;
   overflow:hidden;
 
-  /* IMPORTANT:
-     Keep this image in the same GitHub folder */
+  /* IMPORTANT BACKGROUND IMAGE */
+  background-color:#18253d;
+
   background-image:
     linear-gradient(
       90deg,
-      rgba(4,18,42,.82) 0%,
-      rgba(4,18,42,.66) 35%,
-      rgba(4,18,42,.25) 68%,
-      rgba(4,18,42,.08) 100%
+      rgba(3,15,32,.78) 0%,
+      rgba(3,15,32,.58) 38%,
+      rgba(3,15,32,.12) 75%,
+      rgba(3,15,32,.10) 100%
     ),
     url("4794420C-2C8C-4713-BF55-E23285559A30.jpeg");
 
@@ -260,131 +266,84 @@ button{
   color:#fff;
 }
 
-/* Dark bottom gradient */
-
 .hero::after{
   content:"";
   position:absolute;
   inset:0;
   background:
     linear-gradient(
-      0deg,
-      rgba(3,15,34,.45),
-      transparent 35%
+      180deg,
+      rgba(0,0,0,.10),
+      rgba(0,0,0,.08) 55%,
+      rgba(0,0,0,.30)
     );
   pointer-events:none;
 }
-
-
-/* =====================================================
-   HERO CONTENT
-===================================================== */
 
 .hero-inner{
   position:relative;
   z-index:2;
 
   max-width:1250px;
-  min-height:680px;
-
+  min-height:720px;
   margin:auto;
 
-  padding:90px 5% 75px;
+  padding:90px 5% 80px;
 
   display:flex;
   align-items:center;
 }
 
 .hero-content{
-  max-width:680px;
+  max-width:650px;
 }
-
-
-/* ESTD */
-
-.hero-estd{
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  color:var(--gold2);
-
-  font-size:14px;
-  font-weight:700;
-
-  letter-spacing:2px;
-
-  margin-bottom:22px;
-}
-
-.hero-estd::before,
-.hero-estd::after{
-  content:"";
-  width:38px;
-  height:1px;
-  background:var(--gold);
-}
-
-
-/* TAG */
 
 .hero-tag{
   display:inline-block;
 
-  padding:8px 16px;
+  padding:9px 18px;
 
-  border:1px solid rgba(229,184,92,.65);
-  border-radius:30px;
-
+  border:1px solid rgba(245,217,139,.7);
   color:var(--gold2);
 
-  font-size:12px;
-  letter-spacing:2px;
+  border-radius:30px;
+
+  font-size:13px;
+  letter-spacing:2.5px;
   font-weight:700;
 
-  margin-bottom:20px;
+  margin-bottom:24px;
 
-  background:rgba(7,25,54,.22);
+  background:rgba(0,0,0,.10);
 }
 
-
-/* HEADING */
-
 .hero h1{
-  font-family:Arial,Helvetica,sans-serif;
+  font-family:Georgia,serif;
 
-  font-size:clamp(45px,6vw,76px);
+  font-size:clamp(48px,6vw,82px);
 
-  font-weight:800;
+  line-height:1.02;
 
-  line-height:1.03;
+  margin-bottom:22px;
 
-  letter-spacing:-2px;
-
-  margin-bottom:20px;
-
-  text-transform:uppercase;
+  text-shadow:0 4px 20px rgba(0,0,0,.3);
 }
 
 .hero h1 span{
   color:var(--gold);
 }
 
-
-/* SUBTEXT */
-
 .hero-sub{
-  max-width:620px;
+  font-size:19px;
 
-  font-size:18px;
+  max-width:650px;
 
-  color:rgba(255,255,255,.90);
+  color:rgba(255,255,255,.92);
 
-  margin-bottom:30px;
+  margin-bottom:32px;
+
+  text-shadow:0 2px 8px rgba(0,0,0,.5);
 }
-
-
-/* BUTTONS */
 
 .hero-buttons{
   display:flex;
@@ -398,100 +357,81 @@ button{
   align-items:center;
   justify-content:center;
 
-  min-height:54px;
+  padding:15px 26px;
 
-  padding:14px 25px;
-
-  border-radius:5px;
+  border-radius:30px;
 
   font-weight:700;
 
   transition:.3s;
-
-  cursor:pointer;
 }
 
 .btn-gold{
   background:var(--gold);
   color:var(--navy);
-  box-shadow:0 10px 30px rgba(229,184,92,.22);
+
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
 }
 
 .btn-outline{
-  border:1px solid rgba(255,255,255,.7);
+  border:1px solid rgba(255,255,255,.65);
+  background:rgba(0,0,0,.10);
   color:#fff;
-  background:rgba(0,0,0,.08);
+  backdrop-filter:blur(5px);
 }
 
 .btn:hover{
   transform:translateY(-3px);
 }
 
-.btn-gold:hover{
-  background:var(--gold2);
-}
 
+/* =========================
+   HERO INFO
+========================= */
 
-/* =====================================================
-   HERO FEATURES
-===================================================== */
+.hero-info{
+  position:absolute;
+  z-index:3;
 
-.hero-features{
+  bottom:35px;
+  left:5%;
+
   display:flex;
+  gap:0;
 
-  margin-top:50px;
-
-  max-width:600px;
+  max-width:650px;
 }
 
-.hero-feature{
-  flex:1;
-
-  padding:0 22px;
+.hero-info-item{
+  padding:8px 30px;
 
   border-right:1px solid rgba(255,255,255,.35);
 
-  text-align:center;
+  color:#fff;
 }
 
-.hero-feature:first-child{
+.hero-info-item:first-child{
   padding-left:0;
-  text-align:left;
 }
 
-.hero-feature:last-child{
+.hero-info-item:last-child{
   border-right:0;
 }
 
-.hero-feature-icon{
-  font-size:25px;
-  margin-bottom:6px;
+.hero-info-item strong{
+  display:block;
+  font-size:14px;
 }
 
-.hero-feature strong{
-  display:block;
-
+.hero-info-item span{
+  color:rgba(255,255,255,.75);
   font-size:12px;
-
-  text-transform:uppercase;
-
-  letter-spacing:.5px;
-}
-
-.hero-feature small{
-  display:block;
-
-  color:rgba(255,255,255,.65);
-
-  font-size:11px;
-
-  margin-top:3px;
 }
 
 
-/* =====================================================
+/* =========================
    STATS
-===================================================== */
+========================= */
 
 .stats{
   position:relative;
@@ -502,17 +442,17 @@ button{
 
   background:#fff;
 
-  border-radius:20px;
+  border-radius:25px;
 
   box-shadow:var(--shadow);
 
-  padding:25px;
+  padding:28px;
 
   display:grid;
 
   grid-template-columns:repeat(4,1fr);
 
-  z-index:5;
+  z-index:10;
 }
 
 .stat{
@@ -539,14 +479,13 @@ button{
 
 .stat span{
   color:var(--muted);
-
   font-size:13px;
 }
 
 
-/* =====================================================
+/* =========================
    PAGE SYSTEM
-===================================================== */
+========================= */
 
 .page-section{
   display:none;
@@ -554,14 +493,13 @@ button{
 
 .page-section.active{
   display:block;
-
   animation:pageOpen .35s ease;
 }
 
 @keyframes pageOpen{
   from{
     opacity:0;
-    transform:translateY(10px);
+    transform:translateY(12px);
   }
 
   to{
@@ -570,10 +508,14 @@ button{
   }
 }
 
+.home-section{
+  display:block;
+}
 
-/* =====================================================
+
+/* =========================
    GENERAL
-===================================================== */
+========================= */
 
 section{
   padding:95px 5%;
@@ -586,9 +528,7 @@ section{
 
 .section-head{
   text-align:center;
-
   max-width:700px;
-
   margin:0 auto 50px;
 }
 
@@ -617,9 +557,9 @@ section{
 }
 
 
-/* =====================================================
+/* =========================
    ABOUT
-===================================================== */
+========================= */
 
 .about{
   background:var(--cream);
@@ -694,9 +634,27 @@ section{
 
   border-radius:28px;
 
+  margin-top:25px;
+
   position:relative;
 
   overflow:hidden;
+}
+
+.message::after{
+  content:"“";
+
+  position:absolute;
+
+  right:20px;
+
+  top:-30px;
+
+  font-size:150px;
+
+  color:rgba(229,184,92,.15);
+
+  font-family:Georgia,serif;
 }
 
 .message h4{
@@ -714,9 +672,9 @@ section{
 }
 
 
-/* =====================================================
+/* =========================
    CLASSES
-===================================================== */
+========================= */
 
 .classes{
   background:#fff;
@@ -757,6 +715,7 @@ section{
   border-radius:16px;
 
   display:grid;
+
   place-items:center;
 
   background:var(--cream);
@@ -785,9 +744,9 @@ section{
 }
 
 
-/* =====================================================
+/* =========================
    FEES
-===================================================== */
+========================= */
 
 .fees{
   background:var(--soft);
@@ -831,8 +790,7 @@ table{
   border-collapse:collapse;
 }
 
-th,
-td{
+th,td{
   padding:17px;
 
   text-align:left;
@@ -859,9 +817,9 @@ td{
 }
 
 
-/* =====================================================
+/* =========================
    GALLERY
-===================================================== */
+========================= */
 
 .gallery{
   background:#fff;
@@ -887,6 +845,8 @@ td{
   display:block;
 
   transition:.35s;
+
+  box-shadow:0 10px 30px rgba(7,25,54,.08);
 }
 
 .gallery-grid img:hover{
@@ -894,9 +854,9 @@ td{
 }
 
 
-/* =====================================================
+/* =========================
    ADMISSION
-===================================================== */
+========================= */
 
 .admission{
   background:var(--navy);
@@ -908,6 +868,22 @@ td{
   position:relative;
 
   overflow:hidden;
+}
+
+.admission::before{
+  content:"";
+
+  position:absolute;
+
+  width:400px;
+  height:400px;
+
+  border:1px solid rgba(229,184,92,.2);
+
+  border-radius:50%;
+
+  left:-180px;
+  top:-180px;
 }
 
 .admission h2{
@@ -927,9 +903,9 @@ td{
 }
 
 
-/* =====================================================
+/* =========================
    DOCUMENTS
-===================================================== */
+========================= */
 
 .documents{
   background:var(--cream);
@@ -970,9 +946,9 @@ td{
 }
 
 
-/* =====================================================
+/* =========================
    CONTACT
-===================================================== */
+========================= */
 
 .contact{
   background:#fff;
@@ -1030,13 +1006,17 @@ td{
   font-weight:700;
 }
 
+.map-btn:hover{
+  background:var(--blue);
+}
 
-/* =====================================================
+
+/* =========================
    FOOTER
-===================================================== */
+========================= */
 
 footer{
-  background:#041126;
+  background:var(--navy2);
 
   color:#fff;
 
@@ -1109,9 +1089,9 @@ footer{
 }
 
 
-/* =====================================================
+/* =========================
    WHATSAPP
-===================================================== */
+========================= */
 
 .whatsapp{
   position:fixed;
@@ -1132,7 +1112,7 @@ footer{
 
   place-items:center;
 
-  font-size:26px;
+  font-size:27px;
 
   z-index:999;
 
@@ -1146,42 +1126,26 @@ footer{
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================
+   TABLET
+========================= */
 
 @media(max-width:900px){
 
   .hero{
     min-height:650px;
 
-    background-position:center;
+    background-position:center center;
   }
 
   .hero-inner{
     min-height:650px;
 
-    padding:70px 6% 80px;
+    padding:70px 5%;
   }
 
   .hero-content{
-    max-width:100%;
-  }
-
-  .hero h1{
-    font-size:54px;
-  }
-
-  .hero-sub{
-    font-size:17px;
-  }
-
-  .hero-features{
-    margin-top:40px;
-  }
-
-  .stats{
-    margin:25px 5% 0;
+    max-width:620px;
   }
 
   .about-grid{
@@ -1202,14 +1166,15 @@ footer{
 
   .footer-inner{
     flex-direction:column;
+
     text-align:center;
   }
 }
 
 
-/* =====================================================
-   MOBILE 650
-===================================================== */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:650px){
 
@@ -1218,7 +1183,7 @@ footer{
 
     text-align:center;
 
-    padding:10px 4%;
+    font-size:12px;
   }
 
   .topbar span:last-child{
@@ -1226,39 +1191,44 @@ footer{
   }
 
   .nav-inner{
-    min-height:86px;
-
     padding:11px 5%;
   }
 
+  .brand{
+    gap:10px;
+  }
+
   .brand img{
-    width:52px;
-    height:52px;
+    width:46px;
+    height:46px;
   }
 
   .brand-text strong{
-    font-size:18px;
+    font-size:17px;
   }
 
   .brand-text small{
     font-size:9px;
 
-    letter-spacing:2px;
+    letter-spacing:1.6px;
   }
 
   .menu-btn{
-    width:48px;
-    height:48px;
+    width:46px;
+    height:46px;
+
+    font-size:25px;
   }
 
   .menu-panel{
     right:4%;
     left:4%;
+
     width:auto;
   }
 
 
-  /* HERO MOBILE */
+  /* MOBILE HERO */
 
   .hero{
     min-height:700px;
@@ -1267,9 +1237,10 @@ footer{
 
     background-image:
       linear-gradient(
-        90deg,
-        rgba(4,18,42,.86),
-        rgba(4,18,42,.55)
+        180deg,
+        rgba(3,15,32,.48) 0%,
+        rgba(3,15,32,.55) 45%,
+        rgba(3,15,32,.70) 100%
       ),
       url("4794420C-2C8C-4713-BF55-E23285559A30.jpeg");
   }
@@ -1277,29 +1248,29 @@ footer{
   .hero-inner{
     min-height:700px;
 
-    padding:70px 6% 60px;
+    padding:80px 6% 130px;
 
-    align-items:center;
-  }
-
-  .hero-estd{
     justify-content:center;
 
-    font-size:12px;
+    text-align:center;
+  }
+
+  .hero-content{
+    max-width:100%;
   }
 
   .hero-tag{
-    font-size:10px;
+    font-size:11px;
 
-    padding:7px 13px;
+    letter-spacing:2px;
+
+    padding:8px 14px;
   }
 
   .hero h1{
-    font-size:47px;
+    font-size:48px;
 
-    line-height:1.02;
-
-    letter-spacing:-1.5px;
+    line-height:1.03;
   }
 
   .hero-sub{
@@ -1313,42 +1284,31 @@ footer{
   }
 
   .btn{
-    width:100%;
+    padding:14px 21px;
 
-    min-height:53px;
+    font-size:14px;
   }
 
-  .hero-features{
-    display:grid;
 
-    grid-template-columns:1fr 1fr;
+  .hero-info{
+    left:5%;
+    right:5%;
+    bottom:25px;
 
-    gap:18px;
+    justify-content:center;
 
-    margin-top:40px;
+    width:auto;
   }
 
-  .hero-feature{
-    padding:0;
-
-    border-right:0;
-
-    text-align:center;
+  .hero-info-item{
+    padding:5px 12px;
   }
 
-  .hero-feature:first-child{
-    text-align:center;
+  .hero-info-item strong{
+    font-size:11px;
   }
 
-  .hero-feature-icon{
-    font-size:21px;
-  }
-
-  .hero-feature strong{
-    font-size:10px;
-  }
-
-  .hero-feature small{
+  .hero-info-item span{
     font-size:9px;
   }
 
@@ -1358,9 +1318,9 @@ footer{
   .stats{
     grid-template-columns:1fr 1fr;
 
-    padding:18px;
+    margin:25px 5% 0;
 
-    border-radius:18px;
+    padding:18px;
   }
 
   .stat{
@@ -1402,43 +1362,57 @@ footer{
     font-size:38px;
   }
 
-  th,
-  td{
+  th,td{
     padding:12px 9px;
 
     font-size:13px;
   }
+
 }
 
 
-/* =====================================================
-   VERY SMALL MOBILE
-===================================================== */
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media(max-width:430px){
 
   .brand-text strong{
-    font-size:16px;
+    font-size:15px;
+  }
+
+  .brand-text small{
+    font-size:8px;
   }
 
   .hero{
-    min-height:720px;
+    min-height:690px;
   }
 
   .hero-inner{
-    min-height:720px;
+    min-height:690px;
+
+    padding-top:70px;
   }
 
   .hero h1{
-    font-size:40px;
+    font-size:42px;
   }
 
   .hero-sub{
     font-size:15px;
   }
 
-  .hero-features{
-    gap:12px;
+  .hero-info-item{
+    padding:5px 8px;
+  }
+
+  .hero-info-item strong{
+    font-size:10px;
+  }
+
+  .hero-info-item span{
+    font-size:8px;
   }
 
   .gallery-grid{
@@ -1456,18 +1430,20 @@ footer{
     right:15px;
     bottom:15px;
   }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
+<!-- =========================
      TOP BAR
-===================================================== -->
+========================= -->
 
 <div class="topbar">
 
@@ -1482,10 +1458,9 @@ footer{
 </div>
 
 
-
-<!-- =====================================================
+<!-- =========================
      NAVBAR
-===================================================== -->
+========================= -->
 
 <nav class="navbar">
 
@@ -1579,7 +1554,9 @@ footer{
       href="#admission"
       class="menu-admission"
       onclick="showPage('admission')">
+
       🎓 Admission 2026–27
+
     </a>
 
   </div>
@@ -1588,9 +1565,9 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      HOME
-===================================================== -->
+========================= -->
 
 <div
   id="home"
@@ -1605,27 +1582,20 @@ footer{
 
       <div class="hero-content">
 
-
-        <div class="hero-estd">
-          ESTD. 1997
-        </div>
-
-
         <span class="hero-tag">
           NURSERY TO CLASS 5
         </span>
 
-
         <h1>
 
-          NURTURING MINDS.<br>
+          M.D Memorial
+          <br>
 
           <span>
-            SHAPING FUTURES.
+            School
           </span>
 
         </h1>
-
 
         <p class="hero-sub">
 
@@ -1652,83 +1622,9 @@ footer{
             class="btn btn-outline"
             onclick="showPage('about')">
 
-            👤 Explore School
+            Explore School
 
           </a>
-
-        </div>
-
-
-        <!-- HERO FEATURES -->
-
-        <div class="hero-features">
-
-          <div class="hero-feature">
-
-            <div class="hero-feature-icon">
-              📖
-            </div>
-
-            <strong>
-              Quality Education
-            </strong>
-
-            <small>
-              Strong foundations
-            </small>
-
-          </div>
-
-
-          <div class="hero-feature">
-
-            <div class="hero-feature-icon">
-              👩‍🏫
-            </div>
-
-            <strong>
-              Experienced Faculty
-            </strong>
-
-            <small>
-              Caring guidance
-            </small>
-
-          </div>
-
-
-          <div class="hero-feature">
-
-            <div class="hero-feature-icon">
-              🏆
-            </div>
-
-            <strong>
-              All Round Development
-            </strong>
-
-            <small>
-              Learn & grow
-            </small>
-
-          </div>
-
-
-          <div class="hero-feature">
-
-            <div class="hero-feature-icon">
-              🛡️
-            </div>
-
-            <strong>
-              Safe Environment
-            </strong>
-
-            <small>
-              Care & discipline
-            </small>
-
-          </div>
 
         </div>
 
@@ -1736,8 +1632,65 @@ footer{
 
     </div>
 
-  </section>
 
+    <!-- HERO INFO -->
+
+    <div class="hero-info">
+
+      <div class="hero-info-item">
+
+        <strong>
+          ESTD. 1997
+        </strong>
+
+        <span>
+          Trusted Since 1997
+        </span>
+
+      </div>
+
+
+      <div class="hero-info-item">
+
+        <strong>
+          QUALITY EDUCATION
+        </strong>
+
+        <span>
+          Strong Foundation
+        </span>
+
+      </div>
+
+
+      <div class="hero-info-item">
+
+        <strong>
+          SMART CLASSES
+        </strong>
+
+        <span>
+          Better Learning
+        </span>
+
+      </div>
+
+
+      <div class="hero-info-item">
+
+        <strong>
+          EXTRA SUPPORT
+        </strong>
+
+        <span>
+          Individual Attention
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
   <!-- STATS -->
@@ -1801,9 +1754,9 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      ABOUT
-===================================================== -->
+========================= -->
 
 <section
   class="about page-section"
@@ -1852,6 +1805,7 @@ footer{
 
 
         <div class="features">
+
 
           <div class="feature">
 
@@ -1904,6 +1858,7 @@ footer{
 
           </div>
 
+
         </div>
 
       </div>
@@ -1918,10 +1873,12 @@ footer{
           </h4>
 
           <p>
+
             Our aim is to create an environment where every child
             feels encouraged to learn, grow and shine. We believe
             that education becomes meaningful when children receive
             knowledge, values and individual attention together.
+
           </p>
 
           <br>
@@ -1934,6 +1891,7 @@ footer{
 
       </div>
 
+
     </div>
 
   </div>
@@ -1942,9 +1900,9 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      CLASSES
-===================================================== -->
+========================= -->
 
 <section
   class="classes page-section"
@@ -2025,6 +1983,7 @@ footer{
 
       </div>
 
+
     </div>
 
   </div>
@@ -2033,9 +1992,9 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      FEES
-===================================================== -->
+========================= -->
 
 <section
   class="fees page-section"
@@ -2070,28 +2029,62 @@ footer{
       <table>
 
         <tr>
-          <th>Class</th>
-          <th>Monthly Fee</th>
-          <th>Exam / Activity / Cultural Fee</th>
+
+          <th>
+            Class
+          </th>
+
+          <th>
+            Monthly Fee
+          </th>
+
+          <th>
+            Exam / Activity / Cultural Fee
+          </th>
+
         </tr>
 
-        <tr>
-          <td>Nursery – UKG</td>
-          <td>₹350 / Month</td>
-          <td>₹600</td>
-        </tr>
 
         <tr>
-          <td>Class 1 – 5</td>
-          <td>₹400 / Month</td>
-          <td>₹600</td>
+
+          <td>
+            Nursery – UKG
+          </td>
+
+          <td>
+            ₹350 / Month
+          </td>
+
+          <td>
+            ₹600
+          </td>
+
+        </tr>
+
+
+        <tr>
+
+          <td>
+            Class 1 – 5
+          </td>
+
+          <td>
+            ₹400 / Month
+          </td>
+
+          <td>
+            ₹600
+          </td>
+
         </tr>
 
       </table>
 
 
       <p class="fee-note">
+
         Monthly tuition fee is due by the 10th of every month.
+
       </p>
 
     </div>
@@ -2102,9 +2095,9 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      GALLERY
-===================================================== -->
+========================= -->
 
 <section
   class="gallery page-section"
@@ -2131,41 +2124,51 @@ footer{
 
     <div class="gallery-grid">
 
+
       <img
         src="a5b00ca8-6e49-4309-b53b-1b7a1586dd9e.jpeg"
         alt="M.D Memorial School">
+
 
       <img
         src="15ee2656-ff28-40c1-97f3-4ce6c5d04ca5.jpeg"
         alt="M.D Memorial School">
 
+
       <img
         src="1e7a30a4-c8b3-4405-9297-bbceee85123e.jpeg"
         alt="M.D Memorial School">
+
 
       <img
         src="1f491bd3-0e0c-4568-b970-43b2985cdb1e.jpeg"
         alt="M.D Memorial School">
 
+
       <img
         src="2EADB222-24B2-4D4F-A2B3-64A13E3DFEBB.png"
         alt="M.D Memorial School">
+
 
       <img
         src="788853e2-ff2a-417d-ab30-7d62065f4b50.jpeg"
         alt="M.D Memorial School">
 
+
       <img
         src="IMG_0828.jpeg"
         alt="M.D Memorial School">
+
 
       <img
         src="IMG_0843.jpeg"
         alt="M.D Memorial School">
 
+
       <img
         src="IMG_0870.jpeg"
         alt="M.D Memorial School">
+
 
       <img
         src="d5fb95f0-c573-4145-a41b-9b74d47ccde9.jpeg"
@@ -2179,9 +2182,9 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      ADMISSION
-===================================================== -->
+========================= -->
 
 <section
   class="admission page-section"
@@ -2207,6 +2210,7 @@ footer{
       class="hero-buttons"
       style="justify-content:center;">
 
+
       <a
         href="tel:7409777967"
         class="btn btn-gold">
@@ -2224,6 +2228,7 @@ footer{
 
       </a>
 
+
     </div>
 
   </div>
@@ -2232,9 +2237,9 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      DOCUMENTS
-===================================================== -->
+========================= -->
 
 <section
   class="documents page-section"
@@ -2261,47 +2266,63 @@ footer{
 
     <div class="document-grid">
 
+
       <div class="document-card">
         Student Aadhaar
       </div>
 
+
       <div class="document-card">
+
         Birth Certificate
+
         <small>
           Only if Aadhaar is unavailable
         </small>
+
       </div>
+
 
       <div class="document-card">
         PEN Number
       </div>
 
+
       <div class="document-card">
         Previous School Report Card / Marksheet
       </div>
 
+
       <div class="document-card">
+
         Transfer Certificate
+
         <small>
           If applicable
         </small>
+
       </div>
+
 
       <div class="document-card">
         Passport Size Photographs
       </div>
 
+
       <div class="document-card">
         Parent / Guardian Aadhaar
       </div>
+
 
       <div class="document-card">
         Address Proof
       </div>
 
+
       <div class="document-card">
         WhatsApp Mobile Number
       </div>
+
 
     </div>
 
@@ -2311,9 +2332,9 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      CONTACT
-===================================================== -->
+========================= -->
 
 <section
   class="contact page-section"
@@ -2348,12 +2369,15 @@ footer{
         </strong>
 
         <span>
+
           M.D Memorial School,<br>
           Aurangabad, Bulandshahr,<br>
           Uttar Pradesh
+
         </span>
 
         <br><br>
+
 
         <a
           href="https://maps.app.goo.gl/D363mKKb5yUFidWB7?g_st=ic"
@@ -2388,11 +2412,14 @@ footer{
         </strong>
 
         <span>
+
           Mrs. Poonam Devi — Principal<br>
           Mr. Ashok Kumar — Manager
+
         </span>
 
       </div>
+
 
     </div>
 
@@ -2402,13 +2429,14 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      FOOTER
-===================================================== -->
+========================= -->
 
 <footer>
 
   <div class="footer-inner">
+
 
     <div class="footer-brand">
 
@@ -2435,20 +2463,24 @@ footer{
       LEARN • GROW • SHINE
     </div>
 
+
   </div>
 
 
   <div class="copyright">
-    © 2026 M.D Memorial School. All Rights Reserved.
+
+    © 2026 M.D Memorial School.
+    All Rights Reserved.
+
   </div>
 
 </footer>
 
 
 
-<!-- =====================================================
+<!-- =========================
      WHATSAPP
-===================================================== -->
+========================= -->
 
 <a
   class="whatsapp"
@@ -2461,14 +2493,16 @@ footer{
 
 
 
-<!-- =====================================================
+<!-- =========================
      JAVASCRIPT
-===================================================== -->
+========================= -->
 
 <script>
 
 
-/* MENU */
+/* =========================
+   MENU
+========================= */
 
 function toggleMenu(){
 
@@ -2480,12 +2514,15 @@ function toggleMenu(){
 }
 
 
-/* PAGE NAVIGATION */
+/* =========================
+   PAGE NAVIGATION
+========================= */
 
 function showPage(page){
 
   const pages =
     document.querySelectorAll(".page-section");
+
 
   pages.forEach(function(section){
 
@@ -2508,29 +2545,31 @@ function showPage(page){
   const menu =
     document.getElementById("menuPanel");
 
+
   menu.classList.remove("show");
 
 
   window.scrollTo({
+
     top:0,
+
     behavior:"smooth"
+
   });
 
 
-  if(history.replaceState){
-
-    history.replaceState(
-      null,
-      "",
-      "#" + page
-    );
-
-  }
+  history.replaceState(
+    null,
+    "",
+    "#" + page
+  );
 
 }
 
 
-/* CLOSE MENU OUTSIDE */
+/* =========================
+   CLOSE MENU OUTSIDE
+========================= */
 
 document.addEventListener(
   "click",
@@ -2544,9 +2583,13 @@ document.addEventListener(
 
 
     if(
+
       menu.classList.contains("show") &&
+
       !menu.contains(event.target) &&
+
       !button.contains(event.target)
+
     ){
 
       menu.classList.remove("show");
@@ -2557,7 +2600,9 @@ document.addEventListener(
 );
 
 
-/* URL HASH */
+/* =========================
+   URL HASH
+========================= */
 
 window.addEventListener(
   "load",
@@ -2568,6 +2613,7 @@ window.addEventListener(
 
 
     const validPages = [
+
       "home",
       "about",
       "classes",
@@ -2576,6 +2622,7 @@ window.addEventListener(
       "documents",
       "contact",
       "admission"
+
     ];
 
 
