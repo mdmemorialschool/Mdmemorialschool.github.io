@@ -1,43 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>M.D Memorial School | Aurangabad, Bulandshahr</title>
 
-<meta name="description" content="M.D Memorial School, Aurangabad, Bulandshahr — English medium school offering education from Nursery to Class 5. Established in 1997 with smart classes, extra academic support and co-curricular activities.">
+<meta name="description" content="M.D Memorial School, Aurangabad, Bulandshahr — English medium school offering education from Nursery to Class 5. Established in 1997.">
 
-<meta name="keywords" content="M.D Memorial School, MD Memorial School, school in Aurangabad, school in Bulandshahr, English medium school Aurangabad, Nursery to Class 5, school near Bulandshahr">
+<meta name="keywords" content="M.D Memorial School, MD Memorial School, school in Aurangabad, school in Bulandshahr, English medium school Aurangabad">
 
 <meta name="author" content="M.D Memorial School">
 <meta name="robots" content="index, follow">
-<meta name="language" content="English">
-
-<meta name="geo.region" content="IN-UP">
-<meta name="geo.placename" content="Aurangabad, Bulandshahr, Uttar Pradesh, India">
-
-<meta property="og:title" content="M.D Memorial School | Aurangabad, Bulandshahr">
-<meta property="og:description" content="M.D Memorial School — Learn • Grow • Shine. English medium education from Nursery to Class 5.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="M.D Memorial School">
-<meta property="og:locale" content="en_IN">
-
 <meta name="theme-color" content="#071936">
 
+<meta property="og:title" content="M.D Memorial School | Aurangabad, Bulandshahr">
+<meta property="og:description" content="M.D Memorial School — Learn • Grow • Shine.">
+<meta property="og:type" content="website">
+
 <style>
+
+/* =====================================================
+   ROOT
+===================================================== */
 
 :root{
   --navy:#071936;
   --navy2:#0b2348;
   --blue:#123d7a;
   --gold:#e5b85c;
-  --gold2:#f5d98b;
+  --gold2:#f7dc91;
   --cream:#f8f5ee;
   --white:#ffffff;
   --text:#172033;
   --muted:#6d7687;
-  --line:#e7eaf0;
+  --line:#e5e8ee;
   --soft:#f5f7fa;
   --shadow:0 20px 60px rgba(7,25,54,.12);
 }
@@ -81,15 +79,16 @@ button{
 .topbar{
   background:var(--navy);
   color:#fff;
+  min-height:44px;
   padding:9px 5%;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
   font-size:13px;
 }
 
 .topbar span{
-  opacity:.92;
+  opacity:.95;
 }
 
 
@@ -107,120 +106,72 @@ button{
 }
 
 .nav-inner{
-  max-width:1400px;
+  max-width:1250px;
+  min-height:86px;
   margin:auto;
-  padding:12px 4%;
+  padding:12px 5%;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:25px;
+  gap:20px;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:12px;
-  flex-shrink:0;
+  gap:13px;
 }
 
 .brand img{
   width:58px;
   height:58px;
   object-fit:contain;
-  border-radius:50%;
 }
 
 .brand-text strong{
   display:block;
   color:var(--navy);
   font-family:Georgia,serif;
-  font-size:19px;
+  font-size:22px;
   line-height:1.2;
 }
 
 .brand-text small{
-  color:#7b8493;
+  display:block;
+  color:#7c8493;
   font-size:11px;
-  letter-spacing:1.5px;
+  letter-spacing:2.5px;
+  margin-top:5px;
 }
 
 
-/* DESKTOP NAVIGATION */
-
-.desktop-nav{
-  display:flex;
-  align-items:center;
-  gap:27px;
-}
-
-.desktop-nav a{
-  position:relative;
-  color:var(--navy);
-  font-size:13px;
-  font-weight:700;
-  text-transform:uppercase;
-  padding:12px 0;
-  transition:.25s;
-}
-
-.desktop-nav a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:4px;
-  width:0;
-  height:2px;
-  background:var(--gold);
-  transition:.25s;
-}
-
-.desktop-nav a:hover{
-  color:#a77b20;
-}
-
-.desktop-nav a:hover::after{
-  width:100%;
-}
-
-.desktop-admission{
-  background:var(--gold);
-  color:var(--navy)!important;
-  padding:13px 19px!important;
-  border-radius:7px;
-}
-
-.desktop-admission::after{
-  display:none;
-}
-
-.desktop-admission:hover{
-  background:#f0ca72;
-  transform:translateY(-2px);
-}
-
-
-/* MOBILE MENU BUTTON */
+/* =====================================================
+   MENU BUTTON
+===================================================== */
 
 .menu-btn{
-  width:48px;
-  height:48px;
+  width:52px;
+  height:52px;
   border:0;
-  border-radius:13px;
+  border-radius:15px;
   background:var(--navy);
   color:#fff;
-  font-size:25px;
+  font-size:27px;
   cursor:pointer;
-  display:none;
+  display:grid;
   place-items:center;
   transition:.3s;
 }
 
 .menu-btn:hover{
   background:var(--blue);
+  transform:translateY(-2px);
 }
 
 
-/* MOBILE DROPDOWN */
+/* =====================================================
+   MENU PANEL
+===================================================== */
 
 .menu-panel{
   position:absolute;
@@ -229,15 +180,15 @@ button{
   width:280px;
   background:#fff;
   border:1px solid var(--line);
-  border-radius:18px;
+  border-radius:20px;
   padding:10px;
-  box-shadow:0 20px 50px rgba(7,25,54,.20);
+  box-shadow:0 20px 50px rgba(7,25,54,.18);
   display:none;
-  animation:menuOpen .25s ease;
 }
 
 .menu-panel.show{
   display:block;
+  animation:menuOpen .25s ease;
 }
 
 @keyframes menuOpen{
@@ -245,6 +196,7 @@ button{
     opacity:0;
     transform:translateY(-10px);
   }
+
   to{
     opacity:1;
     transform:translateY(0);
@@ -256,7 +208,7 @@ button{
   align-items:center;
   gap:12px;
   padding:14px 15px;
-  border-radius:12px;
+  border-radius:13px;
   color:var(--navy);
   font-weight:600;
   font-size:14px;
@@ -285,29 +237,30 @@ button{
 ===================================================== */
 
 .hero{
-  min-height:calc(100vh - 100px);
-  min-height:720px;
   position:relative;
+  min-height:680px;
   overflow:hidden;
-  color:#fff;
 
+  /* IMPORTANT:
+     Keep this image in the same GitHub folder */
   background-image:
     linear-gradient(
       90deg,
-      rgba(4,17,38,.86) 0%,
-      rgba(4,17,38,.68) 35%,
-      rgba(4,17,38,.28) 70%,
-      rgba(4,17,38,.12) 100%
+      rgba(4,18,42,.82) 0%,
+      rgba(4,18,42,.66) 35%,
+      rgba(4,18,42,.25) 68%,
+      rgba(4,18,42,.08) 100%
     ),
     url("4794420C-2C8C-4713-BF55-E23285559A30.jpeg");
 
   background-size:cover;
   background-position:center center;
   background-repeat:no-repeat;
+
+  color:#fff;
 }
 
-
-/* DARK BOTTOM GRADIENT */
+/* Dark bottom gradient */
 
 .hero::after{
   content:"";
@@ -315,58 +268,101 @@ button{
   inset:0;
   background:
     linear-gradient(
-      to bottom,
-      transparent 55%,
-      rgba(2,10,24,.45) 100%
+      0deg,
+      rgba(3,15,34,.45),
+      transparent 35%
     );
   pointer-events:none;
 }
 
 
-/* HERO CONTENT */
+/* =====================================================
+   HERO CONTENT
+===================================================== */
 
 .hero-inner{
   position:relative;
   z-index:2;
-  max-width:1400px;
-  min-height:720px;
+
+  max-width:1250px;
+  min-height:680px;
+
   margin:auto;
-  padding:80px 5% 90px;
+
+  padding:90px 5% 75px;
+
   display:flex;
   align-items:center;
 }
 
 .hero-content{
-  max-width:690px;
+  max-width:680px;
 }
 
-.hero-tag{
-  display:inline-flex;
+
+/* ESTD */
+
+.hero-estd{
+  display:flex;
   align-items:center;
-  gap:13px;
+  gap:12px;
+
   color:var(--gold2);
-  font-size:13px;
+
+  font-size:14px;
   font-weight:700;
+
   letter-spacing:2px;
+
   margin-bottom:22px;
 }
 
-.hero-tag::before,
-.hero-tag::after{
+.hero-estd::before,
+.hero-estd::after{
   content:"";
-  width:42px;
+  width:38px;
   height:1px;
   background:var(--gold);
 }
 
 
+/* TAG */
+
+.hero-tag{
+  display:inline-block;
+
+  padding:8px 16px;
+
+  border:1px solid rgba(229,184,92,.65);
+  border-radius:30px;
+
+  color:var(--gold2);
+
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+
+  margin-bottom:20px;
+
+  background:rgba(7,25,54,.22);
+}
+
+
+/* HEADING */
+
 .hero h1{
   font-family:Arial,Helvetica,sans-serif;
+
+  font-size:clamp(45px,6vw,76px);
+
   font-weight:800;
-  font-size:clamp(48px,6vw,78px);
-  line-height:1.02;
+
+  line-height:1.03;
+
   letter-spacing:-2px;
-  margin-bottom:22px;
+
+  margin-bottom:20px;
+
   text-transform:uppercase;
 }
 
@@ -374,16 +370,21 @@ button{
   color:var(--gold);
 }
 
+
+/* SUBTEXT */
+
 .hero-sub{
+  max-width:620px;
+
   font-size:18px;
-  line-height:1.7;
-  max-width:650px;
-  color:rgba(255,255,255,.88);
-  margin-bottom:32px;
+
+  color:rgba(255,255,255,.90);
+
+  margin-bottom:30px;
 }
 
 
-/* HERO BUTTONS */
+/* BUTTONS */
 
 .hero-buttons{
   display:flex;
@@ -393,55 +394,69 @@ button{
 
 .btn{
   display:inline-flex;
+
   align-items:center;
   justify-content:center;
-  padding:15px 27px;
-  border-radius:6px;
+
+  min-height:54px;
+
+  padding:14px 25px;
+
+  border-radius:5px;
+
   font-weight:700;
+
   transition:.3s;
-  min-width:175px;
+
+  cursor:pointer;
 }
 
 .btn-gold{
   background:var(--gold);
   color:var(--navy);
-  box-shadow:0 10px 25px rgba(0,0,0,.18);
-}
-
-.btn-gold:hover{
-  background:#f0ca72;
-  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(229,184,92,.22);
 }
 
 .btn-outline{
-  border:1px solid rgba(255,255,255,.65);
+  border:1px solid rgba(255,255,255,.7);
   color:#fff;
-  background:rgba(255,255,255,.04);
+  background:rgba(0,0,0,.08);
 }
 
-.btn-outline:hover{
-  background:#fff;
-  color:var(--navy);
+.btn:hover{
   transform:translateY(-3px);
 }
 
+.btn-gold:hover{
+  background:var(--gold2);
+}
 
-/* HERO FEATURES */
+
+/* =====================================================
+   HERO FEATURES
+===================================================== */
 
 .hero-features{
   display:flex;
-  margin-top:55px;
-  max-width:700px;
+
+  margin-top:50px;
+
+  max-width:600px;
 }
 
 .hero-feature{
   flex:1;
-  padding:0 25px;
+
+  padding:0 22px;
+
   border-right:1px solid rgba(255,255,255,.35);
+
+  text-align:center;
 }
 
 .hero-feature:first-child{
   padding-left:0;
+  text-align:left;
 }
 
 .hero-feature:last-child{
@@ -449,21 +464,27 @@ button{
 }
 
 .hero-feature-icon{
-  font-size:28px;
-  margin-bottom:7px;
+  font-size:25px;
+  margin-bottom:6px;
 }
 
 .hero-feature strong{
   display:block;
-  font-size:13px;
+
+  font-size:12px;
+
   text-transform:uppercase;
-  letter-spacing:.4px;
+
+  letter-spacing:.5px;
 }
 
-.hero-feature span{
+.hero-feature small{
   display:block;
+
+  color:rgba(255,255,255,.65);
+
   font-size:11px;
-  color:rgba(255,255,255,.7);
+
   margin-top:3px;
 }
 
@@ -474,20 +495,31 @@ button{
 
 .stats{
   position:relative;
-  margin:-55px auto 0;
+
+  margin:-50px auto 0;
+
   max-width:1050px;
+
   background:#fff;
+
   border-radius:20px;
+
   box-shadow:var(--shadow);
-  padding:28px;
+
+  padding:25px;
+
   display:grid;
+
   grid-template-columns:repeat(4,1fr);
+
   z-index:5;
 }
 
 .stat{
   text-align:center;
+
   padding:8px 15px;
+
   border-right:1px solid var(--line);
 }
 
@@ -497,14 +529,45 @@ button{
 
 .stat strong{
   display:block;
+
   font-family:Georgia,serif;
+
   color:var(--navy);
+
   font-size:27px;
 }
 
 .stat span{
   color:var(--muted);
+
   font-size:13px;
+}
+
+
+/* =====================================================
+   PAGE SYSTEM
+===================================================== */
+
+.page-section{
+  display:none;
+}
+
+.page-section.active{
+  display:block;
+
+  animation:pageOpen .35s ease;
+}
+
+@keyframes pageOpen{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
 
@@ -523,53 +586,34 @@ section{
 
 .section-head{
   text-align:center;
+
   max-width:700px;
+
   margin:0 auto 50px;
 }
 
 .eyebrow{
   color:#a77b20;
+
   letter-spacing:2px;
+
   font-size:12px;
+
   font-weight:800;
 }
 
 .section-head h2{
   font-family:Georgia,serif;
+
   font-size:clamp(34px,4vw,48px);
+
   color:var(--navy);
+
   margin:9px 0 12px;
 }
 
 .section-head p{
   color:var(--muted);
-}
-
-
-/* PAGE SYSTEM */
-
-.page-section{
-  display:none;
-}
-
-.page-section.active{
-  display:block;
-  animation:pageOpen .35s ease;
-}
-
-@keyframes pageOpen{
-  from{
-    opacity:0;
-    transform:translateY(12px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-.home-section{
-  display:block;
 }
 
 
@@ -583,72 +627,85 @@ section{
 
 .about-grid{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:55px;
+
   align-items:center;
 }
 
 .about-text h3{
   font-family:Georgia,serif;
+
   font-size:35px;
+
   color:var(--navy);
+
   margin-bottom:18px;
 }
 
 .about-text p{
   color:var(--muted);
+
   margin-bottom:18px;
 }
 
 .features{
   display:grid;
+
   grid-template-columns:1fr 1fr;
+
   gap:15px;
 }
 
 .feature{
   background:#fff;
+
   padding:22px;
+
   border-radius:18px;
+
   border:1px solid var(--line);
+
   box-shadow:0 10px 30px rgba(7,25,54,.05);
 }
 
 .feature strong{
   display:block;
+
   color:var(--navy);
+
   margin-bottom:5px;
 }
 
 .feature span{
   color:var(--muted);
+
   font-size:13px;
 }
 
 .message{
   background:var(--navy);
-  color:#fff;
-  padding:38px;
-  border-radius:28px;
-  margin-top:25px;
-  position:relative;
-  overflow:hidden;
-}
 
-.message::after{
-  content:"“";
-  position:absolute;
-  right:20px;
-  top:-30px;
-  font-size:150px;
-  color:rgba(229,184,92,.15);
-  font-family:Georgia,serif;
+  color:#fff;
+
+  padding:38px;
+
+  border-radius:28px;
+
+  position:relative;
+
+  overflow:hidden;
 }
 
 .message h4{
   color:var(--gold);
+
   font-family:Georgia,serif;
+
   font-size:25px;
+
   margin-bottom:12px;
 }
 
@@ -667,45 +724,63 @@ section{
 
 .class-grid{
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:22px;
 }
 
 .class-card{
   padding:32px;
+
   border:1px solid var(--line);
+
   border-radius:25px;
+
   background:#fff;
+
   box-shadow:0 15px 40px rgba(7,25,54,.06);
+
   transition:.3s;
 }
 
 .class-card:hover{
   transform:translateY(-7px);
+
   box-shadow:var(--shadow);
 }
 
 .class-number{
   width:55px;
   height:55px;
+
   border-radius:16px;
+
   display:grid;
   place-items:center;
+
   background:var(--cream);
+
   color:#a77b20;
+
   font-weight:800;
+
   margin-bottom:20px;
 }
 
 .class-card h3{
   color:var(--navy);
+
   font-family:Georgia,serif;
+
   font-size:25px;
+
   margin-bottom:9px;
 }
 
 .class-card p{
   color:var(--muted);
+
   font-size:14px;
 }
 
@@ -720,37 +795,54 @@ section{
 
 .fee-box{
   background:#fff;
+
   border-radius:28px;
+
   padding:30px;
+
   box-shadow:var(--shadow);
+
   overflow:hidden;
 }
 
 .session{
   display:inline-block;
+
   background:var(--navy);
+
   color:var(--gold2);
+
   padding:9px 16px;
+
   border-radius:30px;
+
   font-size:12px;
+
   font-weight:700;
+
   letter-spacing:1px;
+
   margin-bottom:20px;
 }
 
 table{
   width:100%;
+
   border-collapse:collapse;
 }
 
-th,td{
+th,
+td{
   padding:17px;
+
   text-align:left;
+
   border-bottom:1px solid var(--line);
 }
 
 th{
   background:var(--navy);
+
   color:#fff;
 }
 
@@ -760,67 +852,10 @@ td{
 
 .fee-note{
   padding-top:20px;
+
   color:var(--muted);
+
   font-size:13px;
-}
-
-
-/* =====================================================
-   NOTICE
-===================================================== */
-
-.notice{
-  background:var(--cream);
-}
-
-.notice-box{
-  max-width:900px;
-  margin:auto;
-  border:1px solid var(--line);
-  border-radius:25px;
-  overflow:hidden;
-  background:#fff;
-  box-shadow:var(--shadow);
-}
-
-.notice-head{
-  background:var(--navy);
-  color:#fff;
-  padding:20px 25px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.notice-head strong{
-  font-family:Georgia,serif;
-  font-size:23px;
-}
-
-.update{
-  background:var(--gold);
-  color:var(--navy);
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:11px;
-  font-weight:800;
-}
-
-.notice-body{
-  padding:25px;
-}
-
-.notice-item{
-  padding:18px 0;
-  border-bottom:1px solid var(--line);
-}
-
-.notice-item:last-child{
-  border-bottom:0;
-}
-
-.notice-item strong{
-  color:var(--navy);
 }
 
 
@@ -834,16 +869,23 @@ td{
 
 .gallery-grid{
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:18px;
 }
 
 .gallery-grid img{
   width:100%;
+
   height:270px;
+
   object-fit:cover;
+
   border-radius:20px;
+
   display:block;
+
   transition:.35s;
 }
 
@@ -858,32 +900,29 @@ td{
 
 .admission{
   background:var(--navy);
-  color:#fff;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
 
-.admission::before{
-  content:"";
-  position:absolute;
-  width:400px;
-  height:400px;
-  border:1px solid rgba(229,184,92,.2);
-  border-radius:50%;
-  left:-180px;
-  top:-180px;
+  color:#fff;
+
+  text-align:center;
+
+  position:relative;
+
+  overflow:hidden;
 }
 
 .admission h2{
   font-family:Georgia,serif;
+
   font-size:48px;
+
   margin-bottom:15px;
 }
 
 .admission p{
   color:rgba(255,255,255,.72);
+
   max-width:650px;
+
   margin:0 auto 28px;
 }
 
@@ -898,24 +937,35 @@ td{
 
 .document-grid{
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:16px;
 }
 
 .document-card{
   padding:21px;
+
   background:#fff;
+
   border:1px solid var(--line);
+
   border-radius:17px;
+
   box-shadow:0 8px 25px rgba(7,25,54,.05);
+
   color:var(--text);
+
   font-weight:600;
 }
 
 .document-card small{
   display:block;
+
   color:var(--muted);
+
   font-weight:400;
+
   margin-top:4px;
 }
 
@@ -930,42 +980,54 @@ td{
 
 .contact-grid{
   display:grid;
+
   grid-template-columns:repeat(3,1fr);
+
   gap:20px;
 }
 
 .contact-card{
   padding:30px;
+
   border:1px solid var(--line);
+
   border-radius:22px;
+
   text-align:center;
 }
 
 .contact-card strong{
   display:block;
+
   color:var(--navy);
+
   font-family:Georgia,serif;
+
   font-size:21px;
+
   margin-bottom:7px;
 }
 
 .contact-card span{
   color:var(--muted);
+
   font-size:14px;
 }
 
 .map-btn{
   display:inline-block;
-  background:var(--navy);
-  color:#fff;
-  padding:10px 16px;
-  border-radius:25px;
-  font-size:13px;
-  font-weight:700;
-}
 
-.map-btn:hover{
-  background:var(--blue);
+  background:var(--navy);
+
+  color:#fff;
+
+  padding:10px 16px;
+
+  border-radius:25px;
+
+  font-size:13px;
+
+  font-weight:700;
 }
 
 
@@ -975,31 +1037,44 @@ td{
 
 footer{
   background:#041126;
+
   color:#fff;
+
   padding:45px 5% 25px;
 }
 
 .footer-inner{
   max-width:1150px;
+
   margin:auto;
+
   display:flex;
+
   justify-content:space-between;
+
   gap:30px;
+
   align-items:center;
 }
 
 .footer-brand{
   display:flex;
+
   align-items:center;
+
   gap:12px;
 }
 
 .footer-brand img{
   width:55px;
   height:55px;
+
   object-fit:contain;
+
   background:#fff;
+
   border-radius:50%;
+
   padding:4px;
 }
 
@@ -1013,16 +1088,23 @@ footer{
 
 .footer-tag{
   color:var(--gold);
+
   letter-spacing:3px;
+
   font-size:12px;
 }
 
 .copyright{
   text-align:center;
+
   border-top:1px solid rgba(255,255,255,.1);
+
   margin-top:30px;
+
   padding-top:20px;
+
   color:rgba(255,255,255,.45);
+
   font-size:12px;
 }
 
@@ -1033,65 +1115,53 @@ footer{
 
 .whatsapp{
   position:fixed;
+
   right:22px;
   bottom:22px;
+
   width:58px;
   height:58px;
+
   border-radius:50%;
+
   background:#25D366;
+
   color:#fff;
+
   display:grid;
+
   place-items:center;
-  font-size:27px;
+
+  font-size:26px;
+
   z-index:999;
+
   box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+  transition:.3s;
+}
+
+.whatsapp:hover{
+  transform:scale(1.08);
 }
 
 
 /* =====================================================
-   TABLET
-===================================================== */
-
-@media(max-width:1100px){
-
-  .desktop-nav{
-    gap:15px;
-  }
-
-  .desktop-nav a{
-    font-size:11px;
-  }
-
-  .hero h1{
-    font-size:60px;
-  }
-
-}
-
-
-/* =====================================================
-   MOBILE / TABLET
+   MOBILE
 ===================================================== */
 
 @media(max-width:900px){
 
-  .desktop-nav{
-    display:none;
-  }
-
-  .menu-btn{
-    display:grid;
-  }
-
   .hero{
-    min-height:700px;
-    background-position:center center;
+    min-height:650px;
+
+    background-position:center;
   }
 
   .hero-inner{
-    min-height:700px;
+    min-height:650px;
+
     padding:70px 6% 80px;
-    align-items:center;
   }
 
   .hero-content{
@@ -1099,15 +1169,15 @@ footer{
   }
 
   .hero h1{
-    font-size:clamp(45px,10vw,68px);
+    font-size:54px;
   }
 
   .hero-sub{
-    max-width:620px;
+    font-size:17px;
   }
 
   .hero-features{
-    margin-top:45px;
+    margin-top:40px;
   }
 
   .stats{
@@ -1134,21 +1204,21 @@ footer{
     flex-direction:column;
     text-align:center;
   }
-
 }
 
 
 /* =====================================================
-   SMALL MOBILE
+   MOBILE 650
 ===================================================== */
 
 @media(max-width:650px){
 
   .topbar{
     justify-content:center;
+
     text-align:center;
-    padding:8px 4%;
-    font-size:11px;
+
+    padding:10px 4%;
   }
 
   .topbar span:last-child{
@@ -1156,25 +1226,29 @@ footer{
   }
 
   .nav-inner{
-    padding:10px 5%;
+    min-height:86px;
+
+    padding:11px 5%;
   }
 
   .brand img{
-    width:46px;
-    height:46px;
+    width:52px;
+    height:52px;
   }
 
   .brand-text strong{
-    font-size:15px;
+    font-size:18px;
   }
 
   .brand-text small{
     font-size:9px;
+
+    letter-spacing:2px;
   }
 
   .menu-btn{
-    width:45px;
-    height:45px;
+    width:48px;
+    height:48px;
   }
 
   .menu-panel{
@@ -1183,52 +1257,55 @@ footer{
     width:auto;
   }
 
+
+  /* HERO MOBILE */
+
   .hero{
-    min-height:680px;
+    min-height:700px;
+
+    background-position:center center;
 
     background-image:
       linear-gradient(
-        rgba(4,17,38,.66),
-        rgba(4,17,38,.66)
+        90deg,
+        rgba(4,18,42,.86),
+        rgba(4,18,42,.55)
       ),
       url("4794420C-2C8C-4713-BF55-E23285559A30.jpeg");
-
-    background-position:center center;
-    background-size:cover;
   }
 
   .hero-inner{
-    min-height:680px;
-    padding:55px 6% 70px;
-    text-align:center;
+    min-height:700px;
+
+    padding:70px 6% 60px;
+
+    align-items:center;
   }
 
-  .hero-content{
-    width:100%;
+  .hero-estd{
+    justify-content:center;
+
+    font-size:12px;
   }
 
   .hero-tag{
-    justify-content:center;
-    font-size:11px;
-    letter-spacing:1.5px;
-  }
+    font-size:10px;
 
-  .hero-tag::before,
-  .hero-tag::after{
-    width:25px;
+    padding:7px 13px;
   }
 
   .hero h1{
-    font-size:44px;
-    line-height:1.05;
-    letter-spacing:-1px;
+    font-size:47px;
+
+    line-height:1.02;
+
+    letter-spacing:-1.5px;
   }
 
   .hero-sub{
-    font-size:15px;
+    font-size:16px;
+
     line-height:1.7;
-    margin-left:auto;
-    margin-right:auto;
   }
 
   .hero-buttons{
@@ -1237,39 +1314,60 @@ footer{
 
   .btn{
     width:100%;
-    max-width:280px;
-    padding:14px 20px;
+
+    min-height:53px;
   }
 
   .hero-features{
-    margin-top:42px;
-    width:100%;
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+    margin-top:40px;
   }
 
   .hero-feature{
-    padding:0 10px;
+    padding:0;
+
+    border-right:0;
+
+    text-align:center;
+  }
+
+  .hero-feature:first-child{
+    text-align:center;
   }
 
   .hero-feature-icon{
-    font-size:22px;
+    font-size:21px;
   }
 
   .hero-feature strong{
     font-size:10px;
   }
 
-  .hero-feature span{
+  .hero-feature small{
     font-size:9px;
   }
 
+
+  /* STATS */
+
   .stats{
     grid-template-columns:1fr 1fr;
+
     padding:18px;
+
+    border-radius:18px;
   }
 
   .stat{
     border-right:0;
+
     border-bottom:1px solid var(--line);
+
     padding:14px 5px;
   }
 
@@ -1292,6 +1390,7 @@ footer{
 
   .gallery-grid{
     grid-template-columns:1fr 1fr;
+
     gap:12px;
   }
 
@@ -1306,9 +1405,9 @@ footer{
   th,
   td{
     padding:12px 9px;
+
     font-size:13px;
   }
-
 }
 
 
@@ -1318,28 +1417,28 @@ footer{
 
 @media(max-width:430px){
 
+  .brand-text strong{
+    font-size:16px;
+  }
+
+  .hero{
+    min-height:720px;
+  }
+
+  .hero-inner{
+    min-height:720px;
+  }
+
   .hero h1{
-    font-size:39px;
+    font-size:40px;
   }
 
   .hero-sub{
-    font-size:14px;
+    font-size:15px;
   }
 
   .hero-features{
-    gap:0;
-  }
-
-  .hero-feature{
-    padding:0 6px;
-  }
-
-  .hero-feature strong{
-    font-size:9px;
-  }
-
-  .hero-feature span{
-    display:none;
+    gap:12px;
   }
 
   .gallery-grid{
@@ -1353,14 +1452,15 @@ footer{
   .whatsapp{
     width:53px;
     height:53px;
+
     right:15px;
     bottom:15px;
   }
-
 }
 
 </style>
 </head>
+
 
 <body>
 
@@ -1382,6 +1482,7 @@ footer{
 </div>
 
 
+
 <!-- =====================================================
      NAVBAR
 ===================================================== -->
@@ -1390,9 +1491,10 @@ footer{
 
   <div class="nav-inner">
 
-    <a href="#home"
-       class="brand"
-       onclick="showPage('home')">
+    <a
+      href="#home"
+      class="brand"
+      onclick="showPage('home')">
 
       <img
         src="logo.jpeg"
@@ -1413,15 +1515,1085 @@ footer{
     </a>
 
 
-    <!-- DESKTOP NAV -->
+    <button
+      class="menu-btn"
+      onclick="toggleMenu()"
+      aria-label="Open Menu">
 
-    <div class="desktop-nav">
+      ☰
 
-      <a href="#home"
-         onclick="showPage('home')">
-         Home
+    </button>
+
+  </div>
+
+
+  <!-- MENU -->
+
+  <div
+    class="menu-panel"
+    id="menuPanel">
+
+    <a
+      href="#home"
+      onclick="showPage('home')">
+      🏠 Home
+    </a>
+
+    <a
+      href="#about"
+      onclick="showPage('about')">
+      🏫 About Us
+    </a>
+
+    <a
+      href="#classes"
+      onclick="showPage('classes')">
+      📚 Academics
+    </a>
+
+    <a
+      href="#gallery"
+      onclick="showPage('gallery')">
+      📸 School Gallery
+    </a>
+
+    <a
+      href="#fees"
+      onclick="showPage('fees')">
+      💰 Fee Structure
+    </a>
+
+    <a
+      href="#documents"
+      onclick="showPage('documents')">
+      📄 Required Documents
+    </a>
+
+    <a
+      href="#contact"
+      onclick="showPage('contact')">
+      📞 Contact Us
+    </a>
+
+    <a
+      href="#admission"
+      class="menu-admission"
+      onclick="showPage('admission')">
+      🎓 Admission 2026–27
+    </a>
+
+  </div>
+
+</nav>
+
+
+
+<!-- =====================================================
+     HOME
+===================================================== -->
+
+<div
+  id="home"
+  class="page-section active home-section">
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-inner">
+
+      <div class="hero-content">
+
+
+        <div class="hero-estd">
+          ESTD. 1997
+        </div>
+
+
+        <span class="hero-tag">
+          NURSERY TO CLASS 5
+        </span>
+
+
+        <h1>
+
+          NURTURING MINDS.<br>
+
+          <span>
+            SHAPING FUTURES.
+          </span>
+
+        </h1>
+
+
+        <p class="hero-sub">
+
+          जहाँ शिक्षा केवल किताबों तक सीमित नहीं,
+          बल्कि बच्चों के उज्ज्वल भविष्य की नींव बनती है।
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+          <a
+            href="#admission"
+            class="btn btn-gold"
+            onclick="showPage('admission')">
+
+            🎓 Apply for Admission
+
+          </a>
+
+
+          <a
+            href="#about"
+            class="btn btn-outline"
+            onclick="showPage('about')">
+
+            👤 Explore School
+
+          </a>
+
+        </div>
+
+
+        <!-- HERO FEATURES -->
+
+        <div class="hero-features">
+
+          <div class="hero-feature">
+
+            <div class="hero-feature-icon">
+              📖
+            </div>
+
+            <strong>
+              Quality Education
+            </strong>
+
+            <small>
+              Strong foundations
+            </small>
+
+          </div>
+
+
+          <div class="hero-feature">
+
+            <div class="hero-feature-icon">
+              👩‍🏫
+            </div>
+
+            <strong>
+              Experienced Faculty
+            </strong>
+
+            <small>
+              Caring guidance
+            </small>
+
+          </div>
+
+
+          <div class="hero-feature">
+
+            <div class="hero-feature-icon">
+              🏆
+            </div>
+
+            <strong>
+              All Round Development
+            </strong>
+
+            <small>
+              Learn & grow
+            </small>
+
+          </div>
+
+
+          <div class="hero-feature">
+
+            <div class="hero-feature-icon">
+              🛡️
+            </div>
+
+            <strong>
+              Safe Environment
+            </strong>
+
+            <small>
+              Care & discipline
+            </small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- STATS -->
+
+  <div class="stats">
+
+    <div class="stat">
+
+      <strong>
+        1997
+      </strong>
+
+      <span>
+        Established
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        Nur–5
+      </strong>
+
+      <span>
+        Classes
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        English
+      </strong>
+
+      <span>
+        Medium
+      </span>
+
+    </div>
+
+
+    <div class="stat">
+
+      <strong>
+        Smart
+      </strong>
+
+      <span>
+        Classes
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+  class="about page-section"
+  id="about">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">
+        ABOUT OUR SCHOOL
+      </span>
+
+      <h2>
+        Growing Minds, Building Futures
+      </h2>
+
+      <p>
+        M.D Memorial School is committed to providing quality education
+        in a caring and supportive environment.
+      </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+
+      <div class="about-text">
+
+        <h3>
+          Education With Care
+        </h3>
+
+        <p>
+          M.D Memorial School was established in 1997 at Aurangabad,
+          Bulandshahr, Uttar Pradesh. Our focus is on building strong
+          academic foundations along with confidence and creativity.
+        </p>
+
+        <p>
+          We believe every child learns differently. Therefore,
+          children who need additional academic support receive
+          extra attention and guidance.
+        </p>
+
+
+        <div class="features">
+
+          <div class="feature">
+
+            <strong>
+              English Medium
+            </strong>
+
+            <span>
+              Focus on confident communication and learning.
+            </span>
+
+          </div>
+
+
+          <div class="feature">
+
+            <strong>
+              Smart Classes
+            </strong>
+
+            <span>
+              Technology-supported classroom learning.
+            </span>
+
+          </div>
+
+
+          <div class="feature">
+
+            <strong>
+              Extra Classes
+            </strong>
+
+            <span>
+              Additional support wherever students need it.
+            </span>
+
+          </div>
+
+
+          <div class="feature">
+
+            <strong>
+              Activities
+            </strong>
+
+            <span>
+              GK competitions, games, dance and singing.
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <div class="message">
+
+          <h4>
+            Principal's Message
+          </h4>
+
+          <p>
+            Our aim is to create an environment where every child
+            feels encouraged to learn, grow and shine. We believe
+            that education becomes meaningful when children receive
+            knowledge, values and individual attention together.
+          </p>
+
+          <br>
+
+          <strong>
+            — Mrs. Poonam Devi, Principal
+          </strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CLASSES
+===================================================== -->
+
+<section
+  class="classes page-section"
+  id="classes">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">
+        ACADEMIC PROGRAM
+      </span>
+
+      <h2>
+        Our Classes
+      </h2>
+
+      <p>
+        Strong foundations for every stage of early education.
+      </p>
+
+    </div>
+
+
+    <div class="class-grid">
+
+
+      <div class="class-card">
+
+        <div class="class-number">
+          01
+        </div>
+
+        <h3>
+          Nursery – UKG
+        </h3>
+
+        <p>
+          Early learning with focus on basic concepts,
+          communication, creativity and confidence.
+        </p>
+
+      </div>
+
+
+      <div class="class-card">
+
+        <div class="class-number">
+          02
+        </div>
+
+        <h3>
+          Class 1 – 3
+        </h3>
+
+        <p>
+          Building strong academic foundations through
+          engaging classroom learning and activities.
+        </p>
+
+      </div>
+
+
+      <div class="class-card">
+
+        <div class="class-number">
+          03
+        </div>
+
+        <h3>
+          Class 4 – 5
+        </h3>
+
+        <p>
+          Developing independent learning, knowledge,
+          discipline and preparation for higher classes.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEES
+===================================================== -->
+
+<section
+  class="fees page-section"
+  id="fees">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">
+        FEE STRUCTURE
+      </span>
+
+      <h2>
+        Affordable Education
+      </h2>
+
+      <p>
+        Session 2026–27 fee structure.
+      </p>
+
+    </div>
+
+
+    <div class="fee-box">
+
+      <span class="session">
+        SESSION 2026–27
+      </span>
+
+
+      <table>
+
+        <tr>
+          <th>Class</th>
+          <th>Monthly Fee</th>
+          <th>Exam / Activity / Cultural Fee</th>
+        </tr>
+
+        <tr>
+          <td>Nursery – UKG</td>
+          <td>₹350 / Month</td>
+          <td>₹600</td>
+        </tr>
+
+        <tr>
+          <td>Class 1 – 5</td>
+          <td>₹400 / Month</td>
+          <td>₹600</td>
+        </tr>
+
+      </table>
+
+
+      <p class="fee-note">
+        Monthly tuition fee is due by the 10th of every month.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GALLERY
+===================================================== -->
+
+<section
+  class="gallery page-section"
+  id="gallery">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">
+        OUR CAMPUS
+      </span>
+
+      <h2>
+        School Gallery
+      </h2>
+
+      <p>
+        Moments from M.D Memorial School.
+      </p>
+
+    </div>
+
+
+    <div class="gallery-grid">
+
+      <img
+        src="a5b00ca8-6e49-4309-b53b-1b7a1586dd9e.jpeg"
+        alt="M.D Memorial School">
+
+      <img
+        src="15ee2656-ff28-40c1-97f3-4ce6c5d04ca5.jpeg"
+        alt="M.D Memorial School">
+
+      <img
+        src="1e7a30a4-c8b3-4405-9297-bbceee85123e.jpeg"
+        alt="M.D Memorial School">
+
+      <img
+        src="1f491bd3-0e0c-4568-b970-43b2985cdb1e.jpeg"
+        alt="M.D Memorial School">
+
+      <img
+        src="2EADB222-24B2-4D4F-A2B3-64A13E3DFEBB.png"
+        alt="M.D Memorial School">
+
+      <img
+        src="788853e2-ff2a-417d-ab30-7d62065f4b50.jpeg"
+        alt="M.D Memorial School">
+
+      <img
+        src="IMG_0828.jpeg"
+        alt="M.D Memorial School">
+
+      <img
+        src="IMG_0843.jpeg"
+        alt="M.D Memorial School">
+
+      <img
+        src="IMG_0870.jpeg"
+        alt="M.D Memorial School">
+
+      <img
+        src="d5fb95f0-c573-4145-a41b-9b74d47ccde9.jpeg"
+        alt="M.D Memorial School">
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADMISSION
+===================================================== -->
+
+<section
+  class="admission page-section"
+  id="admission">
+
+  <div class="container">
+
+    <span class="eyebrow">
+      ADMISSIONS 2026–27
+    </span>
+
+    <h2>
+      Give Your Child a Strong Start
+    </h2>
+
+    <p>
+      Admissions are open for Nursery to Class 5.
+      Contact us today for admission information.
+    </p>
+
+
+    <div
+      class="hero-buttons"
+      style="justify-content:center;">
+
+      <a
+        href="tel:7409777967"
+        class="btn btn-gold">
+
+        📞 Call 7409777967
+
       </a>
 
-      <a href="#about"
-         onclick="showPage('about')">
-         About Us
+
+      <a
+        href="https://wa.me/917409777967?text=Hello%20M.D.%20Memorial%20School,%20I%20want%20information%20about%20admission."
+        class="btn btn-outline">
+
+        WhatsApp Us
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DOCUMENTS
+===================================================== -->
+
+<section
+  class="documents page-section"
+  id="documents">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">
+        ADMISSION REQUIREMENTS
+      </span>
+
+      <h2>
+        Required Documents
+      </h2>
+
+      <p>
+        Documents required for admission.
+      </p>
+
+    </div>
+
+
+    <div class="document-grid">
+
+      <div class="document-card">
+        Student Aadhaar
+      </div>
+
+      <div class="document-card">
+        Birth Certificate
+        <small>
+          Only if Aadhaar is unavailable
+        </small>
+      </div>
+
+      <div class="document-card">
+        PEN Number
+      </div>
+
+      <div class="document-card">
+        Previous School Report Card / Marksheet
+      </div>
+
+      <div class="document-card">
+        Transfer Certificate
+        <small>
+          If applicable
+        </small>
+      </div>
+
+      <div class="document-card">
+        Passport Size Photographs
+      </div>
+
+      <div class="document-card">
+        Parent / Guardian Aadhaar
+      </div>
+
+      <div class="document-card">
+        Address Proof
+      </div>
+
+      <div class="document-card">
+        WhatsApp Mobile Number
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+  class="contact page-section"
+  id="contact">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <span class="eyebrow">
+        GET IN TOUCH
+      </span>
+
+      <h2>
+        Contact Us
+      </h2>
+
+      <p>
+        We are happy to help you with admission and school information.
+      </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+      <div class="contact-card">
+
+        <strong>
+          📍 Address
+        </strong>
+
+        <span>
+          M.D Memorial School,<br>
+          Aurangabad, Bulandshahr,<br>
+          Uttar Pradesh
+        </span>
+
+        <br><br>
+
+        <a
+          href="https://maps.app.goo.gl/D363mKKb5yUFidWB7?g_st=ic"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-btn">
+
+          📍 Get Directions
+
+        </a>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <strong>
+          📞 Phone
+        </strong>
+
+        <span>
+          7409777967
+        </span>
+
+      </div>
+
+
+      <div class="contact-card">
+
+        <strong>
+          👩‍🏫 Management
+        </strong>
+
+        <span>
+          Mrs. Poonam Devi — Principal<br>
+          Mr. Ashok Kumar — Manager
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+
+      <img
+        src="logo.jpeg"
+        alt="M.D Memorial School">
+
+      <div>
+
+        <strong>
+          M.D Memorial School
+        </strong>
+
+        <small>
+          Established 1997 • Aurangabad, Bulandshahr
+        </small>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-tag">
+      LEARN • GROW • SHINE
+    </div>
+
+  </div>
+
+
+  <div class="copyright">
+    © 2026 M.D Memorial School. All Rights Reserved.
+  </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     WHATSAPP
+===================================================== -->
+
+<a
+  class="whatsapp"
+  href="https://wa.me/917409777967?text=Hello%20M.D.%20Memorial%20School,%20I%20want%20information%20about%20admission."
+  aria-label="WhatsApp">
+
+  ☎
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* MENU */
+
+function toggleMenu(){
+
+  const menu =
+    document.getElementById("menuPanel");
+
+  menu.classList.toggle("show");
+
+}
+
+
+/* PAGE NAVIGATION */
+
+function showPage(page){
+
+  const pages =
+    document.querySelectorAll(".page-section");
+
+  pages.forEach(function(section){
+
+    section.classList.remove("active");
+
+  });
+
+
+  const selectedPage =
+    document.getElementById(page);
+
+
+  if(selectedPage){
+
+    selectedPage.classList.add("active");
+
+  }
+
+
+  const menu =
+    document.getElementById("menuPanel");
+
+  menu.classList.remove("show");
+
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+
+  if(history.replaceState){
+
+    history.replaceState(
+      null,
+      "",
+      "#" + page
+    );
+
+  }
+
+}
+
+
+/* CLOSE MENU OUTSIDE */
+
+document.addEventListener(
+  "click",
+  function(event){
+
+    const menu =
+      document.getElementById("menuPanel");
+
+    const button =
+      document.querySelector(".menu-btn");
+
+
+    if(
+      menu.classList.contains("show") &&
+      !menu.contains(event.target) &&
+      !button.contains(event.target)
+    ){
+
+      menu.classList.remove("show");
+
+    }
+
+  }
+);
+
+
+/* URL HASH */
+
+window.addEventListener(
+  "load",
+  function(){
+
+    const hash =
+      window.location.hash.replace("#","");
+
+
+    const validPages = [
+      "home",
+      "about",
+      "classes",
+      "gallery",
+      "fees",
+      "documents",
+      "contact",
+      "admission"
+    ];
+
+
+    if(validPages.includes(hash)){
+
+      showPage(hash);
+
+    }else{
+
+      showPage("home");
+
+    }
+
+  }
+);
+
+</script>
+
+
+</body>
+</html>
