@@ -3,23 +3,728 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>About Us | M.D Memorial School</title>
+
+<meta name="description" content="About M.D Memorial School, Aurangabad, Bulandshahr. Established in 1997.">
+
+<style>
+:root{
+  --navy:#071936;
+  --blue:#123d7a;
+  --gold:#e5b85c;
+  --gold2:#f5d98b;
+  --cream:#f8f5ee;
+  --white:#fff;
+  --text:#172033;
+  --muted:#6d7687;
+  --line:#e7eaf0;
+  --shadow:0 20px 60px rgba(7,25,54,.12);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.7;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* TOP BAR */
+.topbar{
+  background:var(--navy);
+  color:#fff;
+  min-height:45px;
+  padding:9px 5%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  font-size:14px;
+}
+
+/* NAVBAR */
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(7,25,54,.08);
+}
+
+.nav-inner{
+  max-width:1250px;
+  margin:auto;
+  padding:13px 5%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.brand img{
+  width:58px;
+  height:58px;
+  object-fit:contain;
+  border-radius:50%;
+}
+
+.brand-text strong{
+  display:block;
+  color:var(--navy);
+  font-family:Georgia,serif;
+  font-size:21px;
+  line-height:1.2;
+}
+
+.brand-text small{
+  color:#7b8391;
+  font-size:11px;
+  letter-spacing:2.2px;
+}
+
+.menu-btn{
+  width:50px;
+  height:50px;
+  border:0;
+  border-radius:15px;
+  background:var(--navy);
+  color:#fff;
+  font-size:27px;
+  cursor:pointer;
+}
+
+/* MENU */
+.menu-panel{
+  position:absolute;
+  top:100%;
+  right:5%;
+  width:285px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:10px;
+  box-shadow:0 20px 50px rgba(7,25,54,.18);
+  display:none;
+}
+
+.menu-panel.show{
+  display:block;
+}
+
+.menu-panel a{
+  display:block;
+  padding:14px 15px;
+  border-radius:13px;
+  color:var(--navy);
+  font-weight:600;
+  font-size:14px;
+}
+
+.menu-panel a:hover{
+  background:var(--cream);
+  color:var(--blue);
+}
+
+/* HERO */
+.page-hero{
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,15,32,.88),
+      rgba(3,15,32,.65)
+    ),
+    url("4794420C-2C8C-4713-BF55-E23285559A30.jpeg");
+
+  background-size:cover;
+  background-position:center;
+
+  min-height:390px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:#fff;
+  padding:70px 5%;
+}
+
+.page-hero span{
+  color:var(--gold2);
+  letter-spacing:3px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.page-hero h1{
+  font-family:Georgia,serif;
+  font-size:clamp(42px,6vw,68px);
+  margin:12px 0;
+}
+
+.page-hero p{
+  color:rgba(255,255,255,.82);
+  max-width:650px;
+  margin:auto;
+}
+
+/* CONTENT */
+section{
+  padding:90px 5%;
+}
+
+.container{
+  max-width:1150px;
+  margin:auto;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.eyebrow{
+  color:#a77b20;
+  letter-spacing:2px;
+  font-size:12px;
+  font-weight:800;
+}
+
+h2{
+  font-family:Georgia,serif;
+  color:var(--navy);
+  font-size:42px;
+  line-height:1.2;
+  margin:10px 0 20px;
+}
+
+.about-text p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* FEATURES */
+.features{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-top:30px;
+}
+
+.feature{
+  padding:22px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  box-shadow:0 10px 30px rgba(7,25,54,.05);
+}
+
+.feature strong{
+  display:block;
+  color:var(--navy);
+  margin-bottom:5px;
+}
+
+.feature span{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* MESSAGE */
+.message{
+  background:var(--navy);
+  color:#fff;
+  padding:40px;
+  border-radius:28px;
+  box-shadow:var(--shadow);
+}
+
+.message h3{
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-size:27px;
+  margin-bottom:18px;
+}
+
+.message p{
+  color:rgba(255,255,255,.78);
+}
+
+.message strong{
+  display:block;
+  margin-top:22px;
+  color:#fff;
+}
+
+/* VALUES */
+.values{
+  background:var(--cream);
+}
+
+.values-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 45px;
+}
+
+.value-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.value-card{
+  background:#fff;
+  padding:30px;
+  border-radius:22px;
+  border:1px solid var(--line);
+  text-align:center;
+}
+
+.value-icon{
+  width:58px;
+  height:58px;
+  border-radius:17px;
+  background:var(--cream);
+  display:grid;
+  place-items:center;
+  margin:0 auto 18px;
+  font-size:25px;
+}
+
+.value-card h3{
+  color:var(--navy);
+  font-family:Georgia,serif;
+  margin-bottom:8px;
+}
+
+.value-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* FOOTER */
+footer{
+  background:#041126;
+  color:#fff;
+  padding:45px 5% 25px;
+}
+
+.footer-inner{
+  max-width:1150px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+}
+
+.footer-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.footer-brand img{
+  width:55px;
+  height:55px;
+  object-fit:contain;
+  background:#fff;
+  border-radius:50%;
+  padding:4px;
+}
+
+.footer-brand strong{
+  display:block;
+}
+
+.footer-brand small{
+  color:rgba(255,255,255,.55);
+}
+
+.footer-tag{
+  color:var(--gold);
+  letter-spacing:3px;
+  font-size:12px;
+}
+
+.copyright{
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:30px;
+  padding-top:20px;
+  color:rgba(255,255,255,.45);
+  font-size:12px;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+  .about-grid{
+    grid-template-columns:1fr;
+  }
+
+  .value-grid{
+    grid-template-columns:1fr;
+  }
+
+  .features{
+    grid-template-columns:1fr;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+@media(max-width:650px){
+
+  .topbar{
+    justify-content:center;
+    text-align:center;
+    font-size:12px;
+  }
+
+  .topbar span:last-child{
+    display:none;
+  }
+
+  .brand img{
+    width:46px;
+    height:46px;
+  }
+
+  .brand-text strong{
+    font-size:17px;
+  }
+
+  .brand-text small{
+    font-size:9px;
+  }
+
+  .menu-btn{
+    width:46px;
+    height:46px;
+  }
+
+  .menu-panel{
+    left:4%;
+    right:4%;
+    width:auto;
+  }
+
+  .page-hero{
+    min-height:330px;
+  }
+
+  section{
+    padding:65px 5%;
+  }
+
+  h2{
+    font-size:35px;
+  }
+
+  .message{
+    padding:28px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-<h1>M.D Memorial School</h1>
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>📍 Aurangabad, Bulandshahr, Uttar Pradesh</span>
+  <span>📞 7409777967</span>
+</div>
 
-<h2>About Us</h2>
+<!-- NAVBAR -->
+<nav class="navbar">
 
-<p>
-Welcome to M.D Memorial School, Aurangabad, Bulandshahr.
-</p>
+  <div class="nav-inner">
 
-<p>
-Our school is committed to providing quality education and helping
-students learn, grow and shine.
-</p>
+    <a href="index.html" class="brand">
+
+      <img src="logo.jpeg" alt="M.D Memorial School Logo">
+
+      <div class="brand-text">
+        <strong>M.D Memorial School</strong>
+        <small>LEARN • GROW • SHINE</small>
+      </div>
+
+    </a>
+
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">
+      ☰
+    </button>
+
+  </div>
+
+  <div class="menu-panel" id="menuPanel">
+
+    <a href="index.html">🏠 Home</a>
+
+    <a href="about.html">🏫 About Us</a>
+
+    <a href="index.html#classes">📚 Academics</a>
+
+    <a href="index.html#gallery">📸 School Gallery</a>
+
+    <a href="index.html#fees">💰 Fee Structure</a>
+
+    <a href="index.html#documents">📄 Required Documents</a>
+
+    <a href="index.html#contact">📞 Contact Us</a>
+
+    <a href="index.html#admission">🎓 Admission 2026–27</a>
+
+  </div>
+
+</nav>
+
+<!-- HERO -->
+<header class="page-hero">
+
+  <div>
+
+    <span>ABOUT OUR SCHOOL</span>
+
+    <h1>Growing Minds,<br>Building Futures</h1>
+
+    <p>
+      M.D Memorial School is committed to providing
+      quality education in a caring and supportive environment.
+    </p>
+
+  </div>
+
+</header>
+
+<!-- ABOUT -->
+<section>
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div class="about-text">
+
+        <span class="eyebrow">OUR STORY</span>
+
+        <h2>Education With Care</h2>
+
+        <p>
+          M.D Memorial School was established in 1997 at
+          Aurangabad, Bulandshahr, Uttar Pradesh.
+        </p>
+
+        <p>
+          Our focus is on building strong academic foundations
+          along with confidence, creativity and good values.
+        </p>
+
+        <p>
+          We believe every child learns differently. Therefore,
+          students who need additional academic support receive
+          extra attention and guidance.
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+            <strong>English Medium</strong>
+            <span>Focus on confident communication and learning.</span>
+          </div>
+
+          <div class="feature">
+            <strong>Smart Classes</strong>
+            <span>Technology-supported classroom learning.</span>
+          </div>
+
+          <div class="feature">
+            <strong>Extra Support</strong>
+            <span>Additional academic guidance for students.</span>
+          </div>
+
+          <div class="feature">
+            <strong>Co-Curricular Activities</strong>
+            <span>GK competitions, games, dance and singing.</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <div class="message">
+
+          <h3>Principal's Message</h3>
+
+          <p>
+            Our aim is to create an environment where every child
+            feels encouraged to learn, grow and shine. We believe
+            education becomes meaningful when children receive
+            knowledge, values and individual attention together.
+          </p>
+
+          <strong>— Mrs. Poonam Devi, Principal</strong>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- VALUES -->
+<section class="values">
+
+  <div class="container">
+
+    <div class="values-head">
+
+      <span class="eyebrow">WHAT WE BELIEVE</span>
+
+      <h2>Our Core Values</h2>
+
+      <p>
+        We aim to create a positive learning environment
+        where students can develop knowledge, confidence and character.
+      </p>
+
+    </div>
+
+    <div class="value-grid">
+
+      <div class="value-card">
+
+        <div class="value-icon">📚</div>
+
+        <h3>Learning</h3>
+
+        <p>
+          Building strong academic foundations through
+          meaningful classroom learning.
+        </p>
+
+      </div>
+
+      <div class="value-card">
+
+        <div class="value-icon">🌱</div>
+
+        <h3>Growth</h3>
+
+        <p>
+          Encouraging students to develop confidence,
+          creativity and curiosity.
+        </p>
+
+      </div>
+
+      <div class="value-card">
+
+        <div class="value-icon">⭐</div>
+
+        <h3>Excellence</h3>
+
+        <p>
+          Helping every child work towards their potential
+          with care and individual attention.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+
+      <img src="logo.jpeg" alt="M.D Memorial School">
+
+      <div>
+
+        <strong>M.D Memorial School</strong>
+
+        <small>
+          Established 1997 • Aurangabad, Bulandshahr
+        </small>
+
+      </div>
+
+    </div>
+
+    <div class="footer-tag">
+      LEARN • GROW • SHINE
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    ©️ 2026 M.D Memorial School. All Rights Reserved.
+  </div>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+  const menu = document.getElementById("menuPanel");
+
+  menu.classList.toggle("show");
+
+}
+
+document.addEventListener("click", function(event){
+
+  const menu = document.getElementById("menuPanel");
+  const button = document.querySelector(".menu-btn");
+
+  if(
+    menu.classList.contains("show") &&
+    !menu.contains(event.target) &&
+    !button.contains(event.target)
+  ){
+
+    menu.classList.remove("show");
+
+  }
+
+});
+
+</script>
 
 </body>
 </html>
