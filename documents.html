@@ -1,1 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Required Documents | M.D Memorial School</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f5ee;
+    color:#172033;
+}
+
+/* SCHOOL HEADER */
+.top-header{
+    background:#071936;
+    color:white;
+    min-height:95px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 20px;
+    border-bottom:4px solid #e5b85c;
+}
+
+.school-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    border-radius:50%;
+    background:white;
+}
+
+.school-name{
+    font-size:26px;
+    font-weight:800;
+}
+
+.school-location{
+    font-size:14px;
+    color:#f5d98b;
+    margin-top:5px;
+}
+
+/* MAIN */
+.container{
+    max-width:900px;
+    margin:45px auto;
+    padding:0 20px;
+}
+
+/* TITLE */
+.page-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.page-title h1{
+    color:#071936;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.line{
+    width:70px;
+    height:4px;
+    background:#e5b85c;
+    margin:auto;
+    border-radius:10px;
+}
+
+.page-title p{
+    color:#6d7687;
+    margin-top:12px;
+}
+
+/* DOCUMENT CARD */
+.documents-card{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 15px 45px rgba(7,25,54,.12);
+    border:1px solid #e7eaf0;
+}
+
+.document{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:18px 10px;
+    border-bottom:1px solid #e7eaf0;
+}
+
+.document:last-child{
+    border-bottom:none;
+}
+
+.icon{
+    width:45px;
+    height:45px;
+    background:#071936;
+    color:#f5d98b;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    flex-shrink:0;
+}
+
+.document h3{
+    font-size:16px;
+    color:#071936;
+}
+
+.document p{
+    font-size:13px;
+    color:#6d7687;
+    margin-top:4px;
+}
+
+/* NOTE */
+.note{
+    margin-top:25px;
+    background:#fffaf0;
+    border-left:5px solid #e5b85c;
+    padding:18px 20px;
+    border-radius:10px;
+}
+
+.note h3{
+    color:#071936;
+    margin-bottom:7px;
+    font-size:17px;
+}
+
+.note p{
+    color:#5f6878;
+    font-size:14px;
+    line-height:1.6;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:50px;
+    background:#071936;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    border-top:4px solid #e5b85c;
+}
+
+.footer p{
+    font-size:13px;
+    color:#dce3ef;
+    line-height:1.7;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .top-header{
+        min-height:85px;
+        padding:12px 15px;
+    }
+
+    .logo{
+        width:52px;
+        height:52px;
+    }
+
+    .school-name{
+        font-size:20px;
+    }
+
+    .school-location{
+        font-size:11px;
+    }
+
+    .container{
+        margin:30px auto;
+        padding:0 12px;
+    }
+
+    .page-title h1{
+        font-size:28px;
+    }
+
+    .documents-card{
+        padding:20px 15px;
+    }
+
+    .document{
+        padding:16px 5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SCHOOL HEADER -->
+<header class="top-header">
+
+    <div class="school-header">
+
+        <img src="logo.jpeg"
+             alt="M.D Memorial School Logo"
+             class="logo">
+
+        <div>
+
+            <div class="school-name">
+                M.D Memorial School
+            </div>
+
+            <div class="school-location">
+                Aurangabad, Bulandshahr, Uttar Pradesh
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- REQUIRED DOCUMENTS -->
+<main class="container">
+
+    <div class="page-title">
+
+        <h1>Required Documents</h1>
+
+        <div class="line"></div>
+
+        <p>Documents required for admission</p>
+
+    </div>
+
+
+    <div class="documents-card">
+
+        <div class="document">
+
+            <div class="icon">🪪</div>
+
+            <div>
+                <h3>Student Aadhaar Card</h3>
+                <p>Student's Aadhaar Card is required.</p>
+            </div>
+
+        </div>
+
+
+        <div class="document">
+
+            <div class="icon">📜</div>
+
+            <div>
+                <h3>Birth Certificate</h3>
+                <p>Required only if Aadhaar Card is unavailable.</p>
+            </div>
+
+        </div>
+
+
+        <div class="document">
+
+            <div class="icon">🔢</div>
+
+            <div>
+                <h3>PEN Number</h3>
+                <p>Student's PEN number is required.</p>
+            </div>
+
+        </div>
+
+
+        <div class="document">
+
+            <div class="icon">📄</div>
+
+            <div>
+                <h3>Previous School Report Card / Marksheet</h3>
+                <p>Required for students coming from another school.</p>
+            </div>
+
+        </div>
+
+
+        <div class="document">
+
+            <div class="icon">📑</div>
+
+            <div>
+                <h3>Transfer Certificate</h3>
+                <p>Required if applicable.</p>
+            </div>
+
+        </div>
+
+
+        <div class="document">
+
+            <div class="icon">📸</div>
+
+            <div>
+                <h3>Passport Size Photographs</h3>
+                <p>Recent passport size photographs of the student.</p>
+            </div>
+
+        </div>
+
+
+        <div class="document">
+
+            <div class="icon">🪪</div>
+
+            <div>
+                <h3>Parent / Guardian Aadhaar</h3>
+                <p>Aadhaar Card of parent or guardian is required.</p>
+            </div>
+
+        </div>
+
+
+        <div class="document">
+
+            <div class="icon">🏠</div>
+
+            <div>
+                <h3>Address Proof</h3>
+                <p>Valid address proof of the parent or guardian.</p>
+            </div>
+
+        </div>
+
+
+        <div class="document">
+
+            <div class="icon">📱</div>
+
+            <div>
+                <h3>WhatsApp Mobile Number</h3>
+                <p>Active WhatsApp number of the parent or guardian.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="note">
+
+        <h3>Important Note</h3>
+
+        <p>
+            Please keep all required documents ready before completing
+            the admission process. Documents should be clear and valid.
+        </p>
+
+    </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <p>
+        © 2026 M.D Memorial School, Aurangabad, Bulandshahr
+    </p>
+
+    <p>
+        LEARN • GROW • SHINE
+    </p>
+
+</footer>
+
+</body>
+</html>
