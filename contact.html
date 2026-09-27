@@ -1,1 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Contact Us | M.D Memorial School</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f8f5ee;
+    color:#172033;
+}
+
+/* SCHOOL HEADER */
+.top-header{
+    background:#071936;
+    color:white;
+    min-height:95px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px 20px;
+    border-bottom:4px solid #e5b85c;
+}
+
+.school-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+    border-radius:50%;
+    background:white;
+}
+
+.school-name{
+    font-size:26px;
+    font-weight:800;
+}
+
+.school-location{
+    font-size:14px;
+    color:#f5d98b;
+    margin-top:5px;
+}
+
+/* MAIN */
+.container{
+    max-width:900px;
+    margin:45px auto;
+    padding:0 20px;
+}
+
+.page-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.page-title h1{
+    color:#071936;
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.line{
+    width:70px;
+    height:4px;
+    background:#e5b85c;
+    margin:auto;
+    border-radius:10px;
+}
+
+.page-title p{
+    color:#6d7687;
+    margin-top:12px;
+}
+
+/* CONTACT CARD */
+.contact-card{
+    background:white;
+    border-radius:18px;
+    padding:30px;
+    box-shadow:0 15px 45px rgba(7,25,54,.12);
+    border:1px solid #e7eaf0;
+}
+
+.contact-item{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:20px 10px;
+    border-bottom:1px solid #e7eaf0;
+}
+
+.contact-item:last-child{
+    border-bottom:none;
+}
+
+.icon{
+    width:48px;
+    height:48px;
+    background:#071936;
+    color:#f5d98b;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:21px;
+    flex-shrink:0;
+}
+
+.contact-item h3{
+    color:#071936;
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.contact-item p,
+.contact-item a{
+    color:#6d7687;
+    font-size:14px;
+    line-height:1.5;
+    text-decoration:none;
+}
+
+.contact-item a:hover{
+    color:#123d7a;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 22px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.whatsapp{
+    background:#071936;
+    color:white;
+}
+
+.map{
+    background:#e5b85c;
+    color:#071936;
+}
+
+/* FOOTER */
+.footer{
+    margin-top:50px;
+    background:#071936;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    border-top:4px solid #e5b85c;
+}
+
+.footer p{
+    font-size:13px;
+    color:#dce3ef;
+    line-height:1.7;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .top-header{
+        min-height:85px;
+        padding:12px 15px;
+    }
+
+    .logo{
+        width:52px;
+        height:52px;
+    }
+
+    .school-name{
+        font-size:20px;
+    }
+
+    .school-location{
+        font-size:11px;
+    }
+
+    .container{
+        margin:30px auto;
+        padding:0 12px;
+    }
+
+    .page-title h1{
+        font-size:28px;
+    }
+
+    .contact-card{
+        padding:20px 15px;
+    }
+
+    .contact-item{
+        padding:16px 5px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SCHOOL HEADER -->
+<header class="top-header">
+
+    <div class="school-header">
+
+        <img src="logo.jpeg"
+             alt="M.D Memorial School Logo"
+             class="logo">
+
+        <div>
+
+            <div class="school-name">
+                M.D Memorial School
+            </div>
+
+            <div class="school-location">
+                Aurangabad, Bulandshahr, Uttar Pradesh
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- CONTACT -->
+<main class="container">
+
+    <div class="page-title">
+
+        <h1>Contact Us</h1>
+
+        <div class="line"></div>
+
+        <p>We are happy to assist you</p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <div class="contact-item">
+
+            <div class="icon">📍</div>
+
+            <div>
+                <h3>School Address</h3>
+                <p>
+                    Jhabba Colony, Aurangabad,<br>
+                    Bulandshahr, Uttar Pradesh, India
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="icon">📞</div>
+
+            <div>
+                <h3>Phone Number</h3>
+                <a href="tel:7409777967">
+                    7409777967
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="icon">💬</div>
+
+            <div>
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/917409777967">
+                    Chat with us on WhatsApp
+                </a>
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="icon">👩‍🏫</div>
+
+            <div>
+                <h3>Principal</h3>
+                <p>
+                    Mrs. Poonam Devi
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="contact-item">
+
+            <div class="icon">👨‍💼</div>
+
+            <div>
+                <h3>Manager</h3>
+                <p>
+                    Mr. Ashok Kumar
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="buttons">
+
+            <a class="btn whatsapp"
+               href="https://wa.me/917409777967">
+                💬 WhatsApp Us
+            </a>
+
+            <a class="btn map"
+               href="https://maps.app.goo.gl/D363mKKb5yUFidWB7?g_st=ic"
+               target="_blank">
+                📍 View Location
+            </a>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <p>
+        © 2026 M.D Memorial School, Aurangabad, Bulandshahr
+    </p>
+
+    <p>
+        LEARN • GROW • SHINE
+    </p>
+
+</footer>
+
+</body>
+</html>
